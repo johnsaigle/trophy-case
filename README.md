@@ -50,4 +50,4 @@ Formal audit reports for which I was the primary auditor.
 
 - [Anchor version detector](https://github.com/johnsaigle/anchor-version-detector) --  Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.
 - [Scary Strings](https://github.com/johnsaigle/scary-strings) -- If these strings are in your code, you might have a problem!
-
+- [Oblique Strategies for Hackers](https://github.com/johnsaigle/oblique-strategies-for-hackers) -- A deck of cards created to stimulate and inspire hackers. (Inspired by Brian Eno's project.)
