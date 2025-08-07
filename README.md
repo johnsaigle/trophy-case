@@ -48,7 +48,6 @@ Formal audit reports for which I was the primary auditor.
  
 # Tools
 
-[Anchor version detector: Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.](https://github.com/johnsaigle/anchor-version-detector)
-[Scary Strings: If these strings are in your code, you might have a problem!](https://github.com/johnsaigle/scary-strings)
-Scary Strings
+- [Anchor version detector: Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.](https://github.com/johnsaigle/anchor-version-detector)
+- [Scary Strings: If these strings are in your code, you might have a problem!](https://github.com/johnsaigle/scary-strings)
 
