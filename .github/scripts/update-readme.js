@@ -60,13 +60,9 @@ async function getM0Stats(owner, repo) {
   try {
     const [closedResponse, openResponse] = await Promise.all([
       octokit.rest.search.issuesAndPullRequests({
-        q: `repo:${owner}/${repo} is:pr label:AR is:closed`,
+        q: `repo:${owner}/${repo} is:pr "AR-"`,
         per_page: 1
       }),
-      octokit.rest.search.issuesAndPullRequests({
-        q: `repo:${owner}/${repo} is:pr label:AR is:open`,
-        per_page: 1
-      })
     ]);
     return { 
       mergedPRs: closedResponse.data.total_count, 
