@@ -11,6 +11,7 @@ security engineering and source code reviews.
 - [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (24 open PRs, 102 merged PRs, 7 issues)
 - [Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (17 merged PRs, 23 issues)
 - [Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
+- [Wormhole Solidity SDK](https://github.com/wormhole-foundation/wormhole-solidity-sdk/commit/82889ff1cb7484dbb3d889c470e368e43c10f645)
 
 ### M0 Foundation
 _(Pull requests labelled "AR" --> Asymmetric Research)_
@@ -19,10 +20,10 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 - [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22)
 
 ### Commonware
-- [Vector uniqueness issue](https://github.com/commonwarexyz/monorepo/issues/290) (2 issues)
+- [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle) (2 issues)
 
-## McGill University
-[LORIS Neuroimaging Software (2015-2020)](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
+## McGill University (2015-2020)
+[LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
 
 
 # Audit Reports
