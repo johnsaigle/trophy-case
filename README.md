@@ -8,9 +8,9 @@ security engineering and source code reviews.
 ## As part of Asymmetric Research
 
 ### Wormhole
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle)
-- [Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle)
-- [Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (24 open PRs, 102 merged PRs, 7 issues)
+- [Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (17 merged PRs, 23 issues)
+- [Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
 
 ### M0 Foundation
 _(Pull requests labelled "AR" --> Asymmetric Research)_
@@ -19,10 +19,10 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 - [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22)
 
 ### Commonware
-- [Vector uniqueness issue](https://github.com/commonwarexyz/monorepo/issues/290)
+- [Vector uniqueness issue](https://github.com/commonwarexyz/monorepo/issues/290) (2 issues)
 
 ## McGill University
-[LORIS Neuroimaging Software (2015-2020)](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22)
+[LORIS Neuroimaging Software (2015-2020)](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
 
 
 # Audit Reports
@@ -48,6 +48,6 @@ Formal audit reports for which I was the primary auditor.
  
 # Tools
 
-- [Anchor version detector](https://github.com/johnsaigle/anchor-version-detector) --  Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.
+- [Anchor version detector](https://github.com/johnsaigle/anchor-version-detector) (3 issues) --  Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.
 - [Scary Strings](https://github.com/johnsaigle/scary-strings) -- If these strings are in your code, you might have a problem!
 - [Oblique Strategies for Hackers](https://github.com/johnsaigle/oblique-strategies-for-hackers) -- A deck of cards created to stimulate and inspire hackers. (Inspired by Brian Eno's project.)
