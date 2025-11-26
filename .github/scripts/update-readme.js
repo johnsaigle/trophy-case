@@ -155,10 +155,28 @@ async function updateReadme() {
   const lines = content.split('\n');
 
   const updatedLines = [];
+  let inCodeReviewSection = false;
   
   for (const line of lines) {
-    const updatedLine = await processLine(line);
-    updatedLines.push(updatedLine);
+    // Track when we enter the Code Review section
+    if (line.includes('# Code Review and Security Engineering')) {
+      inCodeReviewSection = true;
+      updatedLines.push(line);
+      continue;
+    }
+    
+    // Track when we leave the Code Review section (next # heading)
+    if (inCodeReviewSection && line.match(/^# [^#]/)) {
+      inCodeReviewSection = false;
+    }
+    
+    // Only process lines in the Code Review section
+    if (inCodeReviewSection) {
+      const updatedLine = await processLine(line);
+      updatedLines.push(updatedLine);
+    } else {
+      updatedLines.push(line);
+    }
   }
 
   const updatedContent = updatedLines.join('\n');
