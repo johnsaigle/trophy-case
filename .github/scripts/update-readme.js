@@ -55,14 +55,18 @@ async function getIssueCount(owner, repo, author) {
   }
 }
 
-// Special case for M0 Foundation repos (uses "AR" label)
+// Special case for M0 Foundation repos (searches for "AR" in PR title/body)
 async function getM0Stats(owner, repo) {
   try {
     const [closedResponse, openResponse] = await Promise.all([
       octokit.rest.search.issuesAndPullRequests({
-        q: `repo:${owner}/${repo} is:pr "AR-"`,
+        q: `repo:${owner}/${repo} is:pr is:closed "AR"`,
         per_page: 1
       }),
+      octokit.rest.search.issuesAndPullRequests({
+        q: `repo:${owner}/${repo} is:pr is:open "AR"`,
+        per_page: 1
+      })
     ]);
     return { 
       mergedPRs: closedResponse.data.total_count, 
@@ -131,11 +135,18 @@ async function processLine(line) {
 
   const statsString = ` (${stats.join(', ')})`;
 
-  // Remove any existing stats
-  const cleanedLine = line.replace(/\s*\(\d+\s+open\s+PR[s]?(?:,\s*\d+\s+merged\s+PR[s]?)?(?:,\s*\d+\s+issue[s]?)?\)/, '');
+  // Find everything before the link
+  const beforeLink = line.substring(0, line.indexOf(linkMatch[0]));
   
-  // Add new stats before any trailing content
-  return cleanedLine.replace(linkMatch[0], `${linkMatch[0]}${statsString}`);
+  // Find everything after the link (excluding any existing stats in parentheses)
+  const afterLinkIndex = line.indexOf(linkMatch[0]) + linkMatch[0].length;
+  const afterLink = line.substring(afterLinkIndex);
+  
+  // Remove any existing stats from afterLink (anything in parentheses that contains PR or issue)
+  const afterLinkCleaned = afterLink.replace(/\s*\([^)]*(?:PR|issue)[^)]*\)/g, '').trim();
+  
+  // Reconstruct: before + link + stats + cleaned after
+  return beforeLink + linkMatch[0] + statsString + (afterLinkCleaned ? ' ' + afterLinkCleaned : '');
 }
 
 async function updateReadme() {
