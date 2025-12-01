@@ -8,7 +8,7 @@ security engineering and source code reviews.
 ## As part of Asymmetric Research
 
 ### Wormhole
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (24 open PRs, 102 merged PRs, 7 issues)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (24 open PRs, 103 merged PRs, 7 issues)
 - [Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (17 merged PRs, 23 issues)
 - [Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
 - [Wormhole Solidity SDK](https://github.com/wormhole-foundation/wormhole-solidity-sdk/commit/82889ff1cb7484dbb3d889c470e368e43c10f645) (1 merged PR)
