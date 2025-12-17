@@ -19,6 +19,9 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 - [Solana M](https://github.com/m0-foundation/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (10 merged PRs)
 - [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 
+### Stacks
+- [Clarity-Go Parser](https://github.com/stx-labs/clarity-go/issues)
+
 ### Commonware
 - [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle) (2 issues)
 
