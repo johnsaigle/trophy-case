@@ -8,7 +8,7 @@ security engineering and source code reviews.
 ## As part of Asymmetric Research
 
 ### Wormhole
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (23 open PRs, 111 merged PRs, 7 issues)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (24 open PRs, 113 merged PRs, 7 issues)
 - [Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 23 issues)
 - [Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
 - Wormhole Solidity SDK: [PR #22](https://github.com/wormhole-foundation/wormhole-solidity-sdk/pull/22), [PR #106](https://github.com/wormhole-foundation/wormhole-solidity-sdk/pull/106)
@@ -20,7 +20,7 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 - [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 
 ### Stacks
-- [Clarity-Go Parser](https://github.com/stx-labs/clarity-go/issues?q=is%3Aissue%20author%3Ajohnsaigle)
+- [Clarity-Go Parser](https://github.com/stx-labs/clarity-go/issues?q=is%3Aissue%20author%3Ajohnsaigle) (4 issues)
 
 ### Commonware
 - [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle) (2 issues)
