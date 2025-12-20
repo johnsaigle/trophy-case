@@ -95,6 +95,11 @@ async function processLine(line) {
   const linkText = linkMatch[1];
   const linkUrl = linkMatch[2];
   
+  // Skip if the link is to a specific PR, issue, discussion, or commit
+  if (linkUrl.match(/\/(pull|issues|discussions|commit)\/\d+/) || linkUrl.includes('/commit/')) {
+    return line;
+  }
+  
   const repoInfo = parseRepoUrl(linkUrl);
   if (!repoInfo) {
     return line;
