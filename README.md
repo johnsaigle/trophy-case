@@ -51,12 +51,19 @@ Formal audit reports for which I was the primary auditor.
 
 Personal website: https://johnsaigle.com
 
+## Asymmetric Research
+
 - [Boredom Over Beauty: Why Code Quality is Code Security](https://blog.asymmetric.re/boredom-over-beauty-why-code-quality-is-code-security/)
+- [Solana Vulnerabilities That Aren't — Unpacking Common Misreports](https://blog.asymmetric.re/solana-vulnerabilities-that-arent-unpacking-common-misreports/)
+
+## Halborn
+
 - [Top 5 Security Vulnerabilities Cosmos Developers Need to Watch Out For](https://www.halborn.com/blog/post/top-5-security-vulnerabilities-cosmos-developers-need-to-watch-out-for)
 - [Don’t “Panic”: How Improper Error-Handling Can Lead to Blockchain Hacks](https://www.halborn.com/blog/post/dont-panic-how-improper-error-handling-can-lead-to-blockchain-hacks)
  
 # Tools
 
+- [locked-in](https://github.com/asymmetric-research/locked-in) -- Lint for unsafe package installation patterns that could lead to supply-chain attacks.
 - [go-unmaintained](https://github.com/johnsaigle/go-unmaintained) -- Find abandoned packages via go.mod. 
 - [Anchor version detector](https://github.com/johnsaigle/anchor-version-detector) --  Detect or infer the Anchor, Solana, and Rust versions needed for an Anchor project.
 - [Scary Strings](https://github.com/johnsaigle/scary-strings) -- If these strings are in your code, you might have a problem!
