@@ -29,7 +29,7 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 - Ghostfolio: Insecure randomness for new passwords ([Discussion #3192](https://github.com/ghostfolio/ghostfolio/discussions/3192), [PR #3196](https://github.com/ghostfolio/ghostfolio/pull/3196))
 
 ## McGill University (2015-2020)
-[LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (404 merged PRs, 207 issues)
+[LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
 
 
 # Audit Reports
