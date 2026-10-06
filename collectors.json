@@ -1,0 +1,18 @@
+{
+  "author": "johnsaigle",
+  "lookback_days": 8,
+  "repos": [
+    { "slug": "wormhole-foundation/wormhole", "event_id": "code-review-wormhole-guardian", "query_mode": "author" },
+    { "slug": "wormhole-foundation/native-token-transfers", "event_id": "code-review-wormhole-ntt", "query_mode": "author" },
+    { "slug": "wormhole-foundation/example-liquidity-layer", "event_id": "code-review-wormhole-liquidity-layer", "query_mode": "author" },
+    { "slug": "wormhole-foundation/wormhole-solidity-sdk", "event_id": null, "query_mode": "author" },
+    { "slug": "m0-foundation/solana-m", "event_id": "code-review-m0-solana-m", "query_mode": "mentions-ar" },
+    { "slug": "m0-foundation/solana-m-extensions", "event_id": "code-review-m0-solana-m-extensions", "query_mode": "mentions-ar" },
+    { "slug": "stx-labs/clarity-go", "event_id": "code-review-clarity-go-parser", "query_mode": "author" },
+    { "slug": "commonwarexyz/monorepo", "event_id": "code-review-commonware", "query_mode": "author" },
+    { "slug": "ghostfolio/ghostfolio", "event_id": null, "query_mode": "author" },
+    { "slug": "aces/Loris", "event_id": "code-review-loris-mcgill", "query_mode": "author" }
+  ],
+  "review_refresh": ["wormhole-foundation/wormhole", "wormhole-foundation/native-token-transfers"],
+  "model": "openai/gpt-4.1-mini"
+}
