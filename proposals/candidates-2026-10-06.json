@@ -1,0 +1,15 @@
+{
+  "since": "2026-09-28",
+  "candidates": [
+    {
+      "slug": "m0-foundation/solana-m",
+      "url": "https://github.com/m0-platform/solana-m/pull/186",
+      "number": 186,
+      "title": "fix(sdk): walk full index history in claim yield calculation",
+      "is_pr": true,
+      "body": "## Overview\n\nThe wM yield bot resumed after its July data outage and every claim batch failed on-chain with error `6005`, `InsufficientCollateral`. The claim calculation capped its index-update window at the on-chain global timestamp, which only advances on sync and had been frozen since 13 Jul, so the whole 73-day gap collapsed into one `pendingSync` step priced at the earner's current balance. One earner's balance grew 50x in the final week, which inflated its claim to `32,489 wM` against a true time-weighted yield of `3,737 wM` per the [yield derivation](https://gist.github.com/Oighty/d239d",
+      "created_at": "2026-09-28T18:05:22Z"
+    }
+  ],
+  "proposals": []
+}
