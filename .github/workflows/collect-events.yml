@@ -25,6 +25,7 @@ jobs:
       - name: Run collector
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT_READ_ONLY: ${{ secrets.PAT_READ_ONLY }}
         run: node scripts/collect.js
 
       - name: Open proposal PR

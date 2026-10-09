@@ -26,12 +26,12 @@ const DRY_RUN = process.argv.includes("--dry-run");
 
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 
-function gh(endpoint) {
+function gh(endpoint, token) {
   return JSON.parse(
     execFileSync("gh", ["api", endpoint], {
       encoding: "utf8",
       maxBuffer: 16 * 1024 * 1024,
-      env: { ...process.env, GH_TOKEN: TOKEN },
+      env: { ...process.env, GH_TOKEN: token || TOKEN },
     })
   );
 }
@@ -125,11 +125,15 @@ async function collect() {
   }
 
   // Refresh review counts via GraphQL contributions (YTD).
+  // contributionsCollection needs a user token; the Actions bot token can't read it,
+  // so prefer PAT_READ_ONLY when available.
   const yearStart = `${new Date().getFullYear()}-01-01T00:00:00Z`;
   const now = new Date().toISOString();
   let reviewCounts = {};
-  try {
-    const q = `
+  const graphqlToken = process.env.PAT_READ_ONLY || TOKEN;
+  if (process.env.PAT_READ_ONLY) {
+    try {
+      const q = `
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
@@ -140,18 +144,29 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
     }
   }
 }`;
-    const res = gh(
-      "graphql",
-      "-f", `query=${q}`,
-      "-f", `login=${CONFIG.author}`,
-      "-f", `from=${yearStart}`,
-      "-f", `to=${now}`
-    );
-    for (const r of res.data.user.contributionsCollection.pullRequestReviewContributionsByRepository) {
-      reviewCounts[r.repository.nameWithOwner] = r.contributions.totalCount;
+      const res = gh(
+        "graphql",
+        "-f", `query=${q}`,
+        "-f", `login=${CONFIG.author}`,
+        "-f", `from=${yearStart}`,
+        "-f", `to=${now}`,
+        graphqlToken
+      );
+      if (res.errors) {
+        throw new Error(JSON.stringify(res.errors));
+      }
+      if (!res.data || !res.data.user) {
+        throw new Error("GraphQL returned no user data");
+      }
+      for (const r of res.data.user.contributionsCollection.pullRequestReviewContributionsByRepository) {
+        reviewCounts[r.repository.nameWithOwner] = r.contributions.totalCount;
+      }
+      console.log(`Review counts refreshed: ${JSON.stringify(reviewCounts)}`);
+    } catch (err) {
+      console.error(`WARN: review count refresh failed: ${err.message}`);
     }
-  } catch (err) {
-    console.error(`WARN: review count refresh failed: ${err.message}`);
+  } else {
+    console.log("PAT_READ_ONLY not set; skipping review count refresh");
   }
 
   return { events, candidates, counts, reviewCounts, since };
