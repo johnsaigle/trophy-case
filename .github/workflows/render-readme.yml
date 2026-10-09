@@ -39,3 +39,14 @@ jobs:
             git commit -m "chore: render README from events.jsonl"
             git push
           fi
+
+      - name: Prune merged collect branches
+        run: |
+          git fetch origin '+refs/heads/collect/*:refs/remotes/origin/collect/*'
+          for BR in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/collect/); do
+            NAME="${BR#origin/}"
+            if git merge-base --is-ancestor "$BR" HEAD 2>/dev/null; then
+              echo "Deleting merged branch $NAME"
+              git push origin --delete "$NAME" || echo "WARN: failed to delete $NAME"
+            fi
+          done

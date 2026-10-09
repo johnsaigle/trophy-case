@@ -40,7 +40,7 @@ jobs:
             exit 0
           fi
 
-          BRANCH="collect/$(date +%Y-%m-%d)"
+          BRANCH="collect/$(date +%Y-%m-%d-%H%M%S)"
           git checkout -b "$BRANCH"
           git add events.jsonl .github/collect-state.json proposals/
           git commit -m "collect: propose new events for week of $(date +%Y-%m-%d)"
