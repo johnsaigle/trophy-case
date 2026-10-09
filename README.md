@@ -16,32 +16,32 @@ security engineering and source code reviews.
 
 ### Wormhole
 
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (179 merged PRs, 9 issues, 112 reviews in 2026)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (179 merged PRs, 240 issues, 112 reviews in 2026)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
-- [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
-- [Wormhole Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
+- [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 30 issues, 11 reviews in 2026)
+- [Wormhole Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle)
 - [Wormhole Solidity SDK bug reports](https://github.com/wormhole-foundation/wormhole-solidity-sdk/pull/105)
 
 ### M0 Foundation
 
 _(Pull requests labelled "AR" --> Asymmetric Research)_
 
-- [Solana M](https://github.com/m0-foundation/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (10 merged PRs)
-- [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 - [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-foundation/solana-m/pull/186)
+- [Solana M](https://github.com/m0-foundation/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (9 merged PRs)
+- [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 
 ### Stacks
 
-- [Clarity-Go Parser](https://github.com/stx-labs/clarity-go/issues?q=is%3Aissue%20author%3Ajohnsaigle) (4 issues)
+- [Clarity-Go Parser](https://github.com/stx-labs/clarity-go/issues?q=is%3Aissue%20author%3Ajohnsaigle)
 
 ### Commonware
 
-- [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle) (2 issues)
+- [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle)
 
 ## McGill University (2015-2020)
 
-- [LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
+- [LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 533 issues)
 
 ## Independent Projects
 
