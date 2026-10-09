@@ -25,10 +25,11 @@ const PROPOSALS_DIR = path.join(ROOT, "proposals");
 const DRY_RUN = process.argv.includes("--dry-run");
 
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const graphqlToken = () => process.env.PAT_READ_ONLY || TOKEN;
 
-function gh(endpoint, token) {
+function gh(endpoint, token, ...flags) {
   return JSON.parse(
-    execFileSync("gh", ["api", endpoint], {
+    execFileSync("gh", ["api", endpoint, ...flags], {
       encoding: "utf8",
       maxBuffer: 16 * 1024 * 1024,
       env: { ...process.env, GH_TOKEN: token || TOKEN },
@@ -79,46 +80,61 @@ async function collect() {
   const candidates = [];
   const counts = {}; // slug -> { prs_merged, issues }
 
-  for (const { slug, query_mode } of CONFIG.repos) {
-    try {
-      let mergedItems, issueItems, prTotal, issueTotal;
-      if (query_mode === "mentions-ar") {
-        // Repos with issues disabled (e.g. m0-foundation): search API refuses them.
-        // List closed PRs and filter for "AR" (Asymmetric Research) client-side.
-        const pulls = ghAllPages(`repos/${slug}/pulls?state=closed&per_page=100`);
-        mergedItems = pulls.filter(
-          (p) => p.merged_at && `${p.title} ${p.body || ""}`.includes("AR")
-        );
-        prTotal = mergedItems.length;
-        issueItems = [];
-        issueTotal = 0;
-      } else {
-        const merged = gh(
-          `search/issues?q=${encodeURIComponent(`repo:${slug} is:pr is:merged author:${CONFIG.author}`)}&per_page=100&sort=created&order=desc`
-        );
-        const issues = gh(
-          `search/issues?q=${encodeURIComponent(`repo:${slug} is:issue author:${CONFIG.author}`)}&per_page=100&sort=created&order=desc`
-        );
-        mergedItems = merged.items;
-        issueItems = issues.items;
-        prTotal = merged.total_count;
-        issueTotal = issues.total_count;
-      }
-      counts[slug] = { prs_merged: prTotal, issues: issueTotal };
+  // Counts + candidates via GraphQL search: the REST search backend has proven
+  // unreliable from Actions runners (deterministically wrong totals).
+  const authorModeRepos = CONFIG.repos.filter((r) => r.query_mode !== "mentions-ar");
+  if (authorModeRepos.length > 0) {
+    const aliases = [];
+    const def = (name, q) => {
+      aliases.push(
+        `${name}: search(query: ${JSON.stringify(q)}, type: ISSUE, first: 30) { issueCount nodes { ... on Issue { number title url createdAt body } ... on PullRequest { number title url closedAt body } } }`
+      );
+    };
+    authorModeRepos.forEach(({ slug }, i) => {
+      def(`pr${i}`, `repo:${slug} is:pr is:merged author:${CONFIG.author}`);
+      def(`is${i}`, `repo:${slug} is:issue author:${CONFIG.author}`);
+    });
+    const query = `query {\n  ${aliases.join("\n  ")}\n}`;
+    const res = gh("graphql", graphqlToken(), "-f", `query=${query}`);
+    if (res.errors) throw new Error(`GraphQL search errors: ${JSON.stringify(res.errors)}`);
+    const d = res.data;
 
-      for (const item of mergedItems) {
-        if (new Date(item.closed_at) < sinceDate) continue;
-        if (knownUrls.has(item.html_url)) continue;
-        candidates.push({ slug, url: item.html_url, number: item.number, title: item.title,
-          is_pr: true, body: (item.body || "").slice(0, 600), created_at: item.closed_at });
+    authorModeRepos.forEach(({ slug }, i) => {
+      try {
+        const prs = d[`pr${i}`];
+        const iss = d[`is${i}`];
+        counts[slug] = { prs_merged: prs.issueCount, issues: iss.issueCount };
+        const prItems = prs.nodes.map((n) => ({ ...n, is_pr: true, date: n.closedAt }));
+        const isItems = iss.nodes.map((n) => ({ ...n, is_pr: false, date: n.createdAt }));
+        for (const item of [...prItems, ...isItems]) {
+          if (new Date(item.date) < sinceDate) continue;
+          if (knownUrls.has(item.url)) continue;
+          candidates.push({ slug, url: item.url, number: item.number, title: item.title,
+            is_pr: item.is_pr, body: (item.body || "").slice(0, 600), created_at: item.date });
+        }
+        console.log(`${slug}: ${prs.issueCount} merged PRs, ${iss.issueCount} issues (lifetime)`);
+      } catch (err) {
+        console.error(`WARN: ${slug} failed: ${err.message}`);
       }
-      for (const item of issueItems) {
-        if (new Date(item.created_at) < sinceDate) continue;
-        if (knownUrls.has(item.html_url)) continue;
-        candidates.push({ slug, url: item.html_url, number: item.number, title: item.title,
-          is_pr: false, body: (item.body || "").slice(0, 600), created_at: item.created_at });
+    });
+  }
+
+  // Repos with issues disabled (e.g. m0-foundation): search APIs refuse them.
+  // List closed PRs and filter for "AR" (Asymmetric Research) client-side.
+  for (const { slug } of CONFIG.repos.filter((r) => r.query_mode === "mentions-ar")) {
+    try {
+      const pulls = ghAllPages(`repos/${slug}/pulls?state=closed&per_page=100`);
+      const merged = pulls.filter(
+        (p) => p.merged_at && `${p.title} ${p.body || ""}`.includes("AR")
+      );
+      counts[slug] = { prs_merged: merged.length, issues: 0 };
+      for (const p of merged) {
+        if (new Date(p.merged_at) < sinceDate) continue;
+        if (knownUrls.has(p.html_url)) continue;
+        candidates.push({ slug, url: p.html_url, number: p.number, title: p.title,
+          is_pr: true, body: (p.body || "").slice(0, 600), created_at: p.merged_at });
       }
-      console.log(`${slug}: ${prTotal} merged PRs, ${issueTotal} issues (lifetime)`);
+      console.log(`${slug}: ${merged.length} merged PRs, 0 issues (lifetime, AR filter)`);
     } catch (err) {
       console.error(`WARN: ${slug} failed: ${err.message}`);
     }
@@ -130,7 +146,6 @@ async function collect() {
   const yearStart = `${new Date().getFullYear()}-01-01T00:00:00Z`;
   const now = new Date().toISOString();
   let reviewCounts = {};
-  const graphqlToken = process.env.PAT_READ_ONLY || TOKEN;
   if (process.env.PAT_READ_ONLY) {
     try {
       const q = `
@@ -146,11 +161,11 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 }`;
       const res = gh(
         "graphql",
+        process.env.PAT_READ_ONLY,
         "-f", `query=${q}`,
         "-f", `login=${CONFIG.author}`,
         "-f", `from=${yearStart}`,
-        "-f", `to=${now}`,
-        graphqlToken
+        "-f", `to=${now}`
       );
       if (res.errors) {
         throw new Error(JSON.stringify(res.errors));
