@@ -1,0 +1,15 @@
+{
+  "since": "2026-10-09T12:11:23.350Z",
+  "candidates": [
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5045",
+      "number": 5045,
+      "title": "node: Update coverage baseline",
+      "is_pr": true,
+      "body": "Coverage has improved since the previous baseline. This PR updates the coverage baseline to reflect the latest test coverage.\n\nReview the diff in `.coverage-baseline` and merge to lock in the improvements.",
+      "created_at": "2026-10-13T17:04:01Z"
+    }
+  ],
+  "proposals": []
+}
