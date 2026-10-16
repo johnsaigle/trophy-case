@@ -3,7 +3,7 @@
 This is a loose archive of security work I've done for open-source projects, including
 security engineering and source code reviews.
 
-> **9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 5 security tools**
+> **9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 10 security tools**
 
 > **Note:** this is a best-effort list of *public* work only. Much of my audit
 > and security engineering output is under confidentiality agreement and cannot be listed.
@@ -16,7 +16,7 @@ security engineering and source code reviews.
 
 ### Wormhole
 
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (180 merged PRs, 10 issues, 113 reviews in 2026)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (179 merged PRs, 9 issues, 112 reviews in 2026)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
@@ -33,9 +33,9 @@ security engineering and source code reviews.
 
 ### Other Projects
 
-- [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-platform/solana-m/pull/186)
-- [Solana M](https://github.com/m0-platform/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (9 merged PRs)
+- [Solana M](https://github.com/m0-platform/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (10 merged PRs)
 - [Solana M Extensions](https://github.com/m0-platform/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
+- [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-platform/solana-m/pull/186)
 
 ## McGill University (2015-2020)
 
@@ -82,4 +82,9 @@ Personal website: https://johnsaigle.com
 - [go-unmaintained](https://github.com/johnsaigle/go-unmaintained) -- find abandoned packages via go.mod
 - [Anchor version detector](https://github.com/johnsaigle/anchor-version-detector)
 - [Scary Strings](https://github.com/johnsaigle/scary-strings) -- dangerous-function wordlists
+- [skill-issues](https://github.com/johnsaigle/skill-issues) -- prompt injection scanner for markdown and agent files
+- [hermit](https://github.com/johnsaigle/hermit) -- linter for curl | bash patterns
+- [audit-notes](https://github.com/johnsaigle/audit-notes) -- markdown scaffolding for security audits
+- [persona](https://github.com/johnsaigle/persona) -- local-first PII detection and redaction
+- [Neovim security/SAST diagnostics integrations](https://github.com/johnsaigle/semgrep-diagnostics.nvim)
 - [Oblique Strategies for Hackers](https://github.com/johnsaigle/oblique-strategies-for-hackers)
