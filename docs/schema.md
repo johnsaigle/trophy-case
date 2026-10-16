@@ -31,7 +31,7 @@ the file itself is the source of truth.
 | `severity` | string | no | For bugs/findings: `critical` \| `high` \| `medium` \| `low` \| `informational` |
 | `notability` | int 1–5 | no | 5 = career-highlight, 3 = worth listing, 1 = filler. Drives rendering filters |
 | `state` | string | no | **On evidence entries only** (not events): lifecycle of the referenced artifact — `draft` \| `open` \| `merged`. A review is a completed fact regardless of PR state; the collector refreshes evidence `state` when PRs merge |
-| `provenance` | object | yes | `{source, extracted_at, confidence?}` — `source` ∈ `manual` \| `pdf-parse` \| `github-collector` \| `rss` |
+| `provenance` | object | yes | `{source, extracted_at, confidence?}` — `source` ∈ `manual` \| `pdf-parse` \| `github-collector` \| `local-llm` \| `agent` \| `rss` |
 | `reviewed` | bool | yes | `false` for bot-proposed events awaiting human merge approval |
 
 ## Type-specific payloads

@@ -16,20 +16,16 @@ security engineering and source code reviews.
 
 ### Wormhole
 
+<<<<<<< HEAD
 - [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (180 merged PRs, 10 issues, 113 reviews in 2026)
+=======
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (179 merged PRs, 9 issues, 112 reviews in 2026)
+>>>>>>> 50f6906 (organize scripts, do local LLM pass)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
 - [Wormhole Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
 - [Wormhole Solidity SDK bug reports](https://github.com/wormhole-foundation/wormhole-solidity-sdk/pull/105)
-
-### M0 Foundation
-
-_(Pull requests labelled "AR" --> Asymmetric Research)_
-
-- [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-foundation/solana-m/pull/186)
-- [Solana M](https://github.com/m0-foundation/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (9 merged PRs)
-- [Solana M Extensions](https://github.com/m0-foundation/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 
 ### Stacks
 
@@ -38,6 +34,15 @@ _(Pull requests labelled "AR" --> Asymmetric Research)_
 ### Commonware
 
 - [Commonware monorepo](https://github.com/commonwarexyz/monorepo/issues?q=is%3Aissue%20author%3Ajohnsaigle) (2 issues)
+<<<<<<< HEAD
+=======
+
+### Other Projects
+
+- [Solana M](https://github.com/m0-platform/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (10 merged PRs)
+- [Solana M Extensions](https://github.com/m0-platform/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
+- [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-platform/solana-m/pull/186)
+>>>>>>> 50f6906 (organize scripts, do local LLM pass)
 
 ## McGill University (2015-2020)
 

@@ -87,7 +87,7 @@ async function collect() {
     const aliases = [];
     const def = (name, q) => {
       aliases.push(
-        `${name}: search(query: ${JSON.stringify(q)}, type: ISSUE, first: 30) { issueCount nodes { ... on Issue { number title url createdAt body } ... on PullRequest { number title url closedAt body } } }`
+        `${name}: search(query: ${JSON.stringify(q)}, type: ISSUE, first: 100) { issueCount nodes { ... on Issue { number title url createdAt body } ... on PullRequest { number title url closedAt body } } }`
       );
     };
     authorModeRepos.forEach(({ slug }, i) => {
@@ -96,7 +96,13 @@ async function collect() {
     });
     const query = `query {\n  ${aliases.join("\n  ")}\n}`;
     const res = gh("graphql", graphqlToken(), "-f", `query=${query}`);
-    if (res.errors) throw new Error(`GraphQL search errors: ${JSON.stringify(res.errors)}`);
+    if (!res.data) {
+      throw new Error(`GraphQL search failed: ${JSON.stringify(res.errors || "no data")}`);
+    }
+    if (res.errors) {
+      // Partial results are fine (e.g. org token policy denies nodes but allows counts).
+      console.error(`WARN: GraphQL search partial errors: ${res.errors[0].message}`);
+    }
     const d = res.data;
 
     authorModeRepos.forEach(({ slug }, i) => {
@@ -104,8 +110,8 @@ async function collect() {
         const prs = d[`pr${i}`];
         const iss = d[`is${i}`];
         counts[slug] = { prs_merged: prs.issueCount, issues: iss.issueCount };
-        const prItems = prs.nodes.map((n) => ({ ...n, is_pr: true, date: n.closedAt }));
-        const isItems = iss.nodes.map((n) => ({ ...n, is_pr: false, date: n.createdAt }));
+        const prItems = prs.nodes.filter(Boolean).map((n) => ({ ...n, is_pr: true, date: n.closedAt }));
+        const isItems = iss.nodes.filter(Boolean).map((n) => ({ ...n, is_pr: false, date: n.createdAt }));
         for (const item of [...prItems, ...isItems]) {
           if (new Date(item.date) < sinceDate) continue;
           if (knownUrls.has(item.url)) continue;
