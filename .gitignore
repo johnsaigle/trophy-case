@@ -1,0 +1,6 @@
+# Local agent/tooling artifacts
+.opencode/
+
+# OS
+.DS_Store
+Thumbs.db
