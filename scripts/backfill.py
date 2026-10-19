@@ -310,10 +310,10 @@ MANUAL = [
        evidence=[{"kind": "url", "url": "https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22"}]),
     ev("writing-boredom-over-beauty", "writing", "Boredom Over Beauty: Why Code Quality is Code Security",
        org="Asymmetric Research", tags=["blog"], notability=3, role="author",
-       evidence=[{"kind": "url", "url": "https://blog.asymmetric.re/boredom-over-beauty-why-code-quality-is-code-security/"}]),
+       evidence=[{"kind": "url", "url": "https://blog.asymmetric.com/boredom-over-beauty-why-code-quality-is-code-security/"}]),
     ev("writing-solana-vulns-that-arent", "writing", "Solana Vulnerabilities That Aren't — Unpacking Common Misreports",
        org="Asymmetric Research", tags=["blog", "solana"], notability=3, role="author",
-       evidence=[{"kind": "url", "url": "https://blog.asymmetric.re/solana-vulnerabilities-that-arent-unpacking-common-misreports/"}]),
+       evidence=[{"kind": "url", "url": "https://blog.asymmetric.com/solana-vulnerabilities-that-arent-unpacking-common-misreports/"}]),
     ev("writing-top5-cosmos-vulns", "writing", "Top 5 Security Vulnerabilities Cosmos Developers Need to Watch Out For",
        org="Halborn", tags=["blog", "cosmos"], notability=3, role="author",
        evidence=[{"kind": "url", "url": "https://www.halborn.com/blog/post/top-5-security-vulnerabilities-cosmos-developers-need-to-watch-out-for"}]),
@@ -362,6 +362,12 @@ MANUAL = [
     ev("tool-oblique-strategies", "tool", "Oblique Strategies for Hackers",
        project="johnsaigle/oblique-strategies-for-hackers", tags=["fun"], notability=2, role="author",
        evidence=[{"kind": "url", "url": "https://github.com/johnsaigle/oblique-strategies-for-hackers"}]),
+    ev("tool-channelcheck", "tool", "channelcheck — detect dangerous Go channel operations",
+       project="johnsaigle/channelcheck", tags=["static-analysis", "go", "concurrency"], notability=3, role="author",
+       evidence=[{"kind": "url", "url": "https://github.com/johnsaigle/channelcheck"}]),
+    ev("research-solana-float-safety", "research", "Solana floating-point safety research",
+       project="johnsaigle/solana-float-safety", tags=["solana", "rust", "arithmetic", "research"], notability=3, role="author",
+       evidence=[{"kind": "url", "url": "https://github.com/johnsaigle/solana-float-safety"}]),
 ]
 
 

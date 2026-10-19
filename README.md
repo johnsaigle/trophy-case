@@ -3,7 +3,7 @@
 This is a loose archive of security work I've done for open-source projects, including
 security engineering and source code reviews.
 
-> **9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 10 security tools**
+> **9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 13 security tools**
 
 > **Note:** this is a best-effort list of *public* work only. Much of my audit
 > and security engineering output is under confidentiality agreement and cannot be listed.
@@ -68,8 +68,8 @@ Personal website: https://johnsaigle.com
 
 ## Asymmetric Research
 
-- [Boredom Over Beauty: Why Code Quality is Code Security](https://blog.asymmetric.re/boredom-over-beauty-why-code-quality-is-code-security/)
-- [Solana Vulnerabilities That Aren't — Unpacking Common Misreports](https://blog.asymmetric.re/solana-vulnerabilities-that-arent-unpacking-common-misreports/)
+- [Boredom Over Beauty: Why Code Quality is Code Security](https://blog.asymmetric.com/boredom-over-beauty-why-code-quality-is-code-security/)
+- [Solana Vulnerabilities That Aren't — Unpacking Common Misreports](https://blog.asymmetric.com/solana-vulnerabilities-that-arent-unpacking-common-misreports/)
 
 ## Halborn
 
@@ -88,3 +88,6 @@ Personal website: https://johnsaigle.com
 - [persona](https://github.com/johnsaigle/persona) -- local-first PII detection and redaction
 - [Neovim security/SAST diagnostics integrations](https://github.com/johnsaigle/semgrep-diagnostics.nvim)
 - [Oblique Strategies for Hackers](https://github.com/johnsaigle/oblique-strategies-for-hackers)
+- [channelcheck](https://github.com/johnsaigle/channelcheck) -- detect dangerous Go channel operations
+- [cargo-unmaintained](https://github.com/johnsaigle/cargo-unmaintained) -- find unmaintained Rust dependencies
+- [radar](https://github.com/johnsaigle/radar) -- static analysis for Anchor Rust programs
