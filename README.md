@@ -16,7 +16,7 @@ security engineering and source code reviews.
 
 ### Wormhole
 
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (179 merged PRs, 9 issues, 112 reviews in 2026)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (180 merged PRs, 10 issues, 113 reviews in 2026)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
@@ -33,7 +33,7 @@ security engineering and source code reviews.
 
 ### Other Projects
 
-- [Solana M](https://github.com/m0-platform/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (10 merged PRs)
+- [Solana M](https://github.com/m0-platform/solana-m/pulls?q=is%3Apr+AR+is%3Aclosed) (9 merged PRs)
 - [Solana M Extensions](https://github.com/m0-platform/solana-m-extensions/pulls?q=is%3Apr+%22AR%22) (11 merged PRs)
 - [Solana M: claim yield calculation walked incomplete index history](https://github.com/m0-platform/solana-m/pull/186)
 
