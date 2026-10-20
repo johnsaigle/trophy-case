@@ -108,10 +108,7 @@
       "defaults": []
     },
     "aces/Loris": {
-      "defaults": [
-        { "tag": "web", "category": "domain" },
-        { "tag": "healthcare", "category": "domain" }
-      ]
+      "defaults": [{ "tag": "web", "category": "domain" }]
     }
   },
   "issue_label_tags": {}

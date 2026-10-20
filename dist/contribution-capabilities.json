@@ -87,16 +87,6 @@
         "repository-context": 0
       }
     },
-    "healthcare": {
-      "category": "domain",
-      "records": 1337,
-      "evidence": {
-        "direct-contribution": 0,
-        "direct-review": 0,
-        "reviewed-pr-scope": 0,
-        "repository-context": 1337
-      }
-    },
     "javascript": {
       "category": "language",
       "records": 162,

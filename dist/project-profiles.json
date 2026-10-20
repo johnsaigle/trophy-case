@@ -58,15 +58,6 @@
       },
       "ecosystems": {},
       "domains": {
-        "healthcare": {
-          "records": 1337,
-          "evidence": {
-            "direct-contribution": 0,
-            "direct-review": 0,
-            "reviewed-pr-scope": 0,
-            "repository-context": 1337
-          }
-        },
         "web": {
           "records": 1337,
           "evidence": {

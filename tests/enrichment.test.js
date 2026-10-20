@@ -372,7 +372,7 @@ test("repo defaults carry taxonomy categories: bridge/cryptography are domains",
   assert.equal(find(cryptoRecord, "cryptography").category, "domain");
 });
 
-test("Loris records distinguish traditional appsec (web/healthcare domains, php language)", () => {
+test("Loris records distinguish traditional appsec (web domain, php language)", () => {
   const raw = prFixture({
     project: "aces/Loris",
     number: 600,
@@ -388,7 +388,7 @@ test("Loris records distinguish traditional appsec (web/healthcare domains, php 
   const web = find(record, "web");
   assert.equal(web.category, "domain");
   assert.equal(web.evidence_level, "repository-context");
-  assert.equal(find(record, "healthcare").category, "domain");
+  assert.equal(find(record, "healthcare"), undefined);
 });
 
 // ---------------------------------------------------------------- fingerprint & misc
