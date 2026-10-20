@@ -1,0 +1,61 @@
+# Weekly incremental enrichment (plan rollout step 8).
+#
+# Deterministic, data-only: discovery uses an overlap `updated:` window and
+# upserts contributions.jsonl by stable ID, so incomplete runs heal themselves
+# and nothing here needs human proposal review (unlike collect-events.yml,
+# which handles LLM-curated events). Record changes are tracked by git history.
+#
+# NOTE: REST search results have been unreliable on Actions runners before
+# (collect.js moved to GraphQL for counts). Missed hits here are non-destructive
+# (a later run picks them up), but sanity-check the committed diff counts on
+# the first few scheduled runs.
+name: Enrich contributions
+
+on:
+  schedule:
+    - cron: '0 7 * * 1' # Mondays 07:00 UTC, after Collect events
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Incremental discovery, hydration, classification, rendering
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/github-discover.js --incremental
+          node scripts/github-hydrate.js
+          node scripts/github-classify.js
+          node scripts/render-contributions.js
+
+      - name: Commit changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet contributions.jsonl .github/enrichment-state.json \
+             dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json \
+             assets/contribution-evidence.svg; then
+            echo "No contribution changes this week"
+            exit 0
+          fi
+
+          git add contributions.jsonl .github/enrichment-state.json \
+            dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json \
+            assets/contribution-evidence.svg
+          git commit -m "collect: contributions incremental update for week of $(date +%Y-%m-%d)"
+          git push origin HEAD:main
