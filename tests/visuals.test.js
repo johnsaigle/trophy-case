@@ -48,6 +48,14 @@ test("finding class overrides resolve to real findings with valid classes", () =
   }
 });
 
+test("finding class labels map onto known classes", () => {
+  for (const [id, label] of Object.entries(OVERRIDES.labels || {})) {
+    assert.ok(CLASSES.has(id), `label defined for unknown class ${id}`);
+    assert.equal(typeof label, "string");
+    assert.ok(label.trim().length > 0, `label for ${id} is empty`);
+  }
+});
+
 test("no published finding falls back to the other bucket", () => {
   const unclassified = [];
   for (const [key, { finding }] of findings) {

@@ -72,6 +72,10 @@ Finding `class` vocabulary: `accounting`, `access-control`, `arithmetic`, `dos`,
 `crypto`, `supply-chain`, `determinism`, `error-handling`, `memory-safety`,
 `validation`, `config`, `testing`, `documentation`, `other`.
 
+Class IDs are canonical and stable. Display labels used by the fingerprint
+visualization live in `data/finding-class-overrides.json` under `labels`; the
+same file carries per-finding class corrections and their reasons.
+
 Finding `remediation`: `solved` | `acknowledged` | `risk-accepted` | `partially-solved` | `unknown`.
 
 ### `type: "code-review"` / `"review"` / `"bug-report"`

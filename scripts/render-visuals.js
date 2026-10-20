@@ -27,9 +27,11 @@ const events = fs
     }
   });
 const taxonomy = JSON.parse(fs.readFileSync(TAXONOMY_PATH, "utf8"));
-const findingClassOverrides = JSON.parse(
+const findingClassConfig = JSON.parse(
   fs.readFileSync(FINDING_CLASS_OVERRIDES_PATH, "utf8")
-).classes;
+);
+const findingClassOverrides = findingClassConfig.classes;
+const findingClassLabels = findingClassConfig.labels || {};
 
 const esc = (value) =>
   String(value)
@@ -241,7 +243,7 @@ function buildFindingPatterns() {
   }
 
   const classes = [...counts.entries()]
-    .map(([id, value]) => ({ id, label: titleCase(id), ...value }))
+    .map(([id, value]) => ({ id, label: findingClassLabels[id] || titleCase(id), ...value }))
     .sort((a, b) => {
       if (a.id === "other") return 1;
       if (b.id === "other") return -1;

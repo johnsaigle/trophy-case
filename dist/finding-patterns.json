@@ -17,12 +17,24 @@
     },
     {
       "id": "error-handling",
-      "label": "Error Handling",
+      "label": "Robustness",
       "count": 13,
       "severities": {
         "high": 1,
         "informational": 5,
         "low": 7
+      }
+    },
+    {
+      "id": "arithmetic",
+      "label": "Arithmetic",
+      "count": 9,
+      "severities": {
+        "low": 4,
+        "high": 1,
+        "critical": 2,
+        "medium": 1,
+        "informational": 1
       }
     },
     {
@@ -37,19 +49,18 @@
       }
     },
     {
-      "id": "arithmetic",
-      "label": "Arithmetic",
+      "id": "config",
+      "label": "Config",
       "count": 8,
       "severities": {
+        "medium": 2,
         "low": 4,
-        "high": 1,
-        "critical": 2,
-        "medium": 1
+        "informational": 2
       }
     },
     {
       "id": "documentation",
-      "label": "Documentation",
+      "label": "Code Quality",
       "count": 8,
       "severities": {
         "informational": 8
@@ -63,25 +74,6 @@
         "low": 3,
         "high": 1,
         "medium": 3
-      }
-    },
-    {
-      "id": "config",
-      "label": "Config",
-      "count": 7,
-      "severities": {
-        "medium": 2,
-        "low": 3,
-        "informational": 2
-      }
-    },
-    {
-      "id": "testing",
-      "label": "Testing",
-      "count": 7,
-      "severities": {
-        "low": 4,
-        "informational": 3
       }
     },
     {
@@ -102,6 +94,15 @@
       "severities": {
         "high": 2,
         "critical": 1,
+        "low": 3
+      }
+    },
+    {
+      "id": "testing",
+      "label": "Verification Gaps",
+      "count": 5,
+      "severities": {
+        "informational": 2,
         "low": 3
       }
     },

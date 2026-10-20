@@ -121,6 +121,19 @@
     "audit-sifchain-margin-2022/HAL-04": {
       "class": "error-handling",
       "reason": "Duplicated error checks."
+    },
+    "audit-boostylabs-tricorn-2023/HAL-07": {
+      "class": "config",
+      "reason": "Test-server deployment exposes administrator login; this is an environment configuration issue, not a testing gap."
+    },
+    "audit-sifchain-clp-update-2022/HAL-04": {
+      "class": "arithmetic",
+      "reason": "Finding is a re-implementation of a core mathematical function. The source title is a PDF parse artifact that swallowed surrounding document text."
     }
+  },
+  "labels": {
+    "error-handling": "Robustness",
+    "testing": "Verification Gaps",
+    "documentation": "Code Quality"
   }
 }
