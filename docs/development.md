@@ -71,6 +71,19 @@ node --test tests/
 An opt-in integration test hits one known public PR:
 `RUN_INTEGRATION=1 node --test tests/integration.github-api.test.js`.
 
+### Semantic pass (plan step 7, optional)
+
+`scripts/semantic-pass.js prepare` builds semantic packets (titles, paths, and
+the owner's own review/comment bodies) from the raw cache into
+`.cache/github-enrichment/semantic/` — local only, never checked in.
+`classify [--sample N] [--dry-run]` sends batches to any OpenAI-compatible
+endpoint (`LLM_URL`, `LLM_MODEL` auto-detect — same conventions as
+`postprocess.js`) and stores judgments in
+`data/github-enrichment-semantic.json` with `approved: false`. Only after a
+human verifies entries may `apply --id <record-id>` generate
+`data/github-enrichment-overrides.json` entries (tagged repository-context +
+`human-approved` evidence) that feed back into `github-classify.js`.
+
 ## Repo layout
 
 | Path | Role |
