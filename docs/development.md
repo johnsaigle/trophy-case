@@ -84,6 +84,33 @@ human verifies entries may `apply --id <record-id>` generate
 `data/github-enrichment-overrides.json` entries (tagged repository-context +
 `human-approved` evidence) that feed back into `github-classify.js`.
 
+Judgments can also be produced by an agent in-session instead of an LLM
+endpoint. `scripts/semantic-batch.js` keeps that loop small and reviewable:
+
+```bash
+node scripts/semantic-batch.js status                      # packets vs classified
+node scripts/semantic-batch.js dump --offset 0 --limit 14  # next unclassified packets
+node scripts/semantic-batch.js merge <<'EOF'               # JSON patch on stdin
+{ "github-pr-owner-repo-123": { "security_relevant": true, "work_orientation": "appsec",
+  "vuln_classes": ["validation"], "notable": false, "basis": "observable facts only" } }
+EOF
+```
+
+`dump` always starts from the first unclassified packet, so `--offset` is only
+needed when inspecting ahead. `merge` normalizes every judgment to
+`judged_by: "agent"` and, unlike the LLM path, keeps `approved: false` for any
+new or changed judgment; it only preserves `approved: true` when the same
+record was already approved. Approval and `apply` remain manual steps.
+
+Batch conventions: `work_orientation` is `protocol-security`, `appsec`, or
+`other`; `vuln_classes` uses the `docs/schema.md` vocabulary (0–3 per record);
+`notable` is true only when the owner's own words show concrete vulnerability
+identification, a security-blocking review, or substantive security design
+judgment; `basis` records observable facts (files, checks, reasoning) without
+inflating impact. Non-security review work is still classified
+(`security_relevant: false`, `work_orientation: "other"`) so coverage is
+visible.
+
 ## Repo layout
 
 | Path | Role |
