@@ -87,7 +87,8 @@ function ecosystemsForPath(project, filePath, rules) {
 
 function repoDefaults(project, rules) {
   const repoRules = (rules.repos || {})[project];
-  return [...(repoRules && repoRules.defaults ? repoRules.defaults : [])];
+  const raw = repoRules && repoRules.defaults ? repoRules.defaults : [];
+  return raw.map((d) => (typeof d === "string" ? { tag: d, category: "ecosystem" } : d));
 }
 
 // ---------------------------------------------------------------- fingerprint
@@ -332,8 +333,8 @@ function classifyRecord(raw, rules, { author, overrides } = {}) {
   }
 
   // Repository defaults: weakest fallback, never overwrite item-level evidence.
-  for (const tag of repoDefaults(raw.project, rules)) {
-    assertions.push(assertion(tag, "ecosystem", "repository-context", ["repository-default"]));
+  for (const { tag, category } of repoDefaults(raw.project, rules)) {
+    assertions.push(assertion(tag, category, "repository-context", ["repository-default"]));
   }
 
   let finalAssertions = mergeAssertions(assertions);

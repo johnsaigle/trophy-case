@@ -44,7 +44,7 @@
   },
   "repos": {
     "wormhole-foundation/wormhole": {
-      "defaults": ["bridge"],
+      "defaults": [{ "tag": "bridge", "category": "domain" }],
       "paths": {
         "ethereum/": ["evm"],
         "evm/": ["evm"],
@@ -57,7 +57,7 @@
       }
     },
     "wormholelabs-xyz/wormhole": {
-      "defaults": ["bridge"],
+      "defaults": [{ "tag": "bridge", "category": "domain" }],
       "paths": {
         "ethereum/": ["evm"],
         "evm/": ["evm"],
@@ -70,7 +70,7 @@
       }
     },
     "wormhole-foundation/native-token-transfers": {
-      "defaults": ["bridge"],
+      "defaults": [{ "tag": "bridge", "category": "domain" }],
       "paths": {
         "evm/": ["evm"],
         "solana/": ["solana"],
@@ -80,14 +80,14 @@
       }
     },
     "wormhole-foundation/example-liquidity-layer": {
-      "defaults": ["bridge"],
+      "defaults": [{ "tag": "bridge", "category": "domain" }],
       "paths": {
         "evm/": ["evm"],
         "solana/": ["solana"]
       }
     },
     "wormhole-foundation/wormhole-solidity-sdk": {
-      "defaults": ["evm", "bridge"],
+      "defaults": [{ "tag": "evm", "category": "ecosystem" }, { "tag": "bridge", "category": "domain" }],
       "manual_relations": ["reviewed-pr"]
     },
     "m0-platform/solana-m": {
@@ -102,13 +102,16 @@
       "defaults": ["stacks"]
     },
     "commonwarexyz/monorepo": {
-      "defaults": ["cryptography"]
+      "defaults": [{ "tag": "cryptography", "category": "domain" }]
     },
     "ghostfolio/ghostfolio": {
       "defaults": []
     },
     "aces/Loris": {
-      "defaults": []
+      "defaults": [
+        { "tag": "web", "category": "domain" },
+        { "tag": "healthcare", "category": "domain" }
+      ]
     }
   },
   "issue_label_tags": {}

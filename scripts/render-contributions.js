@@ -177,6 +177,7 @@ function main() {
           relations: Object.fromEntries(RELATIONS.map((rel) => [rel, 0])),
           languages: {},
           ecosystems: {},
+          domains: {},
         };
         projects.set(r.project, fresh);
         return fresh;
@@ -189,7 +190,13 @@ function main() {
     const byTag = levelByTag(r);
     for (const a of r.assertions || []) {
       const bucket =
-        a.category === "language" ? p.languages : a.category === "ecosystem" ? p.ecosystems : null;
+        a.category === "language"
+          ? p.languages
+          : a.category === "ecosystem"
+            ? p.ecosystems
+            : a.category === "domain"
+              ? p.domains
+              : null;
       if (!bucket) continue;
       const entry =
         bucket[a.tag] ||
@@ -203,6 +210,7 @@ function main() {
       ...p,
       languages: sortKeysByThenName(p.languages),
       ecosystems: sortKeysByThenName(p.ecosystems),
+      domains: sortKeysByThenName(p.domains),
     }))
     .sort((a, b) => b.records - a.records || a.project.localeCompare(b.project));
 

@@ -349,6 +349,48 @@ test("API-verified review outranks manual attribution on the same repo", () => {
   assert.equal(record.provenance.attribution, undefined);
 });
 
+// ---------------------------------------------------------------- domain defaults
+
+test("repo defaults carry taxonomy categories: bridge/cryptography are domains", () => {
+  const raw = prFixture({
+    project: "wormhole-foundation/native-token-transfers",
+    number: 500,
+    user: AUTHOR,
+    files: [file("solana/programs/ntt/src/lib.rs")],
+  });
+  const record = classifyRecord(raw, rules, { author: AUTHOR });
+  assert.equal(find(record, "bridge").category, "domain");
+  assert.equal(find(record, "solana").category, "ecosystem");
+
+  const cryptoRaw = prFixture({
+    project: "commonwarexyz/monorepo",
+    number: 501,
+    user: AUTHOR,
+    files: [file("commonware-cryptography/src/lib.rs")],
+  });
+  const cryptoRecord = classifyRecord(cryptoRaw, rules, { author: AUTHOR });
+  assert.equal(find(cryptoRecord, "cryptography").category, "domain");
+});
+
+test("Loris records distinguish traditional appsec (web/healthcare domains, php language)", () => {
+  const raw = prFixture({
+    project: "aces/Loris",
+    number: 600,
+    user: "some-dev",
+    files: [file("htdocs/modules/parameter_file_validation.php")],
+    ownerComments: [{ user: { login: AUTHOR }, path: "htdocs/modules/parameter_file_validation.php" }],
+    ownerReviews: [{ user: { login: AUTHOR }, state: "CHANGES_REQUESTED" }],
+  });
+  const record = classifyRecord(raw, rules, { author: AUTHOR });
+  const php = find(record, "php");
+  assert.equal(php.category, "language");
+  assert.equal(php.evidence_level, "direct-review");
+  const web = find(record, "web");
+  assert.equal(web.category, "domain");
+  assert.equal(web.evidence_level, "repository-context");
+  assert.equal(find(record, "healthcare").category, "domain");
+});
+
 // ---------------------------------------------------------------- fingerprint & misc
 
 test("fingerprints change when source fields change and stay stable otherwise", () => {
