@@ -1,0 +1,988 @@
+{
+  "schema_version": 1,
+  "source": "events.jsonl",
+  "event_count": 37,
+  "map": {
+    "minimum_event_count": 2,
+    "categories": [
+      "language",
+      "ecosystem",
+      "domain",
+      "practice"
+    ]
+  },
+  "categories": [
+    {
+      "id": "language",
+      "label": "Languages",
+      "color": "#2563eb",
+      "order": 1
+    },
+    {
+      "id": "ecosystem",
+      "label": "Ecosystems",
+      "color": "#7c3aed",
+      "order": 2
+    },
+    {
+      "id": "domain",
+      "label": "Security domains",
+      "color": "#c2410c",
+      "order": 3
+    },
+    {
+      "id": "practice",
+      "label": "Practices",
+      "color": "#047857",
+      "order": 4
+    },
+    {
+      "id": "format",
+      "label": "Formats",
+      "color": "#475569",
+      "order": 5
+    },
+    {
+      "id": "misc",
+      "label": "Other",
+      "color": "#64748b",
+      "order": 6
+    }
+  ],
+  "nodes": [
+    {
+      "id": "go",
+      "label": "Go",
+      "category": "language",
+      "count": 11,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023",
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-mayachain-node-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022",
+        "audit-zetachain-node-2023",
+        "code-review-clarity-go-parser",
+        "tool-channelcheck",
+        "tool-go-unmaintained"
+      ]
+    },
+    {
+      "id": "cosmos",
+      "label": "Cosmos",
+      "category": "ecosystem",
+      "count": 9,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-mayachain-node-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022",
+        "audit-zetachain-node-2023",
+        "code-review-wormhole-guardian",
+        "writing-top5-cosmos-vulns"
+      ]
+    },
+    {
+      "id": "rust",
+      "label": "Rust",
+      "category": "language",
+      "count": 9,
+      "event_ids": [
+        "audit-groth16-verifier-2023",
+        "bug-report-m0-claim-yield-index",
+        "code-review-commonware",
+        "code-review-m0-solana-m",
+        "code-review-m0-solana-m-extensions",
+        "code-review-wormhole-guardian",
+        "code-review-wormhole-ntt",
+        "research-solana-float-safety",
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "id": "defi",
+      "label": "DeFi",
+      "category": "domain",
+      "count": 7,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022",
+        "bug-report-m0-claim-yield-index",
+        "code-review-wormhole-liquidity-layer"
+      ]
+    },
+    {
+      "id": "solana",
+      "label": "Solana",
+      "category": "ecosystem",
+      "count": 6,
+      "event_ids": [
+        "bug-report-m0-claim-yield-index",
+        "code-review-m0-solana-m",
+        "code-review-m0-solana-m-extensions",
+        "research-solana-float-safety",
+        "tool-anchor-version-detector",
+        "writing-solana-vulns-that-arent"
+      ]
+    },
+    {
+      "id": "bridge",
+      "label": "Bridge",
+      "category": "domain",
+      "count": 5,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023",
+        "audit-zetachain-node-2023",
+        "code-review-wormhole-guardian",
+        "code-review-wormhole-ntt",
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "category": "format",
+      "count": 4,
+      "event_ids": [
+        "writing-boredom-over-beauty",
+        "writing-dont-panic",
+        "writing-solana-vulns-that-arent",
+        "writing-top5-cosmos-vulns"
+      ]
+    },
+    {
+      "id": "solidity",
+      "label": "Solidity",
+      "category": "language",
+      "count": 4,
+      "event_ids": [
+        "audit-zetachain-node-2023",
+        "bug-report-wormhole-solidity-sdk",
+        "code-review-wormhole-liquidity-layer",
+        "code-review-wormhole-ntt"
+      ]
+    },
+    {
+      "id": "lint",
+      "label": "Lint",
+      "category": "practice",
+      "count": 3,
+      "event_ids": [
+        "tool-hermit",
+        "tool-locked-in",
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "id": "supply-chain",
+      "label": "Supply Chain",
+      "category": "domain",
+      "count": 3,
+      "event_ids": [
+        "tool-go-unmaintained",
+        "tool-hermit",
+        "tool-locked-in"
+      ]
+    },
+    {
+      "id": "static-analysis",
+      "label": "Static Analysis",
+      "category": "practice",
+      "count": 2,
+      "event_ids": [
+        "tool-channelcheck",
+        "tool-scary-strings"
+      ]
+    },
+    {
+      "id": "web",
+      "label": "Web",
+      "category": "domain",
+      "count": 2,
+      "event_ids": [
+        "bug-report-ghostfolio-insecure-randomness",
+        "code-review-loris-mcgill"
+      ]
+    },
+    {
+      "id": "anchor",
+      "label": "Anchor",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "tool-anchor-version-detector"
+      ]
+    },
+    {
+      "id": "arithmetic",
+      "label": "Arithmetic",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "id": "auditing",
+      "label": "Auditing",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "tool-audit-notes"
+      ]
+    },
+    {
+      "id": "bash",
+      "label": "Bash",
+      "category": "language",
+      "count": 1,
+      "event_ids": [
+        "tool-hermit"
+      ]
+    },
+    {
+      "id": "bitcoin",
+      "label": "Bitcoin",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "id": "canton",
+      "label": "Canton",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "id": "concurrency",
+      "label": "Concurrency",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "tool-channelcheck"
+      ]
+    },
+    {
+      "id": "cryptography",
+      "label": "Cryptography",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "audit-groth16-verifier-2023"
+      ]
+    },
+    {
+      "id": "evm",
+      "label": "EVM",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023"
+      ]
+    },
+    {
+      "id": "fun",
+      "label": "Fun",
+      "category": "misc",
+      "count": 1,
+      "event_ids": [
+        "tool-oblique-strategies"
+      ]
+    },
+    {
+      "id": "governance",
+      "label": "Governance",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022"
+      ]
+    },
+    {
+      "id": "infra",
+      "label": "Infra",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "code-review-commonware"
+      ]
+    },
+    {
+      "id": "local-first",
+      "label": "Local First",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "id": "neovim",
+      "label": "Neovim",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "id": "node",
+      "label": "Node",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "audit-mayachain-node-2023"
+      ]
+    },
+    {
+      "id": "php",
+      "label": "PHP",
+      "category": "language",
+      "count": 1,
+      "event_ids": [
+        "code-review-loris-mcgill"
+      ]
+    },
+    {
+      "id": "pii",
+      "label": "PII",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "id": "prompt-injection",
+      "label": "Prompt Injection",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "id": "sast",
+      "label": "SAST",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "id": "stablecoin",
+      "label": "Stablecoin",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "code-review-m0-solana-m"
+      ]
+    },
+    {
+      "id": "stacks",
+      "label": "Stacks",
+      "category": "ecosystem",
+      "count": 1,
+      "event_ids": [
+        "code-review-clarity-go-parser"
+      ]
+    },
+    {
+      "id": "tooling",
+      "label": "Tooling",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "id": "typescript",
+      "label": "Typescript",
+      "category": "language",
+      "count": 1,
+      "event_ids": [
+        "bug-report-ghostfolio-insecure-randomness"
+      ]
+    },
+    {
+      "id": "workflow",
+      "label": "Workflow",
+      "category": "practice",
+      "count": 1,
+      "event_ids": [
+        "tool-audit-notes"
+      ]
+    },
+    {
+      "id": "zk",
+      "label": "ZK",
+      "category": "domain",
+      "count": 1,
+      "event_ids": [
+        "audit-groth16-verifier-2023"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "cosmos",
+      "target": "go",
+      "count": 7,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-mayachain-node-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022",
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "cosmos",
+      "target": "defi",
+      "count": 5,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022"
+      ]
+    },
+    {
+      "source": "defi",
+      "target": "go",
+      "count": 5,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022",
+        "audit-mayachain-eth-router-2022",
+        "audit-mayachain-liquidity-auction-2023",
+        "audit-sifchain-clp-update-2022",
+        "audit-sifchain-margin-2022"
+      ]
+    },
+    {
+      "source": "rust",
+      "target": "solana",
+      "count": 4,
+      "event_ids": [
+        "bug-report-m0-claim-yield-index",
+        "code-review-m0-solana-m",
+        "code-review-m0-solana-m-extensions",
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "rust",
+      "count": 3,
+      "event_ids": [
+        "code-review-wormhole-guardian",
+        "code-review-wormhole-ntt",
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "cosmos",
+      "count": 2,
+      "event_ids": [
+        "audit-zetachain-node-2023",
+        "code-review-wormhole-guardian"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "go",
+      "count": 2,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023",
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "solidity",
+      "count": 2,
+      "event_ids": [
+        "audit-zetachain-node-2023",
+        "code-review-wormhole-ntt"
+      ]
+    },
+    {
+      "source": "lint",
+      "target": "supply-chain",
+      "count": 2,
+      "event_ids": [
+        "tool-hermit",
+        "tool-locked-in"
+      ]
+    },
+    {
+      "source": "anchor",
+      "target": "solana",
+      "count": 1,
+      "event_ids": [
+        "tool-anchor-version-detector"
+      ]
+    },
+    {
+      "source": "arithmetic",
+      "target": "research",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "arithmetic",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "arithmetic",
+      "target": "solana",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "auditing",
+      "target": "workflow",
+      "count": 1,
+      "event_ids": [
+        "tool-audit-notes"
+      ]
+    },
+    {
+      "source": "bash",
+      "target": "lint",
+      "count": 1,
+      "event_ids": [
+        "tool-hermit"
+      ]
+    },
+    {
+      "source": "bash",
+      "target": "supply-chain",
+      "count": 1,
+      "event_ids": [
+        "tool-hermit"
+      ]
+    },
+    {
+      "source": "bitcoin",
+      "target": "bridge",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "bitcoin",
+      "target": "cosmos",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "bitcoin",
+      "target": "go",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "bitcoin",
+      "target": "solidity",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "blog",
+      "target": "cosmos",
+      "count": 1,
+      "event_ids": [
+        "writing-top5-cosmos-vulns"
+      ]
+    },
+    {
+      "source": "blog",
+      "target": "solana",
+      "count": 1,
+      "event_ids": [
+        "writing-solana-vulns-that-arent"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "canton",
+      "count": 1,
+      "event_ids": [
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "source": "bridge",
+      "target": "evm",
+      "count": 1,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023"
+      ]
+    },
+    {
+      "source": "canton",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "review-canton-integration-draft"
+      ]
+    },
+    {
+      "source": "concurrency",
+      "target": "go",
+      "count": 1,
+      "event_ids": [
+        "tool-channelcheck"
+      ]
+    },
+    {
+      "source": "concurrency",
+      "target": "static-analysis",
+      "count": 1,
+      "event_ids": [
+        "tool-channelcheck"
+      ]
+    },
+    {
+      "source": "cosmos",
+      "target": "governance",
+      "count": 1,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022"
+      ]
+    },
+    {
+      "source": "cosmos",
+      "target": "node",
+      "count": 1,
+      "event_ids": [
+        "audit-mayachain-node-2023"
+      ]
+    },
+    {
+      "source": "cosmos",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "code-review-wormhole-guardian"
+      ]
+    },
+    {
+      "source": "cosmos",
+      "target": "solidity",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "cryptography",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "audit-groth16-verifier-2023"
+      ]
+    },
+    {
+      "source": "cryptography",
+      "target": "zk",
+      "count": 1,
+      "event_ids": [
+        "audit-groth16-verifier-2023"
+      ]
+    },
+    {
+      "source": "defi",
+      "target": "governance",
+      "count": 1,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022"
+      ]
+    },
+    {
+      "source": "defi",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "bug-report-m0-claim-yield-index"
+      ]
+    },
+    {
+      "source": "defi",
+      "target": "solana",
+      "count": 1,
+      "event_ids": [
+        "bug-report-m0-claim-yield-index"
+      ]
+    },
+    {
+      "source": "defi",
+      "target": "solidity",
+      "count": 1,
+      "event_ids": [
+        "code-review-wormhole-liquidity-layer"
+      ]
+    },
+    {
+      "source": "evm",
+      "target": "go",
+      "count": 1,
+      "event_ids": [
+        "audit-boostylabs-tricorn-2023"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "governance",
+      "count": 1,
+      "event_ids": [
+        "audit-mars-protocol-custom-modules-2022"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "node",
+      "count": 1,
+      "event_ids": [
+        "audit-mayachain-node-2023"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "solidity",
+      "count": 1,
+      "event_ids": [
+        "audit-zetachain-node-2023"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "stacks",
+      "count": 1,
+      "event_ids": [
+        "code-review-clarity-go-parser"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "static-analysis",
+      "count": 1,
+      "event_ids": [
+        "tool-channelcheck"
+      ]
+    },
+    {
+      "source": "go",
+      "target": "supply-chain",
+      "count": 1,
+      "event_ids": [
+        "tool-go-unmaintained"
+      ]
+    },
+    {
+      "source": "infra",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "code-review-commonware"
+      ]
+    },
+    {
+      "source": "lint",
+      "target": "prompt-injection",
+      "count": 1,
+      "event_ids": [
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "source": "lint",
+      "target": "security",
+      "count": 1,
+      "event_ids": [
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "source": "local-first",
+      "target": "pii",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "source": "local-first",
+      "target": "privacy",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "source": "neovim",
+      "target": "sast",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "source": "neovim",
+      "target": "tooling",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "source": "php",
+      "target": "web",
+      "count": 1,
+      "event_ids": [
+        "code-review-loris-mcgill"
+      ]
+    },
+    {
+      "source": "pii",
+      "target": "privacy",
+      "count": 1,
+      "event_ids": [
+        "tool-persona"
+      ]
+    },
+    {
+      "source": "prompt-injection",
+      "target": "security",
+      "count": 1,
+      "event_ids": [
+        "tool-skill-issues"
+      ]
+    },
+    {
+      "source": "research",
+      "target": "rust",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "research",
+      "target": "solana",
+      "count": 1,
+      "event_ids": [
+        "research-solana-float-safety"
+      ]
+    },
+    {
+      "source": "rust",
+      "target": "solidity",
+      "count": 1,
+      "event_ids": [
+        "code-review-wormhole-ntt"
+      ]
+    },
+    {
+      "source": "rust",
+      "target": "stablecoin",
+      "count": 1,
+      "event_ids": [
+        "code-review-m0-solana-m"
+      ]
+    },
+    {
+      "source": "rust",
+      "target": "zk",
+      "count": 1,
+      "event_ids": [
+        "audit-groth16-verifier-2023"
+      ]
+    },
+    {
+      "source": "sast",
+      "target": "tooling",
+      "count": 1,
+      "event_ids": [
+        "tool-nvim-sast"
+      ]
+    },
+    {
+      "source": "solana",
+      "target": "stablecoin",
+      "count": 1,
+      "event_ids": [
+        "code-review-m0-solana-m"
+      ]
+    },
+    {
+      "source": "typescript",
+      "target": "web",
+      "count": 1,
+      "event_ids": [
+        "bug-report-ghostfolio-insecure-randomness"
+      ]
+    }
+  ]
+}

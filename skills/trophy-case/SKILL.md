@@ -7,8 +7,8 @@ description: Maintain the trophy-case security career event log. USE WHEN workin
 
 A generated portfolio of the owner's security career: audits, code review,
 bug reports, writing, tools. **`events.jsonl` is the single source of truth.**
-Everything user-facing (README.md today, visualizations later) is generated
-output — never edit it directly.
+The README, JSON exports, and SVG visualizations are generated output — never
+edit them directly.
 
 ## Rules
 
@@ -19,7 +19,9 @@ output — never edit it directly.
    `github-collector` | `local-llm` | `agent`.
 4. **Honest roles**: `reviewer` is never blurred into `author`. Bugs the owner
    helped find but didn't author are `role: "reporter"` with a summary saying so.
-5. Schema reference: `docs/schema.md`. Pipeline reference: `docs/development.md`.
+5. Every event tag must be classified in `data/tag-taxonomy.json`; add new tags
+   there before regenerating output.
+6. Schema reference: `docs/schema.md`. Pipeline reference: `docs/development.md`.
 
 ## Main task: classify pending candidates
 
@@ -42,7 +44,8 @@ The weekly collector dumps unclassified PRs/issues to
    `provenance: {"source": "agent", ...}`, and evidence `{"kind": "url", "url": ...}`.
 5. Append **all** seen candidate URLs (accepted or not) to
    `proposals/processed-urls.json` so nothing is re-proposed.
-6. Run `node scripts/render.js` and include the regenerated README in the commit.
+6. Run `node scripts/render-visuals.js && node scripts/render.js` and include
+   regenerated files under `assets/`, `dist/`, and `README.md` in the commit.
 
 The script `scripts/postprocess.js` does the same thing against a local
 OpenAI-compatible endpoint — prefer it when the owner wants one-command
@@ -53,11 +56,13 @@ processing; do it by hand (following the steps above) when they don't.
 - **Add a manual event**: append a JSON line to `events.jsonl` (schema-compliant,
   `provenance.source: "manual"`), or add it to `MANUAL` in
   `scripts/backfill.py` and run `python3 scripts/backfill.py` for seed-stable
-  entries. Then `node scripts/render.js`.
-- **Regenerate README**: `node scripts/render.js`.
+  entries. Then run both renderers.
+- **Regenerate presentation output**: `node scripts/render-visuals.js && node scripts/render.js`.
 - **Validate**: `node --check scripts/*.js` after editing scripts.
 
 ## Verification
 
 - `events.jsonl` must stay valid JSONL: `node -e "require('fs').readFileSync('events.jsonl','utf8').trim().split('\n').forEach(JSON.parse)"`
-- After any log change, re-render and check `git diff README.md` looks sane.
+- After any log change, re-render and inspect `git diff -- README.md assets/ dist/`.
+- Determinism check: run `node scripts/render-visuals.js` twice and confirm the
+  second run produces no diff.

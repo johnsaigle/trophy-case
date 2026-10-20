@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "note": "Human-reviewed finding classifications for report findings that the PDF extraction defaulted to `other`. Keyed by `<event-id>/<finding-id>`. events.jsonl stays append-only; render-visuals.js applies these overrides when building finding-patterns.json and the fingerprint SVG.",
+  "classes": {
+    "audit-boostylabs-tricorn-2023/HAL-05": {
+      "class": "accounting",
+      "reason": "Owner withdrawals can lock depositor funds."
+    },
+    "audit-boostylabs-tricorn-2023/HAL-12": {
+      "class": "accounting",
+      "reason": "Desynced commission rates cause protocol yield or availability loss."
+    },
+    "audit-boostylabs-tricorn-2023/HAL-15": {
+      "class": "supply-chain",
+      "reason": "Vulnerable third-party dependencies."
+    },
+    "audit-boostylabs-tricorn-2023/HAL-23": {
+      "class": "supply-chain",
+      "reason": "Outdated Go toolchain exposes side-channel weaknesses."
+    },
+    "audit-boostylabs-tricorn-2023/HAL-24": {
+      "class": "error-handling",
+      "reason": "Incorrect error message returned by a gateway endpoint."
+    },
+    "audit-mayachain-node-2023/HAL-01": {
+      "class": "validation",
+      "reason": "Slashing logic returns early, so the malicious-node condition is never enforced."
+    },
+    "audit-mayachain-node-2023/HAL-02": {
+      "class": "arithmetic",
+      "reason": "Precision loss misdistributes funds."
+    },
+    "audit-mayachain-node-2023/HAL-03": {
+      "class": "accounting",
+      "reason": "Refund logic error can lose liquidity-provider funds during ragnarok."
+    },
+    "audit-mayachain-node-2023/HAL-05": {
+      "class": "accounting",
+      "reason": "Per-block refunds exceed the intended amount."
+    },
+    "audit-mayachain-node-2023/HAL-08": {
+      "class": "crypto",
+      "reason": "Bifrost passphrase has no complexity requirement."
+    },
+    "audit-mayachain-node-2023/HAL-10": {
+      "class": "crypto",
+      "reason": "AES encryption key is derived without a key-derivation function."
+    },
+    "audit-mayachain-node-2023/HAL-14": {
+      "class": "supply-chain",
+      "reason": "Vulnerable third-party packages."
+    },
+    "audit-groth16-verifier-2023/HAL-02": {
+      "class": "memory-safety",
+      "reason": "Use of unsafe functions in Rust."
+    },
+    "audit-groth16-verifier-2023/HAL-04": {
+      "class": "supply-chain",
+      "reason": "Dependency lacks consistent code review and formal verification."
+    },
+    "audit-groth16-verifier-2023/HAL-07": {
+      "class": "supply-chain",
+      "reason": "Dependency relies on a vulnerable library."
+    },
+    "audit-zetachain-node-2023/HAL-01": {
+      "class": "accounting",
+      "reason": "Zeta supply does not track assets correctly."
+    },
+    "audit-zetachain-node-2023/HAL-04": {
+      "class": "validation",
+      "reason": "Bitcoin deposits are credited after a single confirmation."
+    },
+    "audit-zetachain-node-2023/HAL-05": {
+      "class": "accounting",
+      "reason": "No mechanism limits the supply of zeta."
+    },
+    "audit-zetachain-node-2023/HAL-13": {
+      "class": "accounting",
+      "reason": "Price reliance on Uniswap V2 pools exposes the chain to manipulation."
+    },
+    "audit-zetachain-node-2023/HAL-14": {
+      "class": "access-control",
+      "reason": "Arbitrary minting through MintZetaToEVMAccount."
+    },
+    "audit-zetachain-node-2023/HAL-15": {
+      "class": "config",
+      "reason": "Token support cannot be removed from the protocol."
+    },
+    "audit-zetachain-node-2023/HAL-16": {
+      "class": "supply-chain",
+      "reason": "Vulnerable cosmossdk version."
+    },
+    "audit-zetachain-node-2023/HAL-18": {
+      "class": "access-control",
+      "reason": "Centralization risk in privileged roles."
+    },
+    "audit-zetachain-node-2023/HAL-21": {
+      "class": "validation",
+      "reason": "Large Bitcoin nonces allow the same transaction to be sent repeatedly."
+    },
+    "audit-mayachain-liquidity-auction-2023/HAL-01": {
+      "class": "validation",
+      "reason": "Unavailable pools can be modified because their state is not enforced."
+    },
+    "audit-mayachain-liquidity-auction-2023/HAL-02": {
+      "class": "accounting",
+      "reason": "Donating to unavailable pools can lose liquidity-provider funds."
+    },
+    "audit-mayachain-liquidity-auction-2023/HAL-03": {
+      "class": "supply-chain",
+      "reason": "Critically vulnerable cosmossdk version."
+    },
+    "audit-mars-protocol-custom-modules-2022/HAL-01": {
+      "class": "supply-chain",
+      "reason": "Critically vulnerable cosmossdk version."
+    },
+    "audit-mars-protocol-custom-modules-2022/HAL-05": {
+      "class": "error-handling",
+      "reason": "CLI users are not shown the error message."
+    },
+    "audit-sifchain-margin-2022/HAL-04": {
+      "class": "error-handling",
+      "reason": "Duplicated error checks."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+<title id="title">Published report finding classifications</title>
+<desc id="desc">A radial fingerprint of finding classes in public reports listing John Saigle as primary auditor.</desc>
+<style>
+  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .label { font: 600 12px ui-sans-serif,system-ui,sans-serif; fill: #334155 }
+  .total { font: 700 28px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .total-label { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #64748b }
+  .footnote { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #64748b }
+</style>
+<rect width="100%" height="100%" rx="16" fill="#f8fafc"/>
+<text class="title" x="40" y="48">Published report finding classifications</text>
+<text class="subtitle" x="40" y="75">Reports listing John Saigle as primary auditor · radial length uses a square-root count scale.</text>
+<path d="M 446.27 143.19 A 180.00 180.00 0 0 1 513.73 143.19 L 493.12 251.24 A 70 70 0 0 0 466.88 251.24 Z" fill="#2563eb" fill-opacity="0.88">
+<title>Supply Chain: 20 (high: 3, informational: 4, low: 12, medium: 1)</title>
+</path>
+<text class="label" x="480.00" y="106.00" text-anchor="middle">Supply Chain · 20</text>
+<path d="M 526.11 168.16 A 158.68 158.68 0 0 1 578.77 195.80 L 523.57 265.21 A 70 70 0 0 0 500.34 253.02 Z" fill="#7c3aed" fill-opacity="0.88">
+<title>Error Handling: 13 (high: 1, informational: 5, low: 7)</title>
+</path>
+<text class="label" x="579.45" y="130.51" text-anchor="start">Error Handling · 13</text>
+<path d="M 577.97 220.60 A 139.57 139.57 0 0 1 607.69 263.64 L 544.04 291.73 A 70 70 0 0 0 529.14 270.14 Z" fill="#c2410c" fill-opacity="0.88">
+<title>Accounting: 8 (critical: 1, high: 2, low: 3, medium: 2)</title>
+</path>
+<text class="label" x="656.12" y="198.43" text-anchor="start">Accounting · 8</text>
+<path d="M 612.95 277.51 A 139.57 139.57 0 0 1 619.25 329.44 L 549.84 324.73 A 70 70 0 0 0 546.68 298.69 Z" fill="#047857" fill-opacity="0.88">
+<title>Arithmetic: 8 (critical: 2, high: 1, low: 4, medium: 1)</title>
+</path>
+<text class="label" x="692.44" y="294.21" text-anchor="start">Arithmetic · 8</text>
+<path d="M 617.46 344.16 A 139.57 139.57 0 0 1 598.91 393.07 L 539.64 356.65 A 70 70 0 0 0 548.94 332.12 Z" fill="#be123c" fill-opacity="0.88">
+<title>Documentation: 8 (informational: 8)</title>
+</path>
+<text class="label" x="680.09" y="395.89" text-anchor="start">Documentation · 8</text>
+<path d="M 586.93 402.53 A 135.08 135.08 0 0 1 549.04 436.10 L 515.78 380.17 A 70 70 0 0 0 535.41 362.77 Z" fill="#0369a1" fill-opacity="0.88">
+<title>Access Control: 7 (high: 1, low: 3, medium: 3)</title>
+</path>
+<text class="label" x="621.91" y="480.18" text-anchor="start">Access Control · 7</text>
+<path d="M 536.33 442.77 A 135.08 135.08 0 0 1 487.18 454.89 L 483.72 389.90 A 70 70 0 0 0 509.19 383.62 Z" fill="#2563eb" fill-opacity="0.88">
+<title>Config: 7 (informational: 2, low: 3, medium: 2)</title>
+</path>
+<text class="label" x="531.21" y="527.78" text-anchor="start">Config · 7</text>
+<path d="M 472.82 454.89 A 135.08 135.08 0 0 1 423.67 442.77 L 450.81 383.62 A 70 70 0 0 0 476.28 389.90 Z" fill="#7c3aed" fill-opacity="0.88">
+<title>Testing: 7 (informational: 3, low: 4)</title>
+</path>
+<text class="label" x="428.79" y="527.78" text-anchor="end">Testing · 7</text>
+<path d="M 413.43 431.95 A 130.25 130.25 0 0 1 376.89 399.58 L 424.59 362.77 A 70 70 0 0 0 444.22 380.17 Z" fill="#c2410c" fill-opacity="0.88">
+<title>DoS: 6 (critical: 1, high: 2, low: 1, medium: 2)</title>
+</path>
+<text class="label" x="338.09" y="480.18" text-anchor="end">DoS · 6</text>
+<path d="M 369.03 388.19 A 130.25 130.25 0 0 1 351.72 342.55 L 411.06 332.12 A 70 70 0 0 0 420.36 356.65 Z" fill="#047857" fill-opacity="0.88">
+<title>Validation: 6 (critical: 1, high: 2, low: 3)</title>
+</path>
+<text class="label" x="279.91" y="395.89" text-anchor="end">Validation · 6</text>
+<path d="M 367.65 327.61 A 112.60 112.60 0 0 1 372.74 285.72 L 413.32 298.69 A 70 70 0 0 0 410.16 324.73 Z" fill="#be123c" fill-opacity="0.88">
+<title>Crypto: 3 (low: 3)</title>
+</path>
+<text class="label" x="267.56" y="294.21" text-anchor="end">Crypto · 3</text>
+<path d="M 384.14 277.69 A 104.79 104.79 0 0 1 406.44 245.37 L 430.86 270.14 A 70 70 0 0 0 415.96 291.73 Z" fill="#0369a1" fill-opacity="0.88">
+<title>Determinism: 2 (high: 1, low: 1)</title>
+</path>
+<text class="label" x="303.88" y="198.43" text-anchor="end">Determinism · 2</text>
+<path d="M 421.12 245.96 A 94.60 94.60 0 0 1 452.51 229.48 L 459.66 253.02 A 70 70 0 0 0 436.43 265.21 Z" fill="#2563eb" fill-opacity="0.88">
+<title>Memory Safety: 1 (medium: 1)</title>
+</path>
+<text class="label" x="380.55" y="130.51" text-anchor="end">Memory Safety · 1</text>
+<circle cx="480" cy="320" r="65" fill="#fff" stroke="#e2e8f0"/>
+<text class="total" x="480" y="317" text-anchor="middle">96</text>
+<text class="total-label" x="480" y="338" text-anchor="middle">findings</text>
+<text class="footnote" x="40" y="570">Human-reviewed classes from data/finding-class-overrides.json · Generated from events.jsonl</text>
+</svg>

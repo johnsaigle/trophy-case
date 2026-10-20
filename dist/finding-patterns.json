@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "source": "events.jsonl",
+  "report_count": 8,
+  "finding_count": 96,
+  "classes": [
+    {
+      "id": "supply-chain",
+      "label": "Supply Chain",
+      "count": 20,
+      "severities": {
+        "high": 3,
+        "low": 12,
+        "informational": 4,
+        "medium": 1
+      }
+    },
+    {
+      "id": "error-handling",
+      "label": "Error Handling",
+      "count": 13,
+      "severities": {
+        "high": 1,
+        "informational": 5,
+        "low": 7
+      }
+    },
+    {
+      "id": "accounting",
+      "label": "Accounting",
+      "count": 8,
+      "severities": {
+        "medium": 2,
+        "low": 3,
+        "critical": 1,
+        "high": 2
+      }
+    },
+    {
+      "id": "arithmetic",
+      "label": "Arithmetic",
+      "count": 8,
+      "severities": {
+        "low": 4,
+        "high": 1,
+        "critical": 2,
+        "medium": 1
+      }
+    },
+    {
+      "id": "documentation",
+      "label": "Documentation",
+      "count": 8,
+      "severities": {
+        "informational": 8
+      }
+    },
+    {
+      "id": "access-control",
+      "label": "Access Control",
+      "count": 7,
+      "severities": {
+        "low": 3,
+        "high": 1,
+        "medium": 3
+      }
+    },
+    {
+      "id": "config",
+      "label": "Config",
+      "count": 7,
+      "severities": {
+        "medium": 2,
+        "low": 3,
+        "informational": 2
+      }
+    },
+    {
+      "id": "testing",
+      "label": "Testing",
+      "count": 7,
+      "severities": {
+        "low": 4,
+        "informational": 3
+      }
+    },
+    {
+      "id": "dos",
+      "label": "DoS",
+      "count": 6,
+      "severities": {
+        "low": 1,
+        "critical": 1,
+        "high": 2,
+        "medium": 2
+      }
+    },
+    {
+      "id": "validation",
+      "label": "Validation",
+      "count": 6,
+      "severities": {
+        "high": 2,
+        "critical": 1,
+        "low": 3
+      }
+    },
+    {
+      "id": "crypto",
+      "label": "Crypto",
+      "count": 3,
+      "severities": {
+        "low": 3
+      }
+    },
+    {
+      "id": "determinism",
+      "label": "Determinism",
+      "count": 2,
+      "severities": {
+        "high": 1,
+        "low": 1
+      }
+    },
+    {
+      "id": "memory-safety",
+      "label": "Memory Safety",
+      "count": 1,
+      "severities": {
+        "medium": 1
+      }
+    }
+  ]
+}

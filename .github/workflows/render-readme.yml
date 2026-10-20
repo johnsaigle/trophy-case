@@ -1,4 +1,4 @@
-name: Render README
+name: Render portfolio
 
 on:
   push:
@@ -7,7 +7,9 @@ on:
     paths:
       - 'events.jsonl'
       - 'scripts/render.js'
+      - 'scripts/render-visuals.js'
       - 'scripts/backfill.py'
+      - 'data/tag-taxonomy.json'
   workflow_dispatch:
 
 permissions:
@@ -25,18 +27,20 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Render README
-        run: node scripts/render.js
+      - name: Render data, visualizations, and README
+        run: |
+          node scripts/render-visuals.js
+          node scripts/render.js
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets/ dist/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: render README from events.jsonl"
+            git commit -m "chore: render portfolio from events.jsonl"
             git push
           fi
 

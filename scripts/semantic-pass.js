@@ -108,7 +108,7 @@ async function detectModel() {
 
 const VULN_CLASSES = [
   "accounting", "access-control", "arithmetic", "dos", "crypto", "supply-chain",
-  "determinism", "error-handling", "validation", "config", "testing",
+  "determinism", "error-handling", "memory-safety", "validation", "config", "testing",
   "documentation", "other",
 ];
 

@@ -69,8 +69,8 @@ the file itself is the source of truth.
 ```
 
 Finding `class` vocabulary: `accounting`, `access-control`, `arithmetic`, `dos`,
-`crypto`, `supply-chain`, `determinism`, `error-handling`, `validation`,
-`config`, `testing`, `documentation`, `other`.
+`crypto`, `supply-chain`, `determinism`, `error-handling`, `memory-safety`,
+`validation`, `config`, `testing`, `documentation`, `other`.
 
 Finding `remediation`: `solved` | `acknowledged` | `risk-accepted` | `partially-solved` | `unknown`.
 
