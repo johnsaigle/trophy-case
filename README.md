@@ -3,23 +3,36 @@
 This is a loose archive of security work I've done for open-source projects, including
 security engineering and source code reviews.
 
-> **9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 11 security tools**
+![9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 11 security tools](assets/overview-stats.svg)
 
 > **Note:** this is a best-effort list of *public* work only. Much of my audit
 > and security engineering output is under confidentiality agreement and cannot be listed.
 
-## Public-work map
+## Selected work
 
-[![Public security capability map](assets/capability-map.svg)](dist/capability-graph.json)
+- **Audits:** 9 published reports as primary auditor, including 4 critical findings in ZetaChain Node and 1 critical finding in Groth16 Verifier.
+- **Code review:** reviewed 1,248 public pull requests, leaving 3,575 inline comments across 710 of them.
+- **Authored:** 808 public pull requests, 607 merged.
 
-<details>
-<summary>Published report finding classifications</summary>
+| Area | Work | PRs |
+| --- | --- | --- |
+| Wormhole Guardian | Added the Transfer Verifier mechanism to the Guardian node, integrated it into the Ethereum watcher, and wrote its whitepaper. | [#4169](https://github.com/wormhole-foundation/wormhole/pull/4169), [#4233](https://github.com/wormhole-foundation/wormhole/pull/4233), [whitepaper #4242](https://github.com/wormhole-foundation/wormhole/pull/4242) |
+| Wormhole Guardian | Extended Governor flow cancel with a configurable allow-list of chain ID pairs, and added the Notary package for verifying message publications. | [flow cancel #4229](https://github.com/wormhole-foundation/wormhole/pull/4229), [Notary #4315](https://github.com/wormhole-foundation/wormhole/pull/4315) |
+| Native Token Transfers | Added fuzzing and overflow checks for TrimmedAmount in the Solana program, and wrote INVARIANTS.md to support security assessments. | [#269](https://github.com/wormhole-foundation/native-token-transfers/pull/269), [#684](https://github.com/wormhole-foundation/native-token-transfers/pull/684) |
+
+## Public work over time
+
+![Public work over time](assets/career-timeline.svg)
+
+## Security engineering in public repositories
+
+![Security engineering in public repositories](assets/security-engineering.svg)
+
+## Findings in published audit reports
 
 ![Published report finding classifications](assets/finding-fingerprint.svg)
 
-</details>
-
-Machine-readable exports: [events](dist/events.json) · [capability graph](dist/capability-graph.json) · [finding patterns](dist/finding-patterns.json)
+Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.json) · [capability graph](dist/capability-graph.json) · [finding patterns](dist/finding-patterns.json)
 
 <!-- GENERATED from events.jsonl by scripts/render.js — do not edit sections below by hand. -->
 
@@ -63,17 +76,17 @@ Machine-readable exports: [events](dist/events.json) · [capability graph](dist/
 
 Formal audit reports for which I was the primary auditor.
 
-| Title | Organization | Type | Programming Language | Link |
-| --- | --- | --- | --- | --- |
-| Tricorn Bridge Server Security Assessment | BoostyLabs | EVM, Bridge | Go | [📒](https://github.com/HalbornSecurity/PublicReports/blob/master/Cosmos%20Audits/BoostyLabs_Tricorn_Bridge_Server_Golang_Security_Assessment_Report_Halborn_Final.pdf) |
-| Maya Node Security Audit | MayaChain | Cosmos, Node | Go | [📒](https://maya-cdn.s3.amazonaws.com/Halborn/Cosmos_Security_Final.pdf) |
-| Groth16 Verifier Audit | Mysten Labs (Sui Foundation) | Cryptography, ZK | Rust | [📒](https://github.com/johnsaigle/audits/blob/main/pdfs/Groth16.pdf) |
-| ZetaChain Node Security Audit | ZetaChain | Cosmos, Bridge, Bitcoin | Go, Solidity | [📒](https://drive.google.com/file/d/1323iwH34kOqGzBZIz4iX-Qfo8ACzomNc/view) |
-| Maya Node Liquidity Auction Audit | MayaChain | Cosmos, DeFi | Go | [📒](https://maya-cdn.s3.amazonaws.com/Halborn/Liquidity_Auction_Final.pdf) |
-| Mars Protocol Custom Modules Audit (Governance, Incentives, Safety) | Mars Protocol | Cosmos, Governance, DeFi | Go | [📒](https://github.com/mars-protocol/mars-audits/blob/main/hub/halborn/Mars_Protocol_Custom_Modules_Gov_Incentives_Safety_Cosmos_Security.pdf) |
-| Sifchain CLP Update Audit | Sifchain | Cosmos, DeFi | Go | [📒](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
-| Sifchain Margin Audit | Sifchain | Cosmos, DeFi | Go | [📒](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
-| Maya Node ETH Router Audit | MayaChain | Cosmos, DeFi | Go | [📒](https://maya-cdn.s3.amazonaws.com/Halborn/ETH_Router_Draft_3.pdf) |
+| Date | Title | Client | Type | Language | C / H / M / L / I | Report |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2023-08-06 | Tricorn Bridge Server Security Assessment | BoostyLabs | EVM, Bridge | Go | 0 / 3 / 2 / 10 / 9 | [Report](https://github.com/HalbornSecurity/PublicReports/blob/master/Cosmos%20Audits/BoostyLabs_Tricorn_Bridge_Server_Golang_Security_Assessment_Report_Halborn_Final.pdf) |
+| 2023-05-12 | Groth16 Verifier Audit | Mysten Labs (Sui Foundation) | Cryptography, ZK | Rust | 1 / 0 / 1 / 6 / 1 | [Report](https://github.com/johnsaigle/audits/blob/main/pdfs/Groth16.pdf) |
+| 2023-03-31 | ZetaChain Node Security Audit | ZetaChain | Cosmos, Bridge, Bitcoin | Go, Solidity | 4 / 5 / 6 / 6 / 0 | [Report](https://drive.google.com/file/d/1323iwH34kOqGzBZIz4iX-Qfo8ACzomNc/view) |
+| 2023-01-25 | Maya Node Security Audit | MayaChain | Cosmos, Node | Go | 0 / 2 / 0 / 12 / 4 | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/Cosmos_Security_Final.pdf) |
+| 2023-01-18 | Maya Node Liquidity Auction Audit | MayaChain | Cosmos, DeFi | Go | 0 / 2 / 1 / 4 / 2 | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/Liquidity_Auction_Final.pdf) |
+| 2022-11-24 | Mars Protocol Custom Modules Audit (Governance, Incentives, Safety) | Mars Protocol | Cosmos, Governance, DeFi | Go | 0 / 1 / 0 / 3 / 3 | [Report](https://github.com/mars-protocol/mars-audits/blob/main/hub/halborn/Mars_Protocol_Custom_Modules_Gov_Incentives_Safety_Cosmos_Security.pdf) |
+| 2022-09-08 | Sifchain Margin Audit | Sifchain | Cosmos, DeFi | Go | 0 / 0 / 1 / 1 / 2 | [Report](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
+| 2022-07-08 | Sifchain CLP Update Audit | Sifchain | Cosmos, DeFi | Go | 0 / 0 / 1 / 2 / 1 | [Report](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
+|  | Maya Node ETH Router Audit | MayaChain | Cosmos, DeFi | Go | n/a | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/ETH_Router_Draft_3.pdf) |
 
 # Technical Writing
 

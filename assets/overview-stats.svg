@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="168" viewBox="0 0 960 168" role="img" aria-labelledby="title desc">
+<title id="title">Public work at a glance</title>
+<desc id="desc">Audit, finding, pull request, tool, and article counts derived from the public record.</desc>
+<style>
+  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif } .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif }
+  .heading { font: 700 14px ui-sans-serif,system-ui,sans-serif; letter-spacing: .04em; text-transform: uppercase } .footnote { font: 12px ui-sans-serif,system-ui,sans-serif }
+  .wash-a { stop-color: #f8fafc } .wash-b { stop-color: #eef2ff }
+  .bg { fill: #f8fafc } .card { fill: #fff; stroke: #e2e8f0 }
+  .title { fill: #0f172a } .subtitle { fill: #475569 } .heading { fill: #475569 } .footnote { fill: #64748b }
+  .big { font: 700 40px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .tile-label { font: 600 14px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .tile-sub { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .tile-mono { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: #475569 }
+  @media (prefers-color-scheme: dark) {
+    .wash-a { stop-color: #0d1117 } .wash-b { stop-color: #101a30 }
+    .bg { fill: #0d1117 } .card { fill: #161b22; stroke: #30363d }
+    .title { fill: #e6edf3 } .subtitle { fill: #9da7b3 } .heading { fill: #9da7b3 } .footnote { fill: #8b949e }
+    .big { font: 700 40px ui-sans-serif,system-ui,sans-serif; fill: #e6edf3 }
+    .tile-label { font: 600 14px ui-sans-serif,system-ui,sans-serif; fill: #e6edf3 }
+    .tile-sub { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #9da7b3 }
+    .tile-mono { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: #9da7b3 }
+  }
+</style>
+<defs>
+<linearGradient id="bgfade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="wash-a"/><stop offset="1" class="wash-b"/></linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="0.5" stop-color="#14b8a6"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="g-authored" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="g-reviewed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+<linearGradient id="g-issues" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+</defs>
+<rect width="100%" height="100%" rx="16" fill="url(#bgfade)"/>
+<rect class="card" x="30" y="24" width="170" height="120" rx="12"/>
+<rect x="48" y="24" width="36" height="4" rx="2" fill="url(#accent)"/>
+<rect class="card" x="216" y="24" width="270" height="120" rx="12"/>
+<rect x="234" y="24" width="36" height="4" rx="2" fill="#f97316"/>
+<rect class="card" x="502" y="24" width="270" height="120" rx="12"/>
+<rect x="520" y="24" width="36" height="4" rx="2" fill="#2563eb"/>
+<rect class="card" x="788" y="24" width="142" height="120" rx="12"/>
+<rect x="806" y="24" width="36" height="4" rx="2" fill="#14b8a6"/>
+<text class="big" x="48" y="76">9</text>
+<text class="tile-label" x="48" y="100">audits</text>
+<text class="tile-sub" x="48" y="122">as primary auditor</text>
+<text class="big" x="234" y="76">96</text>
+<text class="tile-label" x="234" y="100">published findings</text>
+
+<rect x="234.00" y="112" width="10.19" height="10" rx="2" fill="#b91c1c"><title>critical: 5</title></rect>
+<rect x="246.19" y="112" width="29.69" height="10" rx="2" fill="#f97316"><title>high: 13</title></rect>
+<rect x="277.88" y="112" width="27.25" height="10" rx="2" fill="#eab308"><title>medium: 12</title></rect>
+<rect x="307.13" y="112" width="105.25" height="10" rx="2" fill="#38bdf8"><title>low: 44</title></rect>
+<rect x="414.38" y="112" width="51.63" height="10" rx="2" fill="#94a3b8"><title>informational: 22</title></rect>
+<text class="tile-sub" x="234" y="138">5 crit · 13 high · 12 med · 44 low · 22 info</text>
+<text class="big" x="520" y="76">808 / 1,248</text>
+<text class="tile-label" x="520" y="100">PRs authored / reviewed</text>
+
+<rect x="520" y="112" width="89.96" height="10" rx="2" fill="url(#g-authored)"/>
+<rect x="611.96" y="112" width="142.04" height="10" rx="2" fill="url(#g-reviewed)"/>
+<text class="tile-sub" x="520" y="138">607 merged · 3,575 inline review comments</text>
+<text class="big" x="806" y="76">11</text>
+<text class="tile-label" x="806" y="100">tools</text>
+<text class="tile-sub" x="806" y="122">4 articles</text>
+</svg>

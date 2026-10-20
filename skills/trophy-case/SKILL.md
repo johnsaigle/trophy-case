@@ -47,7 +47,7 @@ The weekly collector dumps unclassified PRs/issues to
    `provenance: {"source": "agent", ...}`, and evidence `{"kind": "url", "url": ...}`.
 5. Append **all** seen candidate URLs (accepted or not) to
    `proposals/processed-urls.json` so nothing is re-proposed.
-6. Run `node scripts/render-visuals.js && node scripts/render.js` and include
+6. Run `node scripts/render-visuals.js && node scripts/render-overview.js && node scripts/render-era.js && node scripts/render.js` and include
    regenerated files under `assets/`, `dist/`, and `README.md` in the commit.
 
 The script `scripts/postprocess.js` does the same thing against a local
@@ -61,7 +61,7 @@ processing; do it by hand (following the steps above) when they don't.
   `scripts/backfill.py` and run `python3 scripts/backfill.py` for seed-stable
   entries. Then run both renderers.
 - **Regenerate presentation output**: `node scripts/render-visuals.js &&
-  node scripts/render.js`. If tag evidence changed, also run
+  node scripts/render-overview.js && node scripts/render-era.js && node scripts/render.js`. If tag evidence changed, also run
   `node scripts/github-classify.js && node scripts/render-contributions.js`.
 - **Validate**: `node --check scripts/*.js` after editing scripts, then
   `node --test tests/`.

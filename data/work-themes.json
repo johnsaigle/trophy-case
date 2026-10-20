@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "description": "Presentation-only keyword groups for authored PR titles since `since`. First matching rule wins; unmatched titles fall into `other`. These describe what a title says, not impact.",
+  "since": "2024-01-01",
+  "rules": [
+    {
+      "id": "transfer-verifier",
+      "label": "Transfer Verifier",
+      "pattern": "transfer ?verifier|txverifier"
+    },
+    {
+      "id": "governor",
+      "label": "Governor & flow cancel",
+      "pattern": "governor|flow.?cancel"
+    },
+    {
+      "id": "notary",
+      "label": "Notary",
+      "pattern": "notary"
+    },
+    {
+      "id": "static-analysis",
+      "label": "Linters & static analysis",
+      "pattern": "lint|clippy|zizmor|locked-in|unparam|depguard|recvcheck|typecheck"
+    },
+    {
+      "id": "testing",
+      "label": "Tests & fuzzing",
+      "pattern": "fuzz|\\btests?\\b|coverage"
+    },
+    {
+      "id": "dependencies",
+      "label": "Dependency reduction & cleanup",
+      "pattern": "^deps?:|^cleanup|dependenc|go mod|submodule"
+    },
+    {
+      "id": "docs",
+      "label": "Docs, policy & security context",
+      "pattern": "^docs?|^meta|contributing|security\\.md|invariants|whitepaper|readme|comment|audits?:"
+    },
+    {
+      "id": "ci",
+      "label": "CI & build",
+      "pattern": "^ci"
+    },
+    {
+      "id": "sdk",
+      "label": "SDK & chain IDs",
+      "pattern": "^sdk"
+    },
+    {
+      "id": "solana-programs",
+      "label": "Solana program changes",
+      "pattern": "^solana:"
+    },
+    {
+      "id": "guardian-node",
+      "label": "Guardian node changes",
+      "pattern": "^node"
+    }
+  ]
+}

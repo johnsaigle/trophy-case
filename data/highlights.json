@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "description": "Curated highlights for the README. Every link must name a contribution id in contributions.jsonl; `claim` says which fact the link supports and is checked by tests (authored-merged | authored | reviewer). Wording describes what the PR title states, not impact.",
+  "items": [
+    {
+      "area": "Wormhole Guardian",
+      "text": "Added the Transfer Verifier mechanism to the Guardian node, integrated it into the Ethereum watcher, and wrote its whitepaper.",
+      "links": [
+        { "label": "#4169", "id": "github-pr-wormhole-foundation-wormhole-4169", "claim": "authored-merged" },
+        { "label": "#4233", "id": "github-pr-wormhole-foundation-wormhole-4233", "claim": "authored-merged" },
+        { "label": "whitepaper #4242", "id": "github-pr-wormhole-foundation-wormhole-4242", "claim": "authored-merged" }
+      ]
+    },
+    {
+      "area": "Wormhole Guardian",
+      "text": "Extended Governor flow cancel with a configurable allow-list of chain ID pairs, and added the Notary package for verifying message publications.",
+      "links": [
+        { "label": "flow cancel #4229", "id": "github-pr-wormhole-foundation-wormhole-4229", "claim": "authored-merged" },
+        { "label": "Notary #4315", "id": "github-pr-wormhole-foundation-wormhole-4315", "claim": "authored-merged" }
+      ]
+    },
+    {
+      "area": "Native Token Transfers",
+      "text": "Added fuzzing and overflow checks for TrimmedAmount in the Solana program, and wrote INVARIANTS.md to support security assessments.",
+      "links": [
+        { "label": "#269", "id": "github-pr-wormhole-foundation-native-token-transfers-269", "claim": "authored-merged" },
+        { "label": "#684", "id": "github-pr-wormhole-foundation-native-token-transfers-684", "claim": "authored-merged" }
+      ]
+    }
+  ]
+}

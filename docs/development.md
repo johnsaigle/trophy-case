@@ -123,7 +123,10 @@ visible.
 | `scripts/postprocess.js` | Local LLM classification of pending candidates |
 | `scripts/render.js` | README renderer |
 | `scripts/render-visuals.js` | Deterministic JSON export and SVG renderer |
-| `data/tag-taxonomy.json` | Tag categories and capability-map inclusion rules |
+| `scripts/render-era.js` | Per-repo quarterly lanes and PR-title keyword groups (rules in `data/work-themes.json`) |
+| `scripts/render-overview.js` | Stat strip, activity timeline SVGs, and `dist/summary.json` (run after render-visuals) |
+| `scripts/lib/svg.js` | Shared SVG theme (light/dark) and severity palette |
+| `data/tag-taxonomy.json` | Tag categories (used by the capability graph export) |
 | `assets/` | Generated static SVG visualizations |
 | `dist/` | Generated website-friendly JSON exports |
 | `contributions.jsonl` | Normalized contribution evidence (deterministic upserts) |
@@ -193,7 +196,7 @@ visualization renderer rejects unknown tags so the website-facing data cannot
 silently drift. Then regenerate all output:
 
 ```bash
-node scripts/render-visuals.js && node scripts/render.js
+node scripts/render-visuals.js && node scripts/render-overview.js && node scripts/render-era.js && node scripts/render.js
 ```
 
 The capability map includes recurring tags at or above

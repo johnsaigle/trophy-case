@@ -15,6 +15,7 @@ const TAXONOMY_PATH = path.join(ROOT, "data", "tag-taxonomy.json");
 const FINDING_CLASS_OVERRIDES_PATH = path.join(ROOT, "data", "finding-class-overrides.json");
 const ASSETS_DIR = path.join(ROOT, "assets");
 const DIST_DIR = path.join(ROOT, "dist");
+const { background, SEVERITIES, SEVERITY_COLORS, themeCss, svgOpen } = require("./lib/svg");
 
 const events = fs
   .readFileSync(EVENTS_PATH, "utf8")
@@ -130,100 +131,6 @@ function buildCapabilityGraph() {
   };
 }
 
-function renderCapabilityMap(graph) {
-  const width = 960;
-  const height = 560;
-  const nodeWidth = 176;
-  const nodeHeight = 48;
-  const columns = taxonomy.map.categories;
-  const minimumCount = taxonomy.map.minimum_event_count;
-  const selected = graph.nodes.filter(
-    (node) => columns.includes(node.category) && node.count >= minimumCount
-  );
-  const selectedById = new Map(selected.map((node) => [node.id, node]));
-  const positions = new Map();
-
-  columns.forEach((category, columnIndex) => {
-    const nodes = selected.filter((node) => node.category === category).sort(compareCountThenName);
-    const x = 138 + columnIndex * 228;
-    const top = 158;
-    const bottom = 472;
-    nodes.forEach((node, index) => {
-      const y = nodes.length === 1 ? (top + bottom) / 2 : top + (index * (bottom - top)) / (nodes.length - 1);
-      positions.set(node.id, { x, y });
-    });
-  });
-
-  const visibleEdges = graph.edges.filter((edge) => {
-    const source = selectedById.get(edge.source);
-    const target = selectedById.get(edge.target);
-    return source && target && source.category !== target.category;
-  });
-
-  const svg = [];
-  svg.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">`,
-    `<title id="title">Public security capability map</title>`,
-    `<desc id="desc">Recurring languages, ecosystems, security domains, and practices connected when their tags occur on the same public-work event.</desc>`,
-    `<style>`,
-    `  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }`,
-    `  .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif; fill: #475569 }`,
-    `  .heading { font: 700 14px ui-sans-serif,system-ui,sans-serif; fill: #334155; letter-spacing: .04em; text-transform: uppercase }`,
-    `  .label { font: 600 14px ui-sans-serif,system-ui,sans-serif; fill: #fff }`,
-    `  .count { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: #fff }`,
-    `  .footnote { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #64748b }`,
-    `</style>`,
-    `<rect width="100%" height="100%" rx="16" fill="#f8fafc"/>`,
-    `<text class="title" x="40" y="48">Public security capability map</text>`,
-    `<text class="subtitle" x="40" y="75">Connections show tags appearing together; line weight shows frequency.</text>`
-  );
-
-  for (const edge of visibleEdges) {
-    const sourceNode = selectedById.get(edge.source);
-    const targetNode = selectedById.get(edge.target);
-    let source = positions.get(edge.source);
-    let target = positions.get(edge.target);
-    if (columns.indexOf(sourceNode.category) > columns.indexOf(targetNode.category)) {
-      [source, target] = [target, source];
-    }
-    const x1 = source.x + nodeWidth / 2;
-    const x2 = target.x - nodeWidth / 2;
-    const middle = (x1 + x2) / 2;
-    svg.push(
-      `<path d="M ${x1} ${source.y} C ${middle} ${source.y}, ${middle} ${target.y}, ${x2} ${target.y}" fill="none" stroke="#94a3b8" stroke-opacity="0.38" stroke-width="${1 + edge.count * 1.4}">`,
-      `<title>${esc(edge.source)} + ${esc(edge.target)}: ${edge.count} event${edge.count === 1 ? "" : "s"}</title>`,
-      `</path>`
-    );
-  }
-
-  columns.forEach((category, columnIndex) => {
-    const definition = taxonomy.categories[category];
-    const x = 138 + columnIndex * 228;
-    svg.push(`<text class="heading" x="${x}" y="116" text-anchor="middle">${esc(definition.label)}</text>`);
-  });
-
-  for (const node of selected) {
-    const { x, y } = positions.get(node.id);
-    const color = taxonomy.categories[node.category].color;
-    svg.push(
-      `<g>`,
-      `<title>${esc(node.label)}: ${node.count} event${node.count === 1 ? "" : "s"}</title>`,
-      `<rect x="${x - nodeWidth / 2}" y="${y - nodeHeight / 2}" width="${nodeWidth}" height="${nodeHeight}" rx="12" fill="${color}"/>`,
-      `<text class="label" x="${x - nodeWidth / 2 + 16}" y="${y + 5}">${esc(node.label)}</text>`,
-      `<circle cx="${x + nodeWidth / 2 - 23}" cy="${y}" r="14" fill="#000" fill-opacity="0.18"/>`,
-      `<text class="count" x="${x + nodeWidth / 2 - 23}" y="${y + 4}" text-anchor="middle">${node.count}</text>`,
-      `</g>`
-    );
-  }
-
-  svg.push(
-    `<text class="footnote" x="40" y="530">Includes tags present on at least ${minimumCount} public-work events · Generated deterministically from events.jsonl</text>`,
-    `</svg>`,
-    ``
-  );
-  return svg.join("\n");
-}
-
 function buildFindingPatterns() {
   const counts = new Map();
   let findingCount = 0;
@@ -259,73 +166,74 @@ function buildFindingPatterns() {
   };
 }
 
-function polar(cx, cy, radius, angle) {
-  const radians = ((angle - 90) * Math.PI) / 180;
-  return { x: cx + radius * Math.cos(radians), y: cy + radius * Math.sin(radians) };
-}
-
-function wedgePath(cx, cy, innerRadius, outerRadius, startAngle, endAngle) {
-  const a = polar(cx, cy, outerRadius, startAngle);
-  const b = polar(cx, cy, outerRadius, endAngle);
-  const c = polar(cx, cy, innerRadius, endAngle);
-  const d = polar(cx, cy, innerRadius, startAngle);
-  return `M ${a.x.toFixed(2)} ${a.y.toFixed(2)} A ${outerRadius.toFixed(2)} ${outerRadius.toFixed(2)} 0 0 1 ${b.x.toFixed(2)} ${b.y.toFixed(2)} L ${c.x.toFixed(2)} ${c.y.toFixed(2)} A ${innerRadius} ${innerRadius} 0 0 0 ${d.x.toFixed(2)} ${d.y.toFixed(2)} Z`;
-}
-
 function renderFindingFingerprint(patterns) {
   const width = 960;
-  const height = 600;
-  const cx = 480;
-  const cy = 320;
-  const innerRadius = 70;
-  const maximumRadius = 180;
+  const rowHeight = 30;
+  const top = 138;
+  const labelRight = 236;
+  const barLeft = 252;
   const maximumCount = Math.max(...patterns.classes.map((entry) => entry.count));
-  const angleStep = 360 / patterns.classes.length;
-  const palette = ["#2563eb", "#7c3aed", "#c2410c", "#047857", "#be123c", "#0369a1"];
+  const unit = (width - barLeft - 70) / maximumCount;
+  const height = top + patterns.classes.length * rowHeight + 62;
+  const totals = Object.fromEntries(SEVERITIES.map((severity) => [severity, 0]));
+  for (const entry of patterns.classes) {
+    for (const [severity, count] of Object.entries(entry.severities)) totals[severity] += count;
+  }
   const svg = [];
 
   svg.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">`,
-    `<title id="title">Published report finding classifications</title>`,
-    `<desc id="desc">A radial fingerprint of finding classes in public reports listing John Saigle as primary auditor.</desc>`,
-    `<style>`,
-    `  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }`,
-    `  .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif; fill: #475569 }`,
-    `  .label { font: 600 12px ui-sans-serif,system-ui,sans-serif; fill: #334155 }`,
-    `  .total { font: 700 28px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }`,
-    `  .total-label { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #64748b }`,
-    `  .footnote { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #64748b }`,
-    `</style>`,
-    `<rect width="100%" height="100%" rx="16" fill="#f8fafc"/>`,
+    svgOpen(
+      width,
+      height,
+      "Published report finding classifications",
+      "Finding classes in public reports listing John Saigle as primary auditor, stacked by severity."
+    ),
+    themeCss([
+      `.label { font: 600 13px ui-sans-serif,system-ui,sans-serif; fill: var(--fg) }`,
+      `.count { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: var(--muted) }`,
+      `.legend { font: 12px ui-sans-serif,system-ui,sans-serif; fill: var(--muted) }`,
+      `.track { fill: var(--line); fill-opacity: .45 }`,
+    ]),
+    background(),
     `<text class="title" x="40" y="48">Published report finding classifications</text>`,
-    `<text class="subtitle" x="40" y="75">Reports listing John Saigle as primary auditor · radial length uses a square-root count scale.</text>`
+    `<text class="subtitle" x="40" y="75">${patterns.finding_count} findings across ${patterns.report_count} reports listing John Saigle as primary auditor · bars stacked by severity.</text>`
   );
 
-  patterns.classes.forEach((entry, index) => {
-    const middleAngle = index * angleStep;
-    const startAngle = middleAngle - angleStep * 0.39;
-    const endAngle = middleAngle + angleStep * 0.39;
-    const outerRadius = innerRadius + Math.sqrt(entry.count / maximumCount) * (maximumRadius - innerRadius);
-    const color = entry.id === "other" ? "#94a3b8" : palette[index % palette.length];
-    const breakdown = Object.entries(entry.severities)
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([severity, count]) => `${severity}: ${count}`)
-      .join(", ");
-    const labelPoint = polar(cx, cy, maximumRadius + 34, middleAngle);
-    const anchor = labelPoint.x < cx - 10 ? "end" : labelPoint.x > cx + 10 ? "start" : "middle";
+  let legendX = 40;
+  for (const severity of SEVERITIES) {
+    if (!totals[severity]) continue;
     svg.push(
-      `<path d="${wedgePath(cx, cy, innerRadius, outerRadius, startAngle, endAngle)}" fill="${color}" fill-opacity="0.88">`,
-      `<title>${esc(entry.label)}: ${entry.count} (${esc(breakdown)})</title>`,
-      `</path>`,
-      `<text class="label" x="${labelPoint.x.toFixed(2)}" y="${labelPoint.y.toFixed(2)}" text-anchor="${anchor}">${esc(entry.label)} · ${entry.count}</text>`
+      `<rect x="${legendX}" y="96" width="12" height="12" rx="3" fill="${SEVERITY_COLORS[severity]}"/>`,
+      `<text class="legend" x="${legendX + 18}" y="107">${severity} · ${totals[severity]}</text>`
     );
+    legendX += 40 + severity.length * 6.4 + String(totals[severity]).length * 7;
+  }
+
+  patterns.classes.forEach((entry, index) => {
+    const y = top + index * rowHeight;
+    const breakdown = SEVERITIES.filter((severity) => entry.severities[severity])
+      .map((severity) => `${severity}: ${entry.severities[severity]}`)
+      .join(", ");
+    svg.push(
+      `<g>`,
+      `<title>${esc(entry.label)}: ${entry.count} (${esc(breakdown)})</title>`,
+      `<text class="label" x="${labelRight}" y="${y + 17}" text-anchor="end">${esc(entry.label)}</text>`
+    );
+    svg.push(`<rect x="${barLeft}" y="${y + 3}" width="${(width - barLeft - 70).toFixed(2)}" height="${rowHeight - 8}" rx="3" class="track"/>`);
+    let x = barLeft;
+    for (const severity of SEVERITIES) {
+      const count = entry.severities[severity] || 0;
+      if (!count) continue;
+      svg.push(
+        `<rect x="${x.toFixed(2)}" y="${y + 3}" width="${(count * unit - 1.5).toFixed(2)}" height="${rowHeight - 8}" rx="3" fill="${SEVERITY_COLORS[severity]}"/>`
+      );
+      x += count * unit;
+    }
+    svg.push(`<text class="count" x="${(x + 8).toFixed(2)}" y="${y + 17}">${entry.count}</text>`, `</g>`);
   });
 
   svg.push(
-    `<circle cx="${cx}" cy="${cy}" r="${innerRadius - 5}" fill="#fff" stroke="#e2e8f0"/>`,
-    `<text class="total" x="${cx}" y="${cy - 3}" text-anchor="middle">${patterns.finding_count}</text>`,
-    `<text class="total-label" x="${cx}" y="${cy + 18}" text-anchor="middle">findings</text>`,
-    `<text class="footnote" x="40" y="570">Human-reviewed classes from data/finding-class-overrides.json · Generated from events.jsonl</text>`,
+    `<text class="footnote" x="40" y="${height - 24}">Human-reviewed classes from data/finding-class-overrides.json · Generated from events.jsonl</text>`,
     `</svg>`,
     ``
   );
@@ -341,7 +249,6 @@ fs.mkdirSync(DIST_DIR, { recursive: true });
 fs.writeFileSync(path.join(DIST_DIR, "events.json"), json(events));
 fs.writeFileSync(path.join(DIST_DIR, "capability-graph.json"), json(capabilityGraph));
 fs.writeFileSync(path.join(DIST_DIR, "finding-patterns.json"), json(findingPatterns));
-fs.writeFileSync(path.join(ASSETS_DIR, "capability-map.svg"), renderCapabilityMap(capabilityGraph));
 fs.writeFileSync(path.join(ASSETS_DIR, "finding-fingerprint.svg"), renderFindingFingerprint(findingPatterns));
 
 console.log(

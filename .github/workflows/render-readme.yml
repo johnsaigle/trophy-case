@@ -8,6 +8,10 @@ on:
       - 'events.jsonl'
       - 'scripts/render.js'
       - 'scripts/render-visuals.js'
+      - 'scripts/render-overview.js'
+      - 'scripts/render-era.js'
+      - 'data/work-themes.json'
+      - 'scripts/lib/svg.js'
       - 'scripts/backfill.py'
       - 'data/tag-taxonomy.json'
   workflow_dispatch:
@@ -30,6 +34,8 @@ jobs:
       - name: Render data, visualizations, and README
         run: |
           node scripts/render-visuals.js
+          node scripts/render-overview.js
+          node scripts/render-era.js
           node scripts/render.js
 
       - name: Commit and push if changed

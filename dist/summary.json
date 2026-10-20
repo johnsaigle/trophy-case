@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source": [
+    "events.jsonl",
+    "contributions.jsonl"
+  ],
+  "audits": 9,
+  "findings": {
+    "total": 96,
+    "by_severity": {
+      "critical": 5,
+      "high": 13,
+      "medium": 12,
+      "low": 44,
+      "informational": 22
+    }
+  },
+  "contributions": {
+    "records": 2001,
+    "projects": 10,
+    "authored_prs": 808,
+    "merged_authored_prs": 607,
+    "inline_review_comments": 3575,
+    "reviewed_prs": 1248,
+    "issues": 256
+  },
+  "tools": 11,
+  "articles": 4
+}

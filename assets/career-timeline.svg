@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+<title id="title">Public work over time</title>
+<desc id="desc">Three chapters of public work by quarter: LORIS contributions, published audit reports, and security engineering in public repositories.</desc>
+<style>
+  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif } .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif }
+  .heading { font: 700 14px ui-sans-serif,system-ui,sans-serif; letter-spacing: .04em; text-transform: uppercase } .footnote { font: 12px ui-sans-serif,system-ui,sans-serif }
+  .wash-a { stop-color: #f8fafc } .wash-b { stop-color: #eef2ff }
+  .bg { fill: #f8fafc } .card { fill: #fff; stroke: #e2e8f0 }
+  .title { fill: #0f172a } .subtitle { fill: #475569 } .heading { fill: #475569 } .footnote { fill: #64748b }
+  .tick { font: 11px ui-monospace,SFMono-Regular,monospace; fill: #64748b }
+  .lane { font: 700 14px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .lane-sub { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .legend { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .grid { stroke: #e2e8f0; stroke-width: 1 }
+  .empty { fill: #e2e8f0; fill-opacity: .5 }
+  @media (prefers-color-scheme: dark) {
+    .wash-a { stop-color: #0d1117 } .wash-b { stop-color: #101a30 }
+    .bg { fill: #0d1117 } .card { fill: #161b22; stroke: #30363d }
+    .title { fill: #e6edf3 } .subtitle { fill: #9da7b3 } .heading { fill: #9da7b3 } .footnote { fill: #8b949e }
+    .tick { font: 11px ui-monospace,SFMono-Regular,monospace; fill: #8b949e }
+    .lane { font: 700 14px ui-sans-serif,system-ui,sans-serif; fill: #e6edf3 }
+    .lane-sub { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #9da7b3 }
+    .legend { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #9da7b3 }
+    .grid { stroke: #30363d; stroke-width: 1 }
+    .empty { fill: #30363d; fill-opacity: .5 }
+  }
+</style>
+<defs>
+<linearGradient id="bgfade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="wash-a"/><stop offset="1" class="wash-b"/></linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="0.5" stop-color="#14b8a6"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="g-authored" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="g-reviewed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+<linearGradient id="g-issues" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+</defs>
+<rect width="100%" height="100%" rx="16" fill="url(#bgfade)"/>
+<rect x="40" y="16" width="64" height="4" rx="2" fill="url(#accent)"/>
+<text class="title" x="40" y="48">Public work over time</text>
+<text class="subtitle" x="40" y="75">Three chapters of the public record, by quarter. Shading is relative within each row.</text>
+<text class="legend" x="40" y="108">Less</text>
+<rect x="72" y="97" width="14" height="14" rx="3" fill="#2563eb" fill-opacity="0.2"/>
+<rect x="90" y="97" width="14" height="14" rx="3" fill="#2563eb" fill-opacity="0.4"/>
+<rect x="108" y="97" width="14" height="14" rx="3" fill="#2563eb" fill-opacity="0.65"/>
+<rect x="126" y="97" width="14" height="14" rx="3" fill="#2563eb" fill-opacity="1"/>
+<text class="legend" x="150" y="108">More PRs and issues that quarter</text>
+<path d="M 386 96 l 8 8 l -8 8 l -8 -8 z" fill="#6366f1"/>
+<text class="legend" x="402" y="108">One published audit report</text>
+<text class="tick" x="292.00" y="138">2016</text>
+<line class="grid" x1="290.00" x2="290.00" y1="144" y2="370"/>
+<text class="tick" x="349.27" y="138">2017</text>
+<line class="grid" x1="347.27" x2="347.27" y1="144" y2="370"/>
+<text class="tick" x="406.55" y="138">2018</text>
+<line class="grid" x1="404.55" x2="404.55" y1="144" y2="370"/>
+<text class="tick" x="463.82" y="138">2019</text>
+<line class="grid" x1="461.82" x2="461.82" y1="144" y2="370"/>
+<text class="tick" x="521.09" y="138">2020</text>
+<line class="grid" x1="519.09" x2="519.09" y1="144" y2="370"/>
+<text class="tick" x="578.36" y="138">2021</text>
+<line class="grid" x1="576.36" x2="576.36" y1="144" y2="370"/>
+<text class="tick" x="635.64" y="138">2022</text>
+<line class="grid" x1="633.64" x2="633.64" y1="144" y2="370"/>
+<text class="tick" x="692.91" y="138">2023</text>
+<line class="grid" x1="690.91" x2="690.91" y1="144" y2="370"/>
+<text class="tick" x="750.18" y="138">2024</text>
+<line class="grid" x1="748.18" x2="748.18" y1="144" y2="370"/>
+<text class="tick" x="807.45" y="138">2025</text>
+<line class="grid" x1="805.45" x2="805.45" y1="144" y2="370"/>
+<text class="tick" x="864.73" y="138">2026</text>
+<line class="grid" x1="862.73" x2="862.73" y1="144" y2="370"/>
+<text class="lane" x="40" y="180">McGill · LORIS</text>
+<text class="lane-sub" x="40" y="198">407 merged PRs · 207 issues · 597 reviews</text>
+<rect x="291.00" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.28"><title>McGill · LORIS 2016Q1: 3 PRs and issues</title></rect>
+<rect x="305.32" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.32"><title>McGill · LORIS 2016Q2: 7 PRs and issues</title></rect>
+<rect x="319.64" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.25"><title>McGill · LORIS 2016Q3: 1 PRs and issues</title></rect>
+<rect x="333.95" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.28"><title>McGill · LORIS 2016Q4: 3 PRs and issues</title></rect>
+<rect x="348.27" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.46"><title>McGill · LORIS 2017Q1: 31 PRs and issues</title></rect>
+<rect x="362.59" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.56"><title>McGill · LORIS 2017Q2: 60 PRs and issues</title></rect>
+<rect x="376.91" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.54"><title>McGill · LORIS 2017Q3: 55 PRs and issues</title></rect>
+<rect x="391.23" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.28"><title>McGill · LORIS 2017Q4: 3 PRs and issues</title></rect>
+<rect x="405.55" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.28"><title>McGill · LORIS 2018Q1: 3 PRs and issues</title></rect>
+<rect x="419.86" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.62"><title>McGill · LORIS 2018Q2: 82 PRs and issues</title></rect>
+<rect x="434.18" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.57"><title>McGill · LORIS 2018Q3: 65 PRs and issues</title></rect>
+<rect x="448.50" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.75"><title>McGill · LORIS 2018Q4: 140 PRs and issues</title></rect>
+<rect x="462.82" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.70"><title>McGill · LORIS 2019Q1: 117 PRs and issues</title></rect>
+<rect x="477.14" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.59"><title>McGill · LORIS 2019Q2: 69 PRs and issues</title></rect>
+<rect x="491.45" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.65"><title>McGill · LORIS 2019Q3: 94 PRs and issues</title></rect>
+<rect x="505.77" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="1.00"><title>McGill · LORIS 2019Q4: 296 PRs and issues</title></rect>
+<rect x="520.09" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.85"><title>McGill · LORIS 2020Q1: 195 PRs and issues</title></rect>
+<rect x="534.41" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.69"><title>McGill · LORIS 2020Q2: 110 PRs and issues</title></rect>
+<rect x="548.73" y="162.00" width="12.32" height="40" rx="3" fill="#2563eb" fill-opacity="0.28"><title>McGill · LORIS 2020Q3: 3 PRs and issues</title></rect>
+<rect class="empty" x="563.05" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="577.36" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="591.68" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="606.00" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="620.32" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="634.64" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="648.95" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="663.27" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="677.59" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="691.91" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="706.23" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="720.55" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="734.86" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="749.18" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="763.50" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="777.82" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="792.14" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="806.45" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="820.77" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="835.09" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="849.41" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="863.73" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="878.05" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="892.36" y="178.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="906.68" y="178.00" width="12.32" height="8" rx="2"/>
+<text class="lane" x="40" y="258">Halborn · audit reports</text>
+<text class="lane-sub" x="40" y="276">9 audits · 96 findings</text>
+<rect class="empty" x="291.00" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="305.32" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="319.64" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="333.95" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="348.27" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="362.59" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="376.91" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="391.23" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="405.55" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="419.86" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="434.18" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="448.50" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="462.82" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="477.14" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="491.45" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="505.77" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="520.09" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="534.41" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="548.73" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="563.05" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="577.36" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="591.68" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="606.00" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="620.32" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="634.64" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="648.95" y="256.00" width="12.32" height="8" rx="2"/>
+<g><title>2022Q3: Sifchain (2022-07-08); Sifchain (2022-09-08)</title>
+<path d="M 669.43 243.50 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+<path d="M 669.43 258.50 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+</g>
+<g><title>2022Q4: Mars Protocol (2022-11-24)</title>
+<path d="M 683.75 251.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+</g>
+<g><title>2023Q1: MayaChain (2023-01-25); ZetaChain (2023-03-31); MayaChain (2023-01-18)</title>
+<path d="M 698.07 236.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+<path d="M 698.07 251.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+<path d="M 698.07 266.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+</g>
+<g><title>2023Q2: Mysten Labs (Sui Foundation) (2023-05-12)</title>
+<path d="M 712.39 251.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+</g>
+<g><title>2023Q3: BoostyLabs (2023-08-06)</title>
+<path d="M 726.70 251.00 l 8 9 l -8 9 l -8 -9 z" fill="#6366f1"/>
+</g>
+<rect class="empty" x="734.86" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="749.18" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="763.50" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="777.82" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="792.14" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="806.45" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="820.77" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="835.09" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="849.41" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="863.73" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="878.05" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="892.36" y="256.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="906.68" y="256.00" width="12.32" height="8" rx="2"/>
+<text class="lane" x="40" y="336">Asymmetric Research</text>
+<text class="lane-sub" x="40" y="354">200 merged PRs · 340 reviews · 49 issues</text>
+<rect class="empty" x="291.00" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="305.32" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="319.64" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="333.95" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="348.27" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="362.59" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="376.91" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="391.23" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="405.55" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="419.86" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="434.18" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="448.50" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="462.82" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="477.14" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="491.45" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="505.77" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="520.09" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="534.41" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="548.73" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="563.05" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="577.36" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="591.68" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="606.00" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="620.32" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="634.64" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="648.95" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="663.27" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="677.59" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="691.91" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="706.23" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="720.55" y="334.00" width="12.32" height="8" rx="2"/>
+<rect class="empty" x="734.86" y="334.00" width="12.32" height="8" rx="2"/>
+<rect x="749.18" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.85"><title>Asymmetric Research 2024Q1: 77 PRs and issues</title></rect>
+<rect x="763.50" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.71"><title>Asymmetric Research 2024Q2: 47 PRs and issues</title></rect>
+<rect x="777.82" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.66"><title>Asymmetric Research 2024Q3: 39 PRs and issues</title></rect>
+<rect x="792.14" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.52"><title>Asymmetric Research 2024Q4: 19 PRs and issues</title></rect>
+<rect x="806.45" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.70"><title>Asymmetric Research 2025Q1: 46 PRs and issues</title></rect>
+<rect x="820.77" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.81"><title>Asymmetric Research 2025Q2: 68 PRs and issues</title></rect>
+<rect x="835.09" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.80"><title>Asymmetric Research 2025Q3: 65 PRs and issues</title></rect>
+<rect x="849.41" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.83"><title>Asymmetric Research 2025Q4: 73 PRs and issues</title></rect>
+<rect x="863.73" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.79"><title>Asymmetric Research 2026Q1: 63 PRs and issues</title></rect>
+<rect x="878.05" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="1.00"><title>Asymmetric Research 2026Q2: 116 PRs and issues</title></rect>
+<rect x="892.36" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.72"><title>Asymmetric Research 2026Q3: 49 PRs and issues</title></rect>
+<rect x="906.68" y="318.00" width="12.32" height="40" rx="3" fill="#14b8a6" fill-opacity="0.31"><title>Asymmetric Research 2026Q4: 2 PRs and issues</title></rect>
+<text class="footnote" x="40" y="442">Dated by PR or issue creation, or by report date. Only watched public repositories are counted; PR counts are not comparable across chapters.</text>
+<text class="footnote" x="40" y="462">1 undated audit not shown. Chapters come from the org recorded on each event in events.jsonl. Generated from events.jsonl and contributions.jsonl.</text>
+</svg>

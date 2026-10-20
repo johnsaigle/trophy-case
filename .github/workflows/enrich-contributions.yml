@@ -48,14 +48,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           if git diff --quiet contributions.jsonl .github/enrichment-state.json \
-             dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json \
-             assets/contribution-evidence.svg; then
+             dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json; then
             echo "No contribution changes this week"
             exit 0
           fi
 
           git add contributions.jsonl .github/enrichment-state.json \
-            dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json \
-            assets/contribution-evidence.svg
+            dist/contributions.json dist/project-profiles.json dist/contribution-capabilities.json
           git commit -m "collect: contributions incremental update for week of $(date +%Y-%m-%d)"
           git push origin HEAD:main

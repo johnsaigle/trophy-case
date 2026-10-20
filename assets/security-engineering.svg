@@ -1,0 +1,322 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="994" viewBox="0 0 960 994" role="img" aria-labelledby="title desc">
+<title id="title">Security engineering in public repositories</title>
+<desc id="desc">Quarterly activity per public repository and keyword groups over authored pull request titles.</desc>
+<style>
+  .title { font: 700 26px ui-sans-serif,system-ui,sans-serif } .subtitle { font: 14px ui-sans-serif,system-ui,sans-serif }
+  .heading { font: 700 14px ui-sans-serif,system-ui,sans-serif; letter-spacing: .04em; text-transform: uppercase } .footnote { font: 12px ui-sans-serif,system-ui,sans-serif }
+  .wash-a { stop-color: #f8fafc } .wash-b { stop-color: #eef2ff }
+  .bg { fill: #f8fafc } .card { fill: #fff; stroke: #e2e8f0 }
+  .title { fill: #0f172a } .subtitle { fill: #475569 } .heading { fill: #475569 } .footnote { fill: #64748b }
+  .lane { font: 600 13px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  .lane-sub { font: 11px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .q { font: 11px ui-monospace,SFMono-Regular,monospace; fill: #64748b }
+  .count { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: #475569 }
+  .legend { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #475569 }
+  .grid { stroke: #e2e8f0; stroke-width: 1 }
+  .track { fill: #e2e8f0; fill-opacity: .45 }
+  .section { font: 700 13px ui-sans-serif,system-ui,sans-serif; fill: #0f172a }
+  @media (prefers-color-scheme: dark) {
+    .wash-a { stop-color: #0d1117 } .wash-b { stop-color: #101a30 }
+    .bg { fill: #0d1117 } .card { fill: #161b22; stroke: #30363d }
+    .title { fill: #e6edf3 } .subtitle { fill: #9da7b3 } .heading { fill: #9da7b3 } .footnote { fill: #8b949e }
+    .lane { font: 600 13px ui-sans-serif,system-ui,sans-serif; fill: #e6edf3 }
+    .lane-sub { font: 11px ui-sans-serif,system-ui,sans-serif; fill: #9da7b3 }
+    .q { font: 11px ui-monospace,SFMono-Regular,monospace; fill: #8b949e }
+    .count { font: 700 12px ui-monospace,SFMono-Regular,monospace; fill: #9da7b3 }
+    .legend { font: 12px ui-sans-serif,system-ui,sans-serif; fill: #9da7b3 }
+    .grid { stroke: #30363d; stroke-width: 1 }
+    .track { fill: #30363d; fill-opacity: .45 }
+    .section { font: 700 13px ui-sans-serif,system-ui,sans-serif; fill: #e6edf3 }
+  }
+</style>
+<defs>
+<linearGradient id="bgfade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="wash-a"/><stop offset="1" class="wash-b"/></linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="0.5" stop-color="#14b8a6"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="g-authored" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="g-reviewed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+<linearGradient id="g-issues" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+</defs>
+<rect width="100%" height="100%" rx="16" fill="url(#bgfade)"/>
+<rect x="40" y="16" width="64" height="4" rx="2" fill="url(#accent)"/>
+<text class="title" x="40" y="48">Security engineering in public repositories</text>
+<text class="subtitle" x="40" y="75">275 authored PRs (200 merged) · 340 reviewed PRs · 49 issues · 2024–2026</text>
+<rect x="40" y="96" width="12" height="12" rx="3" fill="url(#g-authored)"/>
+<text class="legend" x="58" y="107">authored PRs</text>
+<rect x="154.4" y="96" width="12" height="12" rx="3" fill="url(#g-reviewed)"/>
+<text class="legend" x="172.4" y="107">reviewed PRs (not authored)</text>
+<rect x="361.8" y="96" width="12" height="12" rx="3" fill="url(#g-issues)"/>
+<text class="legend" x="379.8" y="107">issues</text>
+<text class="q" x="362.00" y="140">2024</text>
+<text class="q" x="548.67" y="140">2025</text>
+<line class="grid" x1="546.6666666666666" x2="546.6666666666666" y1="146" y2="504"/>
+<text class="q" x="735.33" y="140">2026</text>
+<line class="grid" x1="733.3333333333333" x2="733.3333333333333" y1="146" y2="504"/>
+<g><title>wormhole-foundation/wormhole: 475 records</title>
+<text class="lane" x="40" y="166">wormhole-foundation/wormhole</text>
+<text class="lane-sub" x="40" y="180">241 authored (180 merged) · 224 reviewed · 10 issues</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="186" y2="186"/>
+<g><title>wormhole-foundation/wormhole 2024Q1: 2 (1 authored, 1 reviewed)</title>
+<rect x="370.33" y="182.94" width="26.00" height="2.06" fill="url(#g-authored)"/>
+<path d="M 370.33 182.94 L 370.33 182.94 Q 370.33 180.88 372.39 180.88 L 394.27 180.88 Q 396.33 180.88 396.33 182.94 L 396.33 182.94 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2024Q2: 9 (6 authored, 3 reviewed)</title>
+<rect x="417.00" y="179.17" width="26.00" height="5.83" fill="url(#g-authored)"/>
+<path d="M 417.00 179.17 L 417.00 179.17 Q 417.00 176.26 419.91 176.26 L 440.09 176.26 Q 443.00 176.26 443.00 179.17 L 443.00 179.17 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2024Q3: 28 (11 authored, 16 reviewed, 1 issues)</title>
+<rect x="463.67" y="178.94" width="26.00" height="6.06" fill="url(#g-authored)"/>
+<rect x="463.67" y="170.13" width="26.00" height="8.81" fill="url(#g-reviewed)"/>
+<path d="M 463.67 170.13 L 463.67 170.13 Q 463.67 169.58 464.22 169.58 L 489.12 169.58 Q 489.67 169.58 489.67 170.13 L 489.67 170.13 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2024Q4: 14 (1 authored, 13 reviewed)</title>
+<rect x="510.33" y="184.22" width="26.00" height="0.78" fill="url(#g-authored)"/>
+<path d="M 510.33 184.22 L 510.33 178.10 Q 510.33 174.10 514.33 174.10 L 532.33 174.10 Q 536.33 174.10 536.33 178.10 L 536.33 184.22 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2025Q1: 41 (21 authored, 19 reviewed, 1 issues)</title>
+<rect x="557.00" y="175.44" width="26.00" height="9.56" fill="url(#g-authored)"/>
+<rect x="557.00" y="166.80" width="26.00" height="8.65" fill="url(#g-reviewed)"/>
+<path d="M 557.00 166.80 L 557.00 166.80 Q 557.00 166.34 557.46 166.34 L 582.54 166.34 Q 583.00 166.34 583.00 166.80 L 583.00 166.80 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2025Q2: 55 (34 authored, 20 reviewed, 1 issues)</title>
+<rect x="603.67" y="171.64" width="26.00" height="13.36" fill="url(#g-authored)"/>
+<rect x="603.67" y="163.78" width="26.00" height="7.86" fill="url(#g-reviewed)"/>
+<path d="M 603.67 163.78 L 603.67 163.78 Q 603.67 163.39 604.06 163.39 L 629.27 163.39 Q 629.67 163.39 629.67 163.78 L 629.67 163.78 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2025Q3: 54 (28 authored, 24 reviewed, 2 issues)</title>
+<rect x="650.33" y="173.90" width="26.00" height="11.10" fill="url(#g-authored)"/>
+<rect x="650.33" y="164.38" width="26.00" height="9.52" fill="url(#g-reviewed)"/>
+<path d="M 650.33 164.38 L 650.33 164.38 Q 650.33 163.59 651.13 163.59 L 675.54 163.59 Q 676.33 163.59 676.33 164.38 L 676.33 164.38 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2025Q4: 65 (46 authored, 17 reviewed, 2 issues)</title>
+<rect x="697.00" y="168.37" width="26.00" height="16.63" fill="url(#g-authored)"/>
+<rect x="697.00" y="162.23" width="26.00" height="6.14" fill="url(#g-reviewed)"/>
+<path d="M 697.00 162.23 L 697.00 162.23 Q 697.00 161.51 697.72 161.51 L 722.28 161.51 Q 723.00 161.51 723.00 162.23 L 723.00 162.23 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2026Q1: 59 (23 authored, 35 reviewed, 1 issues)</title>
+<rect x="743.67" y="176.27" width="26.00" height="8.73" fill="url(#g-authored)"/>
+<rect x="743.67" y="163.00" width="26.00" height="13.28" fill="url(#g-reviewed)"/>
+<path d="M 743.67 163.00 L 743.67 163.00 Q 743.67 162.62 744.05 162.62 L 769.29 162.62 Q 769.67 162.62 769.67 163.00 L 769.67 163.00 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2026Q2: 106 (52 authored, 53 reviewed, 1 issues)</title>
+<rect x="790.33" y="170.28" width="26.00" height="14.72" fill="url(#g-authored)"/>
+<rect x="790.33" y="155.28" width="26.00" height="15.00" fill="url(#g-reviewed)"/>
+<path d="M 790.33 155.28 L 790.33 155.28 Q 790.33 155.00 790.62 155.00 L 816.05 155.00 Q 816.33 155.00 816.33 155.28 L 816.33 155.28 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2026Q3: 40 (17 authored, 23 reviewed)</title>
+<rect x="837.00" y="177.17" width="26.00" height="7.83" fill="url(#g-authored)"/>
+<path d="M 837.00 177.17 L 837.00 170.57 Q 837.00 166.57 841.00 166.57 L 859.00 166.57 Q 863.00 166.57 863.00 170.57 L 863.00 177.17 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-foundation/wormhole 2026Q4: 2 (1 authored, 1 issues)</title>
+<rect x="883.67" y="182.94" width="26.00" height="2.06" fill="url(#g-authored)"/>
+<path d="M 883.67 182.94 L 883.67 182.94 Q 883.67 180.88 885.73 180.88 L 907.61 180.88 Q 909.67 180.88 909.67 182.94 L 909.67 182.94 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/native-token-transfers: 124 records</title>
+<text class="lane" x="40" y="206">native-token-transfers</text>
+<text class="lane-sub" x="40" y="220">30 authored (18 merged) · 69 reviewed · 25 issues</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="226" y2="226"/>
+<g><title>native-token-transfers 2024Q1: 74 (21 authored, 38 reviewed, 15 issues)</title>
+<rect x="370.33" y="217.89" width="26.00" height="7.11" fill="url(#g-authored)"/>
+<rect x="370.33" y="205.01" width="26.00" height="12.87" fill="url(#g-reviewed)"/>
+<path d="M 370.33 205.01 L 370.33 203.93 Q 370.33 199.93 374.33 199.93 L 392.33 199.93 Q 396.33 199.93 396.33 203.93 L 396.33 205.01 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>native-token-transfers 2024Q2: 14 (2 authored, 8 reviewed, 4 issues)</title>
+<rect x="417.00" y="223.44" width="26.00" height="1.56" fill="url(#g-authored)"/>
+<rect x="417.00" y="217.21" width="26.00" height="6.23" fill="url(#g-reviewed)"/>
+<path d="M 417.00 217.21 L 417.00 217.21 Q 417.00 214.10 420.12 214.10 L 439.88 214.10 Q 443.00 214.10 443.00 217.21 L 443.00 217.21 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>native-token-transfers 2024Q3: 3 (3 reviewed)</title>
+<path d="M 463.67 225.00 L 463.67 223.95 Q 463.67 219.95 467.67 219.95 L 485.67 219.95 Q 489.67 219.95 489.67 223.95 L 489.67 225.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>native-token-transfers 2024Q4: 3 (3 reviewed)</title>
+<path d="M 510.33 225.00 L 510.33 223.95 Q 510.33 219.95 514.33 219.95 L 532.33 219.95 Q 536.33 219.95 536.33 223.95 L 536.33 225.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>native-token-transfers 2025Q2: 3 (3 reviewed)</title>
+<path d="M 603.67 225.00 L 603.67 223.95 Q 603.67 219.95 607.67 219.95 L 625.67 219.95 Q 629.67 219.95 629.67 223.95 L 629.67 225.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>native-token-transfers 2025Q3: 7 (2 authored, 2 reviewed, 3 issues)</title>
+<rect x="650.33" y="222.80" width="26.00" height="2.20" fill="url(#g-authored)"/>
+<rect x="650.33" y="220.59" width="26.00" height="2.20" fill="url(#g-reviewed)"/>
+<path d="M 650.33 220.59 L 650.33 220.59 Q 650.33 217.29 653.64 217.29 L 673.03 217.29 Q 676.33 217.29 676.33 220.59 L 676.33 220.59 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>native-token-transfers 2025Q4: 3 (1 authored, 1 reviewed, 1 issues)</title>
+<rect x="697.00" y="223.32" width="26.00" height="1.68" fill="url(#g-authored)"/>
+<rect x="697.00" y="221.64" width="26.00" height="1.68" fill="url(#g-reviewed)"/>
+<path d="M 697.00 221.64 L 697.00 221.64 Q 697.00 219.95 698.68 219.95 L 721.32 219.95 Q 723.00 219.95 723.00 221.64 L 723.00 221.64 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>native-token-transfers 2026Q1: 3 (3 reviewed)</title>
+<path d="M 743.67 225.00 L 743.67 223.95 Q 743.67 219.95 747.67 219.95 L 765.67 219.95 Q 769.67 219.95 769.67 223.95 L 769.67 225.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>native-token-transfers 2026Q2: 7 (1 authored, 5 reviewed, 1 issues)</title>
+<rect x="790.33" y="223.90" width="26.00" height="1.10" fill="url(#g-authored)"/>
+<rect x="790.33" y="218.39" width="26.00" height="5.51" fill="url(#g-reviewed)"/>
+<path d="M 790.33 218.39 L 790.33 218.39 Q 790.33 217.29 791.43 217.29 L 815.23 217.29 Q 816.33 217.29 816.33 218.39 L 816.33 218.39 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>native-token-transfers 2026Q3: 7 (3 authored, 3 reviewed, 1 issues)</title>
+<rect x="837.00" y="221.70" width="26.00" height="3.30" fill="url(#g-authored)"/>
+<rect x="837.00" y="218.39" width="26.00" height="3.30" fill="url(#g-reviewed)"/>
+<path d="M 837.00 218.39 L 837.00 218.39 Q 837.00 217.29 838.10 217.29 L 861.90 217.29 Q 863.00 217.29 863.00 218.39 L 863.00 218.39 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormhole-foundation/example-liquidity-layer: 31 records</title>
+<text class="lane" x="40" y="246">example-liquidity-layer</text>
+<text class="lane-sub" x="40" y="260">24 reviewed · 7 issues</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="266" y2="266"/>
+<g><title>example-liquidity-layer 2024Q2: 24 (17 reviewed, 7 issues)</title>
+<rect x="417.00" y="254.89" width="26.00" height="10.11" fill="url(#g-reviewed)"/>
+<path d="M 417.00 254.89 L 417.00 254.73 Q 417.00 250.73 421.00 250.73 L 439.00 250.73 Q 443.00 250.73 443.00 254.73 L 443.00 254.89 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>example-liquidity-layer 2024Q3: 7 (7 reviewed)</title>
+<path d="M 463.67 265.00 L 463.67 261.29 Q 463.67 257.29 467.67 257.29 L 485.67 257.29 Q 489.67 257.29 489.67 261.29 L 489.67 265.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>m0-platform/solana-m-extensions: 11 records</title>
+<text class="lane" x="40" y="286">solana-m-extensions</text>
+<text class="lane-sub" x="40" y="300">11 reviewed</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="306" y2="306"/>
+<g><title>solana-m-extensions 2025Q2: 9 (9 reviewed)</title>
+<path d="M 603.67 305.00 L 603.67 300.26 Q 603.67 296.26 607.67 296.26 L 625.67 296.26 Q 629.67 296.26 629.67 300.26 L 629.67 305.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>solana-m-extensions 2025Q3: 2 (2 reviewed)</title>
+<path d="M 650.33 305.00 L 650.33 304.88 Q 650.33 300.88 654.33 300.88 L 672.33 300.88 Q 676.33 300.88 676.33 304.88 L 676.33 305.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>m0-platform/solana-m: 9 records</title>
+<text class="lane" x="40" y="326">solana-m</text>
+<text class="lane-sub" x="40" y="340">9 reviewed</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="346" y2="346"/>
+<g><title>solana-m 2025Q1: 5 (5 reviewed)</title>
+<path d="M 557.00 345.00 L 557.00 342.48 Q 557.00 338.48 561.00 338.48 L 579.00 338.48 Q 583.00 338.48 583.00 342.48 L 583.00 345.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>solana-m 2025Q2: 1 (1 reviewed)</title>
+<path d="M 603.67 345.00 L 603.67 345.00 Q 603.67 341.00 607.67 341.00 L 625.67 341.00 Q 629.67 341.00 629.67 345.00 L 629.67 345.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>solana-m 2025Q3: 2 (2 reviewed)</title>
+<path d="M 650.33 345.00 L 650.33 344.88 Q 650.33 340.88 654.33 340.88 L 672.33 340.88 Q 676.33 340.88 676.33 344.88 L 676.33 345.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>solana-m 2026Q3: 1 (1 reviewed)</title>
+<path d="M 837.00 345.00 L 837.00 345.00 Q 837.00 341.00 841.00 341.00 L 859.00 341.00 Q 863.00 341.00 863.00 345.00 L 863.00 345.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-foundation/wormhole-solidity-sdk: 7 records</title>
+<text class="lane" x="40" y="366">wormhole-solidity-sdk</text>
+<text class="lane-sub" x="40" y="380">4 authored (2 merged) · 2 reviewed · 1 issue</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="386" y2="386"/>
+<g><title>wormhole-solidity-sdk 2024Q1: 1 (1 authored)</title>
+<path d="M 370.33 385.00 L 370.33 385.00 Q 370.33 381.00 374.33 381.00 L 392.33 381.00 Q 396.33 381.00 396.33 385.00 L 396.33 385.00 Z" fill="url(#g-authored)"/>
+</g>
+<g><title>wormhole-solidity-sdk 2024Q3: 1 (1 reviewed)</title>
+<path d="M 463.67 385.00 L 463.67 385.00 Q 463.67 381.00 467.67 381.00 L 485.67 381.00 Q 489.67 381.00 489.67 385.00 L 489.67 385.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-solidity-sdk 2025Q4: 1 (1 reviewed)</title>
+<path d="M 697.00 385.00 L 697.00 385.00 Q 697.00 381.00 701.00 381.00 L 719.00 381.00 Q 723.00 381.00 723.00 385.00 L 723.00 385.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<g><title>wormhole-solidity-sdk 2026Q1: 1 (1 authored)</title>
+<path d="M 743.67 385.00 L 743.67 385.00 Q 743.67 381.00 747.67 381.00 L 765.67 381.00 Q 769.67 381.00 769.67 385.00 L 769.67 385.00 Z" fill="url(#g-authored)"/>
+</g>
+<g><title>wormhole-solidity-sdk 2026Q2: 3 (2 authored, 1 issues)</title>
+<rect x="790.33" y="381.64" width="26.00" height="3.36" fill="url(#g-authored)"/>
+<path d="M 790.33 381.64 L 790.33 381.64 Q 790.33 379.95 792.02 379.95 L 814.65 379.95 Q 816.33 379.95 816.33 381.64 L 816.33 381.64 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>stx-labs/clarity-go: 4 records</title>
+<text class="lane" x="40" y="406">clarity-go</text>
+<text class="lane-sub" x="40" y="420">4 issues</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="426" y2="426"/>
+<g><title>clarity-go 2025Q4: 4 (4 issues)</title>
+<path d="M 697.00 425.00 L 697.00 423.17 Q 697.00 419.17 701.00 419.17 L 719.00 419.17 Q 723.00 419.17 723.00 423.17 L 723.00 425.00 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>commonwarexyz/monorepo: 2 records</title>
+<text class="lane" x="40" y="446">monorepo</text>
+<text class="lane-sub" x="40" y="460">2 issues</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="466" y2="466"/>
+<g><title>monorepo 2024Q4: 2 (2 issues)</title>
+<path d="M 510.33 465.00 L 510.33 464.88 Q 510.33 460.88 514.33 460.88 L 532.33 460.88 Q 536.33 460.88 536.33 464.88 L 536.33 465.00 Z" fill="url(#g-issues)"/>
+</g>
+<g><title>wormholelabs-xyz/wormhole: 1 records</title>
+<text class="lane" x="40" y="486">wormholelabs-xyz/wormhole</text>
+<text class="lane-sub" x="40" y="500">1 reviewed</text>
+</g>
+<line class="grid" x1="360" x2="920" y1="506" y2="506"/>
+<g><title>wormholelabs-xyz/wormhole 2026Q3: 1 (1 reviewed)</title>
+<path d="M 837.00 505.00 L 837.00 505.00 Q 837.00 501.00 841.00 501.00 L 859.00 501.00 Q 863.00 501.00 863.00 505.00 L 863.00 505.00 Z" fill="url(#g-reviewed)"/>
+</g>
+<text class="section" x="40" y="558">What the authored PR titles say</text>
+<text class="lane-sub" x="40" y="574">Keyword groups over 275 authored PR titles · bar = PRs, solid portion = merged</text>
+<g><title>Linters &amp; static analysis: 57 PRs, 41 merged</title>
+<text class="lane" x="256" y="604" text-anchor="end">Linters &amp; static analysis</text>
+<rect class="track" x="270" y="590" width="580.00" height="18" rx="3"/>
+<rect x="270" y="590" width="416.19" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="858.00" y="604">57</text>
+</g>
+<g><title>Governor &amp; flow cancel: 42 PRs, 32 merged</title>
+<text class="lane" x="256" y="632" text-anchor="end">Governor &amp; flow cancel</text>
+<rect class="track" x="270" y="618" width="427.37" height="18" rx="3"/>
+<rect x="270" y="618" width="324.61" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="705.37" y="632">42</text>
+</g>
+<g><title>Docs, policy &amp; security context: 36 PRs, 33 merged</title>
+<text class="lane" x="256" y="660" text-anchor="end">Docs, policy &amp; security context</text>
+<rect class="track" x="270" y="646" width="366.32" height="18" rx="3"/>
+<rect x="270" y="646" width="334.79" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="644.32" y="660">36</text>
+</g>
+<g><title>Tests &amp; fuzzing: 36 PRs, 18 merged</title>
+<text class="lane" x="256" y="688" text-anchor="end">Tests &amp; fuzzing</text>
+<rect class="track" x="270" y="674" width="366.32" height="18" rx="3"/>
+<rect x="270" y="674" width="182.16" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="644.32" y="688">36</text>
+</g>
+<g><title>Guardian node changes: 33 PRs, 19 merged</title>
+<text class="lane" x="256" y="716" text-anchor="end">Guardian node changes</text>
+<rect class="track" x="270" y="702" width="335.79" height="18" rx="3"/>
+<rect x="270" y="702" width="192.33" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="613.79" y="716">33</text>
+</g>
+<g><title>Transfer Verifier: 18 PRs, 15 merged</title>
+<text class="lane" x="256" y="744" text-anchor="end">Transfer Verifier</text>
+<rect class="track" x="270" y="730" width="183.16" height="18" rx="3"/>
+<rect x="270" y="730" width="151.63" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="461.16" y="744">18</text>
+</g>
+<g><title>Dependency reduction &amp; cleanup: 15 PRs, 14 merged</title>
+<text class="lane" x="256" y="772" text-anchor="end">Dependency reduction &amp; cleanup</text>
+<rect class="track" x="270" y="758" width="152.63" height="18" rx="3"/>
+<rect x="270" y="758" width="141.46" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="430.63" y="772">15</text>
+</g>
+<g><title>CI &amp; build: 8 PRs, 8 merged</title>
+<text class="lane" x="256" y="800" text-anchor="end">CI &amp; build</text>
+<rect class="track" x="270" y="786" width="81.40" height="18" rx="3"/>
+<rect x="270" y="786" width="80.40" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="359.40" y="800">8</text>
+</g>
+<g><title>SDK &amp; chain IDs: 8 PRs, 5 merged</title>
+<text class="lane" x="256" y="828" text-anchor="end">SDK &amp; chain IDs</text>
+<rect class="track" x="270" y="814" width="81.40" height="18" rx="3"/>
+<rect x="270" y="814" width="49.88" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="359.40" y="828">8</text>
+</g>
+<g><title>Solana program changes: 8 PRs, 5 merged</title>
+<text class="lane" x="256" y="856" text-anchor="end">Solana program changes</text>
+<rect class="track" x="270" y="842" width="81.40" height="18" rx="3"/>
+<rect x="270" y="842" width="49.88" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="359.40" y="856">8</text>
+</g>
+<g><title>Notary: 7 PRs, 7 merged</title>
+<text class="lane" x="256" y="884" text-anchor="end">Notary</text>
+<rect class="track" x="270" y="870" width="71.23" height="18" rx="3"/>
+<rect x="270" y="870" width="70.23" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="349.23" y="884">7</text>
+</g>
+<g><title>Other: 7 PRs, 3 merged</title>
+<text class="lane" x="256" y="912" text-anchor="end">Other</text>
+<rect class="track" x="270" y="898" width="71.23" height="18" rx="3"/>
+<rect x="270" y="898" width="29.53" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="349.23" y="912">7</text>
+</g>
+<text class="footnote" x="40" y="958">Quarterly column height uses a square-root scale. Groups come from data/work-themes.json (first match wins); they describe titles, not impact.</text>
+<text class="footnote" x="40" y="976">Dated by PR/issue creation; only watched public repositories. Much of this work is not public. Generated from contributions.jsonl.</text>
+</svg>

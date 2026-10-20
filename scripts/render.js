@@ -63,6 +63,30 @@ const statsLine = [
   `${events.filter((e) => e.type === "tool").length} security tools`,
 ].join(" · ");
 
+// ---------------------------------------------------------------- highlights
+
+const fmt = (n) => n.toLocaleString("en-US");
+const contributions = JSON.parse(fs.readFileSync(path.join(ROOT, "dist", "contributions.json"), "utf8")).records;
+const contributionById = new Map(contributions.map((r) => [r.id, r]));
+const prs = contributions.filter((r) => r.kind === "pull-request");
+const authoredPrs = prs.filter((r) => r.relations.includes("authored-pr"));
+const reviewedPrs = prs.filter((r) => r.relations.includes("reviewed-pr"));
+const inlineReviewed = reviewedPrs.filter((r) => r.review && r.review.inline_comment_count > 0);
+const inlineComments = reviewedPrs.reduce((sum, r) => sum + ((r.review && r.review.inline_comment_count) || 0), 0);
+const criticalAudits = auditEvents
+  .filter((e) => e.audit && e.audit.counts && e.audit.counts.critical)
+  .sort((a, b) => b.audit.counts.critical - a.audit.counts.critical);
+
+const highlightConfig = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "highlights.json"), "utf8"));
+const highlightRows = highlightConfig.items.map((item) => {
+  const links = item.links.map((link) => {
+    const record = contributionById.get(link.id);
+    if (!record) throw new Error(`highlight link ${link.id} not found in contributions`);
+    return `[${link.label}](${record.url})`;
+  });
+  return `| ${item.area} | ${item.text} | ${links.join(", ")} |`;
+});
+
 // ---------------------------------------------------------------- sections
 
 const lines = [];
@@ -72,23 +96,36 @@ lines.push(
   `This is a loose archive of security work I've done for open-source projects, including`,
   `security engineering and source code reviews.`,
   ``,
-  `> **${statsLine}**`,
+  `![${statsLine}](assets/overview-stats.svg)`,
   ``,
   `> **Note:** this is a best-effort list of *public* work only. Much of my audit`,
   `> and security engineering output is under confidentiality agreement and cannot be listed.`,
   ``,
-  `## Public-work map`,
+  `## Selected work`,
   ``,
-  `[![Public security capability map](assets/capability-map.svg)](dist/capability-graph.json)`,
+  `- **Audits:** ${auditEvents.length} published reports as primary auditor, including ${criticalAudits
+    .map((e) => `${e.audit.counts.critical} critical finding${e.audit.counts.critical === 1 ? "" : "s"} in ${e.title.replace(/ (Security )?(Audit|Assessment)$/, "")}`)
+    .join(" and ")}.`,
+  `- **Code review:** reviewed ${fmt(reviewedPrs.length)} public pull requests, leaving ${fmt(inlineComments)} inline comments across ${fmt(inlineReviewed.length)} of them.`,
+  `- **Authored:** ${fmt(authoredPrs.length)} public pull requests, ${fmt(authoredPrs.filter((r) => r.merged_at).length)} merged.`,
   ``,
-  `<details>`,
-  `<summary>Published report finding classifications</summary>`,
+  `| Area | Work | PRs |`,
+  `| --- | --- | --- |`,
+  ...highlightRows,
+  ``,
+  `## Public work over time`,
+  ``,
+  `![Public work over time](assets/career-timeline.svg)`,
+  ``,
+  `## Security engineering in public repositories`,
+  ``,
+  `![Security engineering in public repositories](assets/security-engineering.svg)`,
+  ``,
+  `## Findings in published audit reports`,
   ``,
   `![Published report finding classifications](assets/finding-fingerprint.svg)`,
   ``,
-  `</details>`,
-  ``,
-  `Machine-readable exports: [events](dist/events.json) · [capability graph](dist/capability-graph.json) · [finding patterns](dist/finding-patterns.json)`,
+  `Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.json) · [capability graph](dist/capability-graph.json) · [finding patterns](dist/finding-patterns.json)`,
   ``,
   `<!-- GENERATED from events.jsonl by scripts/render.js — do not edit sections below by hand. -->`,
   ``,
@@ -155,15 +192,20 @@ for (const org of ["Asymmetric Research", "McGill University", "Independent"]) {
 
 // --- audit table
 lines.push(`# Audit Reports`, ``, `Formal audit reports for which I was the primary auditor.`, ``);
-lines.push(`| Title | Organization | Type | Programming Language | Link |`);
-lines.push(`| --- | --- | --- | --- | --- |`);
-for (const e of auditEvents) {
+lines.push(`| Date | Title | Client | Type | Language | C / H / M / L / I | Report |`);
+lines.push(`| --- | --- | --- | --- | --- | --- | --- |`);
+const auditsByDate = [...auditEvents].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+for (const e of auditsByDate) {
   const tags = e.tags || [];
   const langs = tags.filter((t) => LANGUAGES.has(t)).map(tc);
   const types = tags.filter((t) => !LANGUAGES.has(t)).map(tc);
   const url = evUrl(e);
-  const link = url ? `[📒](${url})` : "";
-  lines.push(`| ${e.title} | ${e.client} | ${types.join(", ")} | ${langs.join(", ")} | ${link} |`);
+  const link = url ? `[Report](${url})` : "";
+  const counts = (e.audit && e.audit.counts) || {};
+  const sev = !e.audit || !e.audit.counts ? "n/a" : ["critical", "high", "medium", "low", "informational"].map((s) => counts[s] || 0).join(" / ");
+  lines.push(
+    `| ${e.date || ""} | ${e.title} | ${e.client} | ${types.join(", ")} | ${langs.join(", ")} | ${sev} | ${link} |`
+  );
 }
 lines.push(``);
 
