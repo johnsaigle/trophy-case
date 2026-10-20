@@ -20,9 +20,56 @@ future visualizations, Pages site) is generated output — never hand-edited. Th
                  ┌──────────────────────────────┐
   events.jsonl ─►│ scripts/render.js            │ ──► README.md
                  └──────────────────────────────┘
+                 ┌──────────────────────────────┐
+  events.jsonl ─►│ scripts/render-visuals.js    │ ──► assets/*.svg
+  tag taxonomy ─►│                              │ ──► dist/*.json
+                 └──────────────────────────────┘
 ```
 
 **`events.jsonl` is the single source of truth.** Schema: [schema.md](schema.md).
+
+The deterministic pipeline for contribution-level GitHub evidence is implemented
+(see [github-enrichment-plan.md](github-enrichment-plan.md) for the design) and
+the one-time repository-by-repository backfill has been run: `contributions.jsonl`
+holds one normalized record per public PR/issue across the watched repos.
+
+### GitHub contribution enrichment
+
+```bash
+# 1. Discovery (per-repo, resumable yearly windows; checkpointed in
+#    .github/enrichment-state.json, candidates cached in .cache/github-enrichment/)
+node scripts/github-discover.js --backfill [--dry-run] [--repos a/b,c/d]
+node scripts/github-discover.js --incremental [--overlap-days 7]
+
+# 2. Hydration (raw API facts cached under .cache/github-enrichment/raw/)
+node scripts/github-hydrate.js                    # all pending discovery candidates
+node scripts/github-hydrate.js --prs owner/repo#918,owner/repo#921
+
+# 3. Deterministic classification -> contributions.jsonl (checked in)
+node scripts/github-classify.js
+
+# 4. Derived profiles -> dist/contributions.json, dist/project-profiles.json,
+#    dist/contribution-capabilities.json
+node scripts/render-contributions.js
+```
+
+Rules live in `data/github-enrichment-rules.json` (versioned: language table,
+path rules per repo, low-signal file flags, issue label mappings). Rare
+corrections go in `data/github-enrichment-overrides.json` and must include a
+`reason`. Records are upserted by stable ID (`github-pr-<owner>-<repo>-<number>`),
+so reruns are idempotent and git history tracks metadata changes. Assertions
+carry an `evidence_level`: `direct-contribution` > `direct-review` >
+`reviewed-pr-scope` > `repository-context`; repository defaults never overwrite
+stronger evidence.
+
+Tests (no network):
+
+```bash
+node --test tests/
+```
+
+An opt-in integration test hits one known public PR:
+`RUN_INTEGRATION=1 node --test tests/integration.github-api.test.js`.
 
 ## Repo layout
 
@@ -35,6 +82,13 @@ future visualizations, Pages site) is generated output — never hand-edited. Th
 | `scripts/collect.js` | Weekly collector (runs in Actions) |
 | `scripts/postprocess.js` | Local LLM classification of pending candidates |
 | `scripts/render.js` | README renderer |
+| `scripts/render-visuals.js` | Deterministic JSON export and SVG renderer |
+| `data/tag-taxonomy.json` | Tag categories and capability-map inclusion rules |
+| `assets/` | Generated static SVG visualizations |
+| `dist/` | Generated website-friendly JSON exports |
+| `contributions.jsonl` | Normalized contribution evidence (deterministic upserts) |
+| `data/github-enrichment-*.json` | Enrichment rules, overrides, and watched repos |
+| `tests/` | Fixture tests (`node --test tests/`) + opt-in integration test |
 | `proposals/` | Candidate dumps from collector runs + `processed-urls.json` |
 | `docs/` | Dev documentation (this file, schema) |
 | `pdfs/` | Audit report archive |
@@ -45,8 +99,9 @@ future visualizations, Pages site) is generated output — never hand-edited. Th
   counts in `events.jsonl`, dumps new candidates to `proposals/`, opens a
   proposal PR. Requires repo setting "Allow GitHub Actions to create and approve
   pull requests" and the `PAT_READ_ONLY` secret (classic PAT, `public_repo`).
-- **`render-readme.yml`** — on every push touching `events.jsonl`. Re-renders the
-  README and prunes merged `collect/*` branches.
+- **`render-readme.yml`** — on every relevant data or renderer change. Re-renders
+  the JSON exports, SVG visualizations, and README, then prunes merged
+  `collect/*` branches.
 
 ## Local post-processing
 
@@ -93,7 +148,22 @@ Two options:
 2. **Quick append**: add a JSON line to `events.jsonl` directly. Keep the schema
    (`docs/schema.md`), set `provenance.source: "manual"`.
 
-Either way, push and the README regenerates.
+When introducing a new tag, also classify it in `data/tag-taxonomy.json`. The
+visualization renderer rejects unknown tags so the website-facing data cannot
+silently drift. Then regenerate all output:
+
+```bash
+node scripts/render-visuals.js && node scripts/render.js
+```
+
+The capability map includes recurring tags at or above
+`map.minimum_event_count`; its nodes and connections are computed from event
+tag co-occurrence. The finding fingerprint is computed from audit finding
+classes. The renderers use fixed sorting and geometry, omit timestamps, and do
+not use randomized layout, so identical inputs produce byte-for-byte identical
+artifacts.
+
+Either way, push and the README and visualizations regenerate.
 
 ## Regenerating the seed
 

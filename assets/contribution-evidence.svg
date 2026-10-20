@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="758" viewBox="0 0 960 758" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1132" viewBox="0 0 960 1132" role="img" aria-labelledby="title desc">
 <title id="title">Contribution evidence by tag</title>
 <desc id="desc">Tags from normalized GitHub pull request and issue records, split by the strongest evidence level observed.</desc>
 <style>
@@ -13,51 +13,112 @@
 <rect width="100%" height="100%" rx="16" fill="#f8fafc"/>
 <text class="title" x="40" y="48">Contribution evidence by tag</text>
 <text class="subtitle" x="40" y="75">Normalized GitHub PR/issue records · bar length shows tagged records; color shows the strongest evidence level.</text>
-<text class="stats" x="40" y="99">5 records · 2 projects · 1 authored PRs · 4 reviewed PRs · 0 issues</text>
-<text class="label" x="40" y="217">bridge</text>
+<text class="stats" x="40" y="99">2001 records · 10 projects · 808 authored PRs · 1248 reviewed PRs · 256 issues</text>
+<text class="label" x="40" y="217">healthcare</text>
 <rect x="260.00" y="202" width="520.00" height="20" fill="#e2e8f0"/>
-<text class="count" x="788.00" y="217">5</text>
-<text class="label" x="40" y="251">shell</text>
-<rect x="260.00" y="236" width="104.00" height="20" fill="#2563eb"/>
-<rect x="364.00" y="236" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="476.00" y="251">2</text>
-<text class="label" x="40" y="285">typescript</text>
-<rect x="260.00" y="270" width="208.00" height="20" fill="#2563eb"/>
-<text class="count" x="476.00" y="285">2</text>
-<text class="label" x="40" y="319">daml</text>
-<rect x="260.00" y="304" width="104.00" height="20" fill="#2563eb"/>
-<text class="count" x="372.00" y="319">1</text>
-<text class="label" x="40" y="353">dockerfile</text>
-<rect x="260.00" y="338" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="353">1</text>
-<text class="label" x="40" y="387">evm</text>
-<rect x="260.00" y="372" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="387">1</text>
-<text class="label" x="40" y="421">go</text>
-<rect x="260.00" y="406" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="421">1</text>
-<text class="label" x="40" y="455">javascript</text>
-<rect x="260.00" y="440" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="455">1</text>
-<text class="label" x="40" y="489">makefile</text>
-<rect x="260.00" y="474" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="489">1</text>
-<text class="label" x="40" y="523">rust</text>
-<rect x="260.00" y="508" width="104.00" height="20" fill="#047857"/>
-<text class="count" x="372.00" y="523">1</text>
-<text class="label" x="40" y="557">solana</text>
-<rect x="260.00" y="542" width="104.00" height="20" fill="#047857"/>
-<text class="count" x="372.00" y="557">1</text>
-<text class="label" x="40" y="591">solidity</text>
-<rect x="260.00" y="576" width="104.00" height="20" fill="#94a3b8"/>
-<text class="count" x="372.00" y="591">1</text>
-<text class="label" x="40" y="625">xrpl</text>
-<rect x="260.00" y="610" width="104.00" height="20" fill="#2563eb"/>
-<text class="count" x="372.00" y="625">1</text>
-<rect x="40" y="671" width="14" height="14" rx="3" fill="#047857"/><text class="legend" x="60" y="682">direct contribution (authored files)</text>
-<rect x="265" y="671" width="14" height="14" rx="3" fill="#2563eb"/><text class="legend" x="285" y="682">direct review (inline comments)</text>
-<rect x="490" y="671" width="14" height="14" rx="3" fill="#94a3b8"/><text class="legend" x="510" y="682">reviewed PR scope (other changed files)</text>
-<rect x="715" y="671" width="14" height="14" rx="3" fill="#e2e8f0"/><text class="legend" x="735" y="682">repository context (defaults/labels)</text>
-<text class="footnote" x="40" y="712">Item-level evidence: files changed by authored PRs and files with inline review comments. Reviewed PR scope covers</text>
-<text class="footnote" x="40" y="730">other files changed by reviewed PRs. Repository context is repo defaults and issue labels. All 13 tags shown.</text>
+<text class="count" x="788.00" y="217">1337</text>
+<text class="label" x="40" y="251">web</text>
+<rect x="260.00" y="236" width="520.00" height="20" fill="#e2e8f0"/>
+<text class="count" x="788.00" y="251">1337</text>
+<text class="label" x="40" y="285">bridge</text>
+<rect x="260.00" y="270" width="248.14" height="20" fill="#e2e8f0"/>
+<text class="count" x="516.14" y="285">638</text>
+<text class="label" x="40" y="319">php</text>
+<rect x="260.00" y="304" width="76.23" height="20" fill="#047857"/>
+<rect x="336.23" y="304" width="29.17" height="20" fill="#2563eb"/>
+<rect x="365.40" y="304" width="52.51" height="20" fill="#94a3b8"/>
+<text class="count" x="425.91" y="319">406</text>
+<text class="label" x="40" y="353">go</text>
+<rect x="260.00" y="338" width="50.95" height="20" fill="#047857"/>
+<rect x="310.95" y="338" width="22.17" height="20" fill="#2563eb"/>
+<rect x="333.12" y="338" width="41.23" height="20" fill="#94a3b8"/>
+<text class="count" x="382.35" y="353">294</text>
+<text class="label" x="40" y="387">javascript</text>
+<rect x="260.00" y="372" width="9.33" height="20" fill="#047857"/>
+<rect x="269.33" y="372" width="9.72" height="20" fill="#2563eb"/>
+<rect x="279.06" y="372" width="43.95" height="20" fill="#94a3b8"/>
+<text class="count" x="331.01" y="387">162</text>
+<text class="label" x="40" y="421">shell</text>
+<rect x="260.00" y="406" width="35.78" height="20" fill="#047857"/>
+<rect x="295.78" y="406" width="5.06" height="20" fill="#2563eb"/>
+<rect x="300.84" y="406" width="11.28" height="20" fill="#94a3b8"/>
+<text class="count" x="320.12" y="421">134</text>
+<text class="label" x="40" y="455">rust</text>
+<rect x="260.00" y="440" width="9.72" height="20" fill="#047857"/>
+<rect x="269.72" y="440" width="7.00" height="20" fill="#2563eb"/>
+<rect x="276.72" y="440" width="25.67" height="20" fill="#94a3b8"/>
+<text class="count" x="310.39" y="455">109</text>
+<text class="label" x="40" y="489">solana</text>
+<rect x="260.00" y="474" width="9.33" height="20" fill="#047857"/>
+<rect x="269.33" y="474" width="6.61" height="20" fill="#2563eb"/>
+<rect x="275.95" y="474" width="17.50" height="20" fill="#94a3b8"/>
+<rect x="293.45" y="474" width="7.78" height="20" fill="#e2e8f0"/>
+<text class="count" x="309.23" y="489">106</text>
+<text class="label" x="40" y="523">typescript</text>
+<rect x="260.00" y="508" width="5.06" height="20" fill="#047857"/>
+<rect x="265.06" y="508" width="6.22" height="20" fill="#2563eb"/>
+<rect x="271.28" y="508" width="26.45" height="20" fill="#94a3b8"/>
+<text class="count" x="305.73" y="523">97</text>
+<text class="label" x="40" y="557">evm</text>
+<rect x="260.00" y="542" width="3.89" height="20" fill="#047857"/>
+<rect x="263.89" y="542" width="3.11" height="20" fill="#2563eb"/>
+<rect x="267.00" y="542" width="14.78" height="20" fill="#94a3b8"/>
+<rect x="281.78" y="542" width="2.72" height="20" fill="#e2e8f0"/>
+<text class="count" x="292.50" y="557">63</text>
+<text class="label" x="40" y="591">makefile</text>
+<rect x="260.00" y="576" width="12.06" height="20" fill="#047857"/>
+<rect x="272.06" y="576" width="0.39" height="20" fill="#2563eb"/>
+<rect x="272.45" y="576" width="8.56" height="20" fill="#94a3b8"/>
+<text class="count" x="289.00" y="591">54</text>
+<text class="label" x="40" y="625">solidity</text>
+<rect x="260.00" y="610" width="1.94" height="20" fill="#047857"/>
+<rect x="261.94" y="610" width="2.33" height="20" fill="#2563eb"/>
+<rect x="264.28" y="610" width="10.11" height="20" fill="#94a3b8"/>
+<text class="count" x="282.39" y="625">37</text>
+<text class="label" x="40" y="659">dockerfile</text>
+<rect x="260.00" y="644" width="3.89" height="20" fill="#047857"/>
+<rect x="263.89" y="644" width="0.39" height="20" fill="#2563eb"/>
+<rect x="264.28" y="644" width="8.95" height="20" fill="#94a3b8"/>
+<text class="count" x="281.22" y="659">34</text>
+<text class="label" x="40" y="693">cosmos</text>
+<rect x="260.00" y="678" width="1.94" height="20" fill="#047857"/>
+<rect x="261.94" y="678" width="0.39" height="20" fill="#2563eb"/>
+<rect x="262.33" y="678" width="1.17" height="20" fill="#94a3b8"/>
+<text class="count" x="271.50" y="693">9</text>
+<text class="label" x="40" y="727">near</text>
+<rect x="260.00" y="712" width="2.72" height="20" fill="#047857"/>
+<rect x="262.72" y="712" width="0.39" height="20" fill="#94a3b8"/>
+<text class="count" x="271.11" y="727">8</text>
+<text class="label" x="40" y="761">algorand</text>
+<rect x="260.00" y="746" width="1.94" height="20" fill="#047857"/>
+<rect x="261.94" y="746" width="0.78" height="20" fill="#94a3b8"/>
+<text class="count" x="270.72" y="761">7</text>
+<text class="label" x="40" y="795">stacks</text>
+<rect x="260.00" y="780" width="1.56" height="20" fill="#e2e8f0"/>
+<text class="count" x="269.56" y="795">4</text>
+<text class="label" x="40" y="829">python</text>
+<rect x="260.00" y="814" width="0.39" height="20" fill="#047857"/>
+<rect x="260.39" y="814" width="0.78" height="20" fill="#94a3b8"/>
+<text class="count" x="269.17" y="829">3</text>
+<text class="label" x="40" y="863">sui</text>
+<rect x="260.00" y="848" width="1.17" height="20" fill="#94a3b8"/>
+<text class="count" x="269.17" y="863">3</text>
+<text class="label" x="40" y="897">cryptography</text>
+<rect x="260.00" y="882" width="0.78" height="20" fill="#e2e8f0"/>
+<text class="count" x="268.78" y="897">2</text>
+<text class="label" x="40" y="931">daml</text>
+<rect x="260.00" y="916" width="0.39" height="20" fill="#2563eb"/>
+<text class="count" x="268.39" y="931">1</text>
+<text class="label" x="40" y="965">move</text>
+<rect x="260.00" y="950" width="0.39" height="20" fill="#94a3b8"/>
+<text class="count" x="268.39" y="965">1</text>
+<text class="label" x="40" y="999">xrpl</text>
+<rect x="260.00" y="984" width="0.39" height="20" fill="#2563eb"/>
+<text class="count" x="268.39" y="999">1</text>
+<rect x="40" y="1045" width="14" height="14" rx="3" fill="#047857"/><text class="legend" x="60" y="1056">direct contribution (authored files)</text>
+<rect x="265" y="1045" width="14" height="14" rx="3" fill="#2563eb"/><text class="legend" x="285" y="1056">direct review (inline comments)</text>
+<rect x="490" y="1045" width="14" height="14" rx="3" fill="#94a3b8"/><text class="legend" x="510" y="1056">reviewed PR scope (other changed files)</text>
+<rect x="715" y="1045" width="14" height="14" rx="3" fill="#e2e8f0"/><text class="legend" x="735" y="1056">repository context (defaults/labels)</text>
+<text class="footnote" x="40" y="1086">Item-level evidence: files changed by authored PRs and files with inline review comments. Reviewed PR scope covers</text>
+<text class="footnote" x="40" y="1104">other files changed by reviewed PRs. Repository context is repo defaults and issue labels. All 24 tags shown.</text>
 </svg>

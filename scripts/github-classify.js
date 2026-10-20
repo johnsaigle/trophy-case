@@ -62,9 +62,21 @@ function main() {
   const records = new Map(loadContributions().map((r) => [r.id, r]));
   let classified = 0;
   let changed = 0;
+  let skippedNoRelation = 0;
   for (const f of rawFiles) {
     const raw = JSON.parse(fs.readFileSync(path.join(RAW_DIR, f), "utf8"));
-    const record = classifyRecord(raw, rules, { author, overrides });
+    let record;
+    try {
+      record = classifyRecord(raw, rules, { author, overrides });
+    } catch (err) {
+      // Discovery is only a candidate source: hydrated facts may not support
+      // any relationship (e.g. a stale search hit). Skip those, loudly.
+      if (/no relationship/.test(err.message)) {
+        skippedNoRelation++;
+        continue;
+      }
+      throw err;
+    }
     if (record.id !== f.replace(/\.json$/, "")) {
       throw new Error(`Cache filename ${f} does not match stable ID ${record.id}`);
     }
@@ -83,7 +95,9 @@ function main() {
     return;
   }
   writeContributionsAtomic(sorted);
-  console.log(`Wrote ${sorted.length} records (${changed} new or changed).`);
+  console.log(
+    `Wrote ${sorted.length} records (${changed} new or changed; ${skippedNoRelation} candidates had no supported relationship and were skipped).`
+  );
 }
 
 main();

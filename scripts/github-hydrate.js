@@ -125,7 +125,18 @@ async function main() {
       refreshed++;
     }
     process.stdout.write(`Hydrating ${id}... `);
-    const raw = t.kind === "pr" ? await hydratePr(t.project, t.number) : await hydrateIssue(t.project, t.number);
+    let raw;
+    try {
+      raw =
+        t.kind === "pr"
+          ? await hydratePr(t.project, t.number)
+          : await hydrateIssue(t.project, t.number);
+    } catch (err) {
+      // One bad PR (deleted, 404, transient failure) must not kill the backfill;
+      // state is resumable so the target is retried on the next run.
+      console.log(`FAILED: ${err.message.slice(0, 200)}`);
+      continue;
+    }
     writeJsonAtomic(existingPath, raw);
     const ownerReviewCount = (raw.reviews || []).filter(
       (r) => r.user && r.user.login === AUTHOR && r.state !== "PENDING"
