@@ -2,8 +2,9 @@
 /**
  * Generate deterministic, dependency-free data exports and SVG visualizations.
  *
- * Identical events.jsonl and data/tag-taxonomy.json inputs produce byte-for-byte
- * identical output. Run: node scripts/render-visuals.js
+ * Identical events.jsonl, data/tag-taxonomy.json, and
+ * data/finding-class-overrides.json inputs produce byte-for-byte identical
+ * output. Run: node scripts/render-visuals.js
  */
 const fs = require("fs");
 const path = require("path");

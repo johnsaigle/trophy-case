@@ -17,9 +17,9 @@
 </path>
 <text class="label" x="480.00" y="106.00" text-anchor="middle">Supply Chain · 20</text>
 <path d="M 526.11 168.16 A 158.68 158.68 0 0 1 578.77 195.80 L 523.57 265.21 A 70 70 0 0 0 500.34 253.02 Z" fill="#7c3aed" fill-opacity="0.88">
-<title>Robustness: 13 (high: 1, informational: 5, low: 7)</title>
+<title>Failure Handling: 13 (high: 1, informational: 5, low: 7)</title>
 </path>
-<text class="label" x="579.45" y="130.51" text-anchor="start">Robustness · 13</text>
+<text class="label" x="579.45" y="130.51" text-anchor="start">Failure Handling · 13</text>
 <path d="M 580.94 217.59 A 143.79 143.79 0 0 1 611.55 261.94 L 544.04 291.73 A 70 70 0 0 0 529.14 270.14 Z" fill="#c2410c" fill-opacity="0.88">
 <title>Arithmetic: 9 (critical: 2, high: 1, informational: 1, low: 4, medium: 1)</title>
 </path>

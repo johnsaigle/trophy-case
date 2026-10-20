@@ -40,3 +40,8 @@ Read and filter `events.jsonl` directly. For example:
 Use this repository to summarize public work, identify relevant experience, and
 locate primary sources. Do not expose private data, invent metrics, claim that
 an event covers undisclosed work, or edit generated output directly.
+
+Finding class IDs are canonical (`docs/schema.md`). Chart labels in
+`data/finding-class-overrides.json` are presentation-only; never restate a
+finding with wording that claims more than its class and recorded reason
+support.

@@ -132,7 +132,7 @@
     }
   },
   "labels": {
-    "error-handling": "Robustness",
+    "error-handling": "Failure Handling",
     "testing": "Verification Gaps",
     "documentation": "Code Quality"
   }

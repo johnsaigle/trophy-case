@@ -203,6 +203,32 @@ classes. The renderers use fixed sorting and geometry, omit timestamps, and do
 not use randomized layout, so identical inputs produce byte-for-byte identical
 artifacts.
 
+### Finding classes and display labels
+
+Class IDs are canonical (`docs/schema.md`) and shared with the semantic pass, so
+they are never renamed for presentation. Two layers live in
+`data/finding-class-overrides.json`:
+
+- `classes` maps `<event-id>/<finding-id>` to `{class, reason}` for findings the
+  PDF extraction left as `other` or classified wrongly. Every entry needs a
+  factual one-line reason. `tests/visuals.test.js` fails if an override does not
+  resolve to a real finding, uses an unknown class, or if any finding would
+  still fall back to `other`.
+- `labels` maps class IDs to chart labels: `error-handling` → **Failure
+  Handling**, `testing` → **Verification Gaps**, `documentation` → **Code
+  Quality**. A label may be more precise than its ID but must not claim work or
+  impact the finding does not have.
+
+Fix a wrong class rather than relabelling it. Examples already applied: an
+exposed admin login on a test server is `config`, not `testing`; a duplicated
+core math routine (whose source title is a PDF parse artifact) is `arithmetic`.
+
+When event tags change, the contributions outputs depend on them too:
+
+```bash
+node scripts/github-classify.js && node scripts/render-contributions.js
+```
+
 Either way, push and the README and visualizations regenerate.
 
 ## Regenerating the seed

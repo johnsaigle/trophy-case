@@ -17,7 +17,7 @@
     },
     {
       "id": "error-handling",
-      "label": "Robustness",
+      "label": "Failure Handling",
       "count": 13,
       "severities": {
         "high": 1,
