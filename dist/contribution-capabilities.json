@@ -7,14 +7,44 @@
     "repository-context"
   ],
   "tags": {
-    "bridge": {
+    "algorand": {
       "category": "ecosystem",
-      "records": 5,
+      "records": 7,
+      "evidence": {
+        "direct-contribution": 5,
+        "direct-review": 0,
+        "reviewed-pr-scope": 2,
+        "repository-context": 0
+      }
+    },
+    "bridge": {
+      "category": "domain",
+      "records": 638,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
         "reviewed-pr-scope": 0,
-        "repository-context": 5
+        "repository-context": 638
+      }
+    },
+    "cosmos": {
+      "category": "ecosystem",
+      "records": 9,
+      "evidence": {
+        "direct-contribution": 5,
+        "direct-review": 1,
+        "reviewed-pr-scope": 3,
+        "repository-context": 0
+      }
+    },
+    "cryptography": {
+      "category": "domain",
+      "records": 2,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 0,
+        "repository-context": 2
       }
     },
     "daml": {
@@ -29,102 +59,182 @@
     },
     "dockerfile": {
       "category": "language",
-      "records": 1,
+      "records": 34,
       "evidence": {
-        "direct-contribution": 0,
-        "direct-review": 0,
-        "reviewed-pr-scope": 1,
+        "direct-contribution": 10,
+        "direct-review": 1,
+        "reviewed-pr-scope": 23,
         "repository-context": 0
       }
     },
     "evm": {
       "category": "ecosystem",
-      "records": 1,
+      "records": 63,
       "evidence": {
-        "direct-contribution": 0,
-        "direct-review": 0,
-        "reviewed-pr-scope": 1,
-        "repository-context": 0
+        "direct-contribution": 10,
+        "direct-review": 8,
+        "reviewed-pr-scope": 38,
+        "repository-context": 7
       }
     },
     "go": {
       "category": "language",
-      "records": 1,
+      "records": 294,
+      "evidence": {
+        "direct-contribution": 131,
+        "direct-review": 57,
+        "reviewed-pr-scope": 106,
+        "repository-context": 0
+      }
+    },
+    "healthcare": {
+      "category": "domain",
+      "records": 1337,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
-        "reviewed-pr-scope": 1,
-        "repository-context": 0
+        "reviewed-pr-scope": 0,
+        "repository-context": 1337
       }
     },
     "javascript": {
       "category": "language",
-      "records": 1,
+      "records": 162,
       "evidence": {
-        "direct-contribution": 0,
-        "direct-review": 0,
-        "reviewed-pr-scope": 1,
+        "direct-contribution": 24,
+        "direct-review": 25,
+        "reviewed-pr-scope": 113,
         "repository-context": 0
       }
     },
     "makefile": {
       "category": "language",
+      "records": 54,
+      "evidence": {
+        "direct-contribution": 31,
+        "direct-review": 1,
+        "reviewed-pr-scope": 22,
+        "repository-context": 0
+      }
+    },
+    "move": {
+      "category": "language",
       "records": 1,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
         "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "near": {
+      "category": "ecosystem",
+      "records": 8,
+      "evidence": {
+        "direct-contribution": 7,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "php": {
+      "category": "language",
+      "records": 406,
+      "evidence": {
+        "direct-contribution": 196,
+        "direct-review": 75,
+        "reviewed-pr-scope": 135,
+        "repository-context": 0
+      }
+    },
+    "python": {
+      "category": "language",
+      "records": 3,
+      "evidence": {
+        "direct-contribution": 1,
+        "direct-review": 0,
+        "reviewed-pr-scope": 2,
         "repository-context": 0
       }
     },
     "rust": {
       "category": "language",
-      "records": 1,
+      "records": 109,
       "evidence": {
-        "direct-contribution": 1,
-        "direct-review": 0,
-        "reviewed-pr-scope": 0,
+        "direct-contribution": 25,
+        "direct-review": 18,
+        "reviewed-pr-scope": 66,
         "repository-context": 0
       }
     },
     "shell": {
       "category": "language",
-      "records": 2,
+      "records": 134,
       "evidence": {
-        "direct-contribution": 0,
-        "direct-review": 1,
-        "reviewed-pr-scope": 1,
+        "direct-contribution": 92,
+        "direct-review": 13,
+        "reviewed-pr-scope": 29,
         "repository-context": 0
       }
     },
     "solana": {
       "category": "ecosystem",
-      "records": 1,
+      "records": 106,
       "evidence": {
-        "direct-contribution": 1,
-        "direct-review": 0,
-        "reviewed-pr-scope": 0,
-        "repository-context": 0
+        "direct-contribution": 24,
+        "direct-review": 17,
+        "reviewed-pr-scope": 45,
+        "repository-context": 20
       }
     },
     "solidity": {
       "category": "language",
-      "records": 1,
+      "records": 37,
+      "evidence": {
+        "direct-contribution": 5,
+        "direct-review": 6,
+        "reviewed-pr-scope": 26,
+        "repository-context": 0
+      }
+    },
+    "stacks": {
+      "category": "ecosystem",
+      "records": 4,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
-        "reviewed-pr-scope": 1,
+        "reviewed-pr-scope": 0,
+        "repository-context": 4
+      }
+    },
+    "sui": {
+      "category": "ecosystem",
+      "records": 3,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 3,
         "repository-context": 0
       }
     },
     "typescript": {
       "category": "language",
-      "records": 2,
+      "records": 97,
+      "evidence": {
+        "direct-contribution": 13,
+        "direct-review": 16,
+        "reviewed-pr-scope": 68,
+        "repository-context": 0
+      }
+    },
+    "web": {
+      "category": "domain",
+      "records": 1337,
       "evidence": {
         "direct-contribution": 0,
-        "direct-review": 2,
+        "direct-review": 0,
         "reviewed-pr-scope": 0,
-        "repository-context": 0
+        "repository-context": 1337
       }
     },
     "xrpl": {

@@ -2,24 +2,173 @@
   "version": 1,
   "projects": [
     {
-      "project": "wormhole-foundation/native-token-transfers",
-      "records": 4,
+      "project": "aces/Loris",
+      "records": 1337,
       "relations": {
-        "authored-pr": 1,
-        "reviewed-pr": 3,
-        "authored-issue": 0
+        "authored-pr": 533,
+        "reviewed-pr": 827,
+        "authored-issue": 207
       },
       "languages": {
-        "typescript": {
+        "php": {
+          "records": 406,
+          "evidence": {
+            "direct-contribution": 196,
+            "direct-review": 75,
+            "reviewed-pr-scope": 135,
+            "repository-context": 0
+          }
+        },
+        "javascript": {
+          "records": 155,
+          "evidence": {
+            "direct-contribution": 22,
+            "direct-review": 25,
+            "reviewed-pr-scope": 108,
+            "repository-context": 0
+          }
+        },
+        "shell": {
+          "records": 95,
+          "evidence": {
+            "direct-contribution": 69,
+            "direct-review": 9,
+            "reviewed-pr-scope": 17,
+            "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 15,
+          "evidence": {
+            "direct-contribution": 10,
+            "direct-review": 0,
+            "reviewed-pr-scope": 5,
+            "repository-context": 0
+          }
+        },
+        "python": {
           "records": 2,
           "evidence": {
             "direct-contribution": 0,
-            "direct-review": 2,
+            "direct-review": 0,
+            "reviewed-pr-scope": 2,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {},
+      "domains": {
+        "healthcare": {
+          "records": 1337,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
             "reviewed-pr-scope": 0,
+            "repository-context": 1337
+          }
+        },
+        "web": {
+          "records": 1337,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 1337
+          }
+        }
+      }
+    },
+    {
+      "project": "wormhole-foundation/wormhole",
+      "records": 475,
+      "relations": {
+        "authored-pr": 241,
+        "reviewed-pr": 294,
+        "authored-issue": 10
+      },
+      "languages": {
+        "go": {
+          "records": 293,
+          "evidence": {
+            "direct-contribution": 131,
+            "direct-review": 57,
+            "reviewed-pr-scope": 105,
+            "repository-context": 0
+          }
+        },
+        "typescript": {
+          "records": 38,
+          "evidence": {
+            "direct-contribution": 9,
+            "direct-review": 8,
+            "reviewed-pr-scope": 21,
+            "repository-context": 0
+          }
+        },
+        "shell": {
+          "records": 33,
+          "evidence": {
+            "direct-contribution": 20,
+            "direct-review": 3,
+            "reviewed-pr-scope": 10,
             "repository-context": 0
           }
         },
         "rust": {
+          "records": 26,
+          "evidence": {
+            "direct-contribution": 10,
+            "direct-review": 6,
+            "reviewed-pr-scope": 10,
+            "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 25,
+          "evidence": {
+            "direct-contribution": 17,
+            "direct-review": 1,
+            "reviewed-pr-scope": 7,
+            "repository-context": 0
+          }
+        },
+        "dockerfile": {
+          "records": 23,
+          "evidence": {
+            "direct-contribution": 9,
+            "direct-review": 1,
+            "reviewed-pr-scope": 13,
+            "repository-context": 0
+          }
+        },
+        "solidity": {
+          "records": 8,
+          "evidence": {
+            "direct-contribution": 2,
+            "direct-review": 2,
+            "reviewed-pr-scope": 4,
+            "repository-context": 0
+          }
+        },
+        "javascript": {
+          "records": 5,
+          "evidence": {
+            "direct-contribution": 2,
+            "direct-review": 0,
+            "reviewed-pr-scope": 3,
+            "repository-context": 0
+          }
+        },
+        "move": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "python": {
           "records": 1,
           "evidence": {
             "direct-contribution": 1,
@@ -27,13 +176,205 @@
             "reviewed-pr-scope": 0,
             "repository-context": 0
           }
+        }
+      },
+      "ecosystems": {
+        "evm": {
+          "records": 25,
+          "evidence": {
+            "direct-contribution": 7,
+            "direct-review": 3,
+            "reviewed-pr-scope": 15,
+            "repository-context": 0
+          }
+        },
+        "solana": {
+          "records": 10,
+          "evidence": {
+            "direct-contribution": 2,
+            "direct-review": 3,
+            "reviewed-pr-scope": 5,
+            "repository-context": 0
+          }
+        },
+        "cosmos": {
+          "records": 9,
+          "evidence": {
+            "direct-contribution": 5,
+            "direct-review": 1,
+            "reviewed-pr-scope": 3,
+            "repository-context": 0
+          }
+        },
+        "near": {
+          "records": 8,
+          "evidence": {
+            "direct-contribution": 7,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "algorand": {
+          "records": 7,
+          "evidence": {
+            "direct-contribution": 5,
+            "direct-review": 0,
+            "reviewed-pr-scope": 2,
+            "repository-context": 0
+          }
+        },
+        "sui": {
+          "records": 3,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 3,
+            "repository-context": 0
+          }
+        }
+      },
+      "domains": {
+        "bridge": {
+          "records": 475,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 475
+          }
+        }
+      }
+    },
+    {
+      "project": "wormhole-foundation/native-token-transfers",
+      "records": 124,
+      "relations": {
+        "authored-pr": 30,
+        "reviewed-pr": 76,
+        "authored-issue": 25
+      },
+      "languages": {
+        "rust": {
+          "records": 40,
+          "evidence": {
+            "direct-contribution": 15,
+            "direct-review": 7,
+            "reviewed-pr-scope": 18,
+            "repository-context": 0
+          }
+        },
+        "typescript": {
+          "records": 28,
+          "evidence": {
+            "direct-contribution": 4,
+            "direct-review": 8,
+            "reviewed-pr-scope": 16,
+            "repository-context": 0
+          }
+        },
+        "solidity": {
+          "records": 26,
+          "evidence": {
+            "direct-contribution": 2,
+            "direct-review": 4,
+            "reviewed-pr-scope": 20,
+            "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 11,
+          "evidence": {
+            "direct-contribution": 4,
+            "direct-review": 0,
+            "reviewed-pr-scope": 7,
+            "repository-context": 0
+          }
+        },
+        "dockerfile": {
+          "records": 10,
+          "evidence": {
+            "direct-contribution": 1,
+            "direct-review": 0,
+            "reviewed-pr-scope": 9,
+            "repository-context": 0
+          }
         },
         "shell": {
+          "records": 5,
+          "evidence": {
+            "direct-contribution": 3,
+            "direct-review": 1,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "solana": {
+          "records": 52,
+          "evidence": {
+            "direct-contribution": 22,
+            "direct-review": 8,
+            "reviewed-pr-scope": 22,
+            "repository-context": 0
+          }
+        },
+        "evm": {
+          "records": 30,
+          "evidence": {
+            "direct-contribution": 3,
+            "direct-review": 5,
+            "reviewed-pr-scope": 22,
+            "repository-context": 0
+          }
+        },
+        "xrpl": {
           "records": 1,
           "evidence": {
             "direct-contribution": 0,
             "direct-review": 1,
             "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        }
+      },
+      "domains": {
+        "bridge": {
+          "records": 124,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 124
+          }
+        }
+      }
+    },
+    {
+      "project": "wormhole-foundation/example-liquidity-layer",
+      "records": 31,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 24,
+        "authored-issue": 7
+      },
+      "languages": {
+        "rust": {
+          "records": 24,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 5,
+            "reviewed-pr-scope": 19,
+            "repository-context": 0
+          }
+        },
+        "typescript": {
+          "records": 17,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 17,
             "repository-context": 0
           }
         },
@@ -48,13 +389,13 @@
         }
       },
       "ecosystems": {
-        "bridge": {
-          "records": 4,
+        "solana": {
+          "records": 24,
           "evidence": {
             "direct-contribution": 0,
-            "direct-review": 0,
-            "reviewed-pr-scope": 0,
-            "repository-context": 4
+            "direct-review": 6,
+            "reviewed-pr-scope": 18,
+            "repository-context": 0
           }
         },
         "evm": {
@@ -65,23 +406,211 @@
             "reviewed-pr-scope": 1,
             "repository-context": 0
           }
-        },
-        "solana": {
-          "records": 1,
+        }
+      },
+      "domains": {
+        "bridge": {
+          "records": 31,
           "evidence": {
-            "direct-contribution": 1,
+            "direct-contribution": 0,
             "direct-review": 0,
             "reviewed-pr-scope": 0,
+            "repository-context": 31
+          }
+        }
+      }
+    },
+    {
+      "project": "m0-platform/solana-m-extensions",
+      "records": 11,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 11,
+        "authored-issue": 0
+      },
+      "languages": {
+        "rust": {
+          "records": 11,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 11,
             "repository-context": 0
           }
         },
-        "xrpl": {
+        "typescript": {
+          "records": 7,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 7,
+            "repository-context": 0
+          }
+        },
+        "javascript": {
           "records": 1,
           "evidence": {
             "direct-contribution": 0,
-            "direct-review": 1,
-            "reviewed-pr-scope": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
             "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "solana": {
+          "records": 11,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 11
+          }
+        }
+      },
+      "domains": {}
+    },
+    {
+      "project": "m0-platform/solana-m",
+      "records": 9,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 9,
+        "authored-issue": 0
+      },
+      "languages": {
+        "rust": {
+          "records": 8,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 8,
+            "repository-context": 0
+          }
+        },
+        "typescript": {
+          "records": 7,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 7,
+            "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "solana": {
+          "records": 9,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 9
+          }
+        }
+      },
+      "domains": {}
+    },
+    {
+      "project": "wormhole-foundation/wormhole-solidity-sdk",
+      "records": 7,
+      "relations": {
+        "authored-pr": 4,
+        "reviewed-pr": 6,
+        "authored-issue": 1
+      },
+      "languages": {
+        "solidity": {
+          "records": 2,
+          "evidence": {
+            "direct-contribution": 1,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "evm": {
+          "records": 7,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 7
+          }
+        }
+      },
+      "domains": {
+        "bridge": {
+          "records": 7,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 7
+          }
+        }
+      }
+    },
+    {
+      "project": "stx-labs/clarity-go",
+      "records": 4,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 0,
+        "authored-issue": 4
+      },
+      "languages": {},
+      "ecosystems": {
+        "stacks": {
+          "records": 4,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 4
+          }
+        }
+      },
+      "domains": {}
+    },
+    {
+      "project": "commonwarexyz/monorepo",
+      "records": 2,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 0,
+        "authored-issue": 2
+      },
+      "languages": {},
+      "ecosystems": {},
+      "domains": {
+        "cryptography": {
+          "records": 2,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 2
           }
         }
       }
@@ -150,7 +679,8 @@
           }
         }
       },
-      "ecosystems": {
+      "ecosystems": {},
+      "domains": {
         "bridge": {
           "records": 1,
           "evidence": {

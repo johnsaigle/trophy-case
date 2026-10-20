@@ -110,20 +110,26 @@ async function searchWindow(relationship, slug, window) {
   return all;
 }
 
-function toCandidates(items, relationship, slug) {
+function toCandidates(items, relationship, slug, kind = null) {
   return items
     .filter((it) => it && (it.number || it.number === 0))
-    .map((it) => ({
-      id: stableId(it.pull_request ? "pull-request" : "issue", slug, it.number),
-      kind: it.pull_request ? "pr" : "issue",
-      project: slug,
-      number: it.number,
-      title: it.title,
-      url: it.html_url,
-      created_at: it.created_at,
-      updated_at: it.updated_at,
-      relations: [relationship],
-    }));
+    .map((it) => {
+      // kind is the stable-ID vocabulary ("pull-request"|"issue"); the record
+      // kind is the short form ("pr"|"issue"). Manual pulls have no
+      // .pull_request marker, so callers pass it explicitly.
+      const kindName = kind || (it.pull_request ? "pull-request" : "issue");
+      return {
+        id: stableId(kindName, slug, it.number),
+        kind: kindName === "pull-request" ? "pr" : "issue",
+        project: slug,
+        number: it.number,
+        title: it.title,
+        url: it.html_url,
+        created_at: it.created_at,
+        updated_at: it.updated_at,
+        relations: [relationship],
+      };
+    });
 }
 
 function yearlyWindows() {
@@ -156,7 +162,7 @@ async function main() {
       const completed = new Set((state.windows[slug] || {})["mentions-ar"] || []);
       if (completed.size === 0) {
         const merged = await searchManualMentionsAr(slug);
-        const fresh = toCandidates(merged, "reviewed-pr", slug);
+        const fresh = toCandidates(merged, "reviewed-pr", slug, "pull-request");
         candidates = mergeCandidates(candidates, fresh);
         totalNew += fresh.length;
         console.log(`${slug} mentions-ar: ${merged.length} merged PRs -> ${candidates.length} total candidates`);
