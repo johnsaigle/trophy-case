@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "levels": [
+    "direct-contribution",
+    "direct-review",
+    "reviewed-pr-scope",
+    "repository-context"
+  ],
+  "tags": {
+    "bridge": {
+      "category": "ecosystem",
+      "records": 5,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 0,
+        "repository-context": 5
+      }
+    },
+    "daml": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 1,
+        "reviewed-pr-scope": 0,
+        "repository-context": 0
+      }
+    },
+    "dockerfile": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "evm": {
+      "category": "ecosystem",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "go": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "javascript": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "makefile": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "rust": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 1,
+        "direct-review": 0,
+        "reviewed-pr-scope": 0,
+        "repository-context": 0
+      }
+    },
+    "shell": {
+      "category": "language",
+      "records": 2,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 1,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "solana": {
+      "category": "ecosystem",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 1,
+        "direct-review": 0,
+        "reviewed-pr-scope": 0,
+        "repository-context": 0
+      }
+    },
+    "solidity": {
+      "category": "language",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 0,
+        "reviewed-pr-scope": 1,
+        "repository-context": 0
+      }
+    },
+    "typescript": {
+      "category": "language",
+      "records": 2,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 2,
+        "reviewed-pr-scope": 0,
+        "repository-context": 0
+      }
+    },
+    "xrpl": {
+      "category": "ecosystem",
+      "records": 1,
+      "evidence": {
+        "direct-contribution": 0,
+        "direct-review": 1,
+        "reviewed-pr-scope": 0,
+        "repository-context": 0
+      }
+    }
+  }
+}

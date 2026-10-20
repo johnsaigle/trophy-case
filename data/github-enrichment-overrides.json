@@ -1,0 +1,4 @@
+{
+  "_comment": "Rare, reviewable corrections applied after deterministic rules and before aggregation. Keys are stable record IDs. Each entry must include a factual `reason`. `remove_assertions` lists tags; `add_assertions` are full assertion objects.",
+  "entries": {}
+}

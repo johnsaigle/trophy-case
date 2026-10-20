@@ -1,6 +1,9 @@
 # Local agent/tooling artifacts
 .opencode/
 
+# Enrichment cache (raw hydrated API responses; local only)
+.cache/
+
 # OS
 .DS_Store
 Thumbs.db

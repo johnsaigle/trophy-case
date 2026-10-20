@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "languages": {
+    "extensions": {
+      ".go": "go",
+      ".rs": "rust",
+      ".sol": "solidity",
+      ".ts": "typescript",
+      ".tsx": "typescript",
+      ".js": "javascript",
+      ".jsx": "javascript",
+      ".move": "move",
+      ".daml": "daml",
+      ".php": "php",
+      ".py": "python",
+      ".sh": "shell",
+      ".bash": "shell"
+    },
+    "filenames": {
+      "dockerfile": "dockerfile",
+      "makefile": "makefile",
+      "gnumakefile": "makefile"
+    }
+  },
+  "flagged_paths": {
+    "generated": {
+      "suffixes": [".min.js", ".min.css", ".pb.go", ".pb.cc", ".pb.h", "_pb2.py", ".g.dart", ".generated.ts", ".d.ts"],
+      "segments": ["/dist/", "/coverage/"]
+    },
+    "vendored": {
+      "segments": ["/vendor/", "/third_party/", "/thirdparty/", "/node_modules/"]
+    },
+    "lock": {
+      "suffixes": [".lock", ".sum"],
+      "names": ["package-lock.json", "pnpm-lock.yaml", "yarn.lock", "bun.lockb", "cargo.lock", "poetry.lock", "flake.lock", "composer.lock"]
+    },
+    "binary": {
+      "suffixes": [".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".pdf", ".zip", ".gz", ".tgz", ".woff", ".woff2", ".ttf", ".otf", ".eot", ".mp4", ".mov"]
+    },
+    "documentation": {
+      "suffixes": [".md", ".mdx", ".rst", ".adoc", ".txt"],
+      "name_prefixes": ["README", "CHANGELOG", "CONTRIBUTING", "LICENSE", "CODEOWNERS", "SECURITY"]
+    }
+  },
+  "repos": {
+    "wormhole-foundation/wormhole": {
+      "defaults": ["bridge"],
+      "paths": {
+        "ethereum/": ["evm"],
+        "evm/": ["evm"],
+        "solana/": ["solana"],
+        "cosmwasm/": ["cosmos"],
+        "algorand/": ["algorand"],
+        "aptos/": ["aptos"],
+        "near/": ["near"],
+        "sui/": ["sui"]
+      }
+    },
+    "wormholelabs-xyz/wormhole": {
+      "defaults": ["bridge"],
+      "paths": {
+        "ethereum/": ["evm"],
+        "evm/": ["evm"],
+        "solana/": ["solana"],
+        "cosmwasm/": ["cosmos"],
+        "algorand/": ["algorand"],
+        "aptos/": ["aptos"],
+        "near/": ["near"],
+        "sui/": ["sui"]
+      }
+    },
+    "wormhole-foundation/native-token-transfers": {
+      "defaults": ["bridge"],
+      "paths": {
+        "evm/": ["evm"],
+        "solana/": ["solana"],
+        "cosmwasm/": ["cosmos"],
+        "sui/": ["sui"],
+        "cli/src/commands/xrpl/": ["xrpl"]
+      }
+    },
+    "wormhole-foundation/example-liquidity-layer": {
+      "defaults": ["bridge"],
+      "paths": {
+        "evm/": ["evm"],
+        "solana/": ["solana"]
+      }
+    },
+    "wormhole-foundation/wormhole-solidity-sdk": {
+      "defaults": ["evm"]
+    },
+    "m0-platform/solana-m": {
+      "defaults": ["solana"]
+    },
+    "m0-platform/solana-m-extensions": {
+      "defaults": ["solana"]
+    },
+    "stx-labs/clarity-go": {
+      "defaults": ["stacks"]
+    },
+    "commonwarexyz/monorepo": {
+      "defaults": ["cryptography"]
+    },
+    "ghostfolio/ghostfolio": {
+      "defaults": []
+    },
+    "aces/Loris": {
+      "defaults": []
+    }
+  },
+  "issue_label_tags": {}
+}

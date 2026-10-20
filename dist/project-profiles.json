@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "project": "wormhole-foundation/native-token-transfers",
+      "records": 4,
+      "relations": {
+        "authored-pr": 1,
+        "reviewed-pr": 3,
+        "authored-issue": 0
+      },
+      "languages": {
+        "typescript": {
+          "records": 2,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 2,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        },
+        "rust": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 1,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        },
+        "shell": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 1,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        },
+        "solidity": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "bridge": {
+          "records": 4,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 4
+          }
+        },
+        "evm": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "solana": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 1,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        },
+        "xrpl": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 1,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        }
+      }
+    },
+    {
+      "project": "wormholelabs-xyz/wormhole",
+      "records": 1,
+      "relations": {
+        "authored-pr": 0,
+        "reviewed-pr": 1,
+        "authored-issue": 0
+      },
+      "languages": {
+        "daml": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 1,
+            "reviewed-pr-scope": 0,
+            "repository-context": 0
+          }
+        },
+        "dockerfile": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "go": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "javascript": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "makefile": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        },
+        "shell": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 1,
+            "repository-context": 0
+          }
+        }
+      },
+      "ecosystems": {
+        "bridge": {
+          "records": 1,
+          "evidence": {
+            "direct-contribution": 0,
+            "direct-review": 0,
+            "reviewed-pr-scope": 0,
+            "repository-context": 1
+          }
+        }
+      }
+    }
+  ]
+}

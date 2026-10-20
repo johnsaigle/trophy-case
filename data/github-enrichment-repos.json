@@ -1,0 +1,15 @@
+{
+  "author": "johnsaigle",
+  "repos": [
+    "wormhole-foundation/wormhole",
+    "wormhole-foundation/native-token-transfers",
+    "wormhole-foundation/example-liquidity-layer",
+    "wormhole-foundation/wormhole-solidity-sdk",
+    "m0-platform/solana-m",
+    "m0-platform/solana-m-extensions",
+    "stx-labs/clarity-go",
+    "commonwarexyz/monorepo",
+    "ghostfolio/ghostfolio",
+    "aces/Loris"
+  ]
+}
