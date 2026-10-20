@@ -1,0 +1,92 @@
+{
+  ".": "Semantic pass pilot results. Statements here are model/agent judgments over the owner's own public review words and changed files, mirroring scripts/semantic-pass.js output shape. approved: false everywhere until manually verified; `apply` refuses unapproved entries.",
+  "github-pr-wormholelabs-xyz-wormhole-55": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [
+      "validation",
+      "accounting",
+      "crypto"
+    ],
+    "notable": true,
+    "basis": "Daml Canton integration review invoked SAFETY_CRITICAL_CODE.md; flagged fee truncation to zero below 10000000000.0 and r/s DER-signature 32-byte ambiguity on VAA parsing; asked for Daml tests in CI.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-wormhole-foundation-native-token-transfers-923": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [
+      "error-handling"
+    ],
+    "notable": false,
+    "basis": "Flagged private-key logging to STDERR as a side effect of structured output, misleading OK-true error emission, push continuing after failed registration steps, and a test change that hides errors.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-wormhole-foundation-native-token-transfers-404": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [
+      "access-control",
+      "validation"
+    ],
+    "notable": true,
+    "basis": "Held merge with requests for a thorough review across 48 files; questioned remaining_accounts usage that bypasses Anchor's account checks and documented the release_inbound invariant reasoning.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-wormhole-foundation-example-liquidity-layer-122": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [
+      "documentation"
+    ],
+    "notable": false,
+    "basis": "Reviewed a 75-file Solana local-fills overhaul through several iterations before approving; comments asked for accurate Anchor CHECK annotations, issue-tracking of loose ends, and entrypoint/access-control documentation.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-wormhole-foundation-wormhole-4324": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [],
+    "notable": false,
+    "basis": "Reviewed ranger/verifier Sui watcher integration with self-declared limited Sui knowledge; comments were mostly cleanup and convention nits plus an appeal to SAFETY_CRITICAL_CODE.md.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-wormhole-foundation-wormhole-4362": {
+    "security_relevant": true,
+    "work_orientation": "protocol-security",
+    "vuln_classes": [
+      "error-handling"
+    ],
+    "notable": true,
+    "basis": "Challenged fail-open error handling in the Transfer Verifier on EVM, pushed the function refactor to neither fail open nor fail closed, and requested re-review of the security-sensitive behavior.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-aces-Loris-4359": {
+    "security_relevant": true,
+    "work_orientation": "appsec",
+    "vuln_classes": [
+      "error-handling"
+    ],
+    "notable": false,
+    "basis": "PHP/SQL biobank module review: file-availability checks, expanding throw conditions, error logging, removal of an accidentally committed .swp file.",
+    "judged_by": "agent",
+    "approved": false
+  },
+  "github-pr-aces-Loris-5230": {
+    "security_relevant": true,
+    "work_orientation": "appsec",
+    "vuln_classes": [
+      "validation"
+    ],
+    "notable": false,
+    "basis": "Reviewed a new electrophysiology module; flagged a security issue introduced in the last commit and asked for strict_types PHP declarations and get_file.php parameter validation.",
+    "judged_by": "agent",
+    "approved": false
+  }
+}
