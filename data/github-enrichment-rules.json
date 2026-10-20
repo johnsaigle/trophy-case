@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "languages": {
     "extensions": {
       ".go": "go",
@@ -90,10 +90,12 @@
       "defaults": ["evm"]
     },
     "m0-platform/solana-m": {
-      "defaults": ["solana"]
+      "defaults": ["solana"],
+      "manual_relations": ["reviewed-pr"]
     },
     "m0-platform/solana-m-extensions": {
-      "defaults": ["solana"]
+      "defaults": ["solana"],
+      "manual_relations": ["reviewed-pr"]
     },
     "stx-labs/clarity-go": {
       "defaults": ["stacks"]

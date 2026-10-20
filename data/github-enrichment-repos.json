@@ -11,5 +11,9 @@
     "commonwarexyz/monorepo",
     "ghostfolio/ghostfolio",
     "aces/Loris"
+  ],
+  "manual_mentions_ar": [
+    "m0-platform/solana-m",
+    "m0-platform/solana-m-extensions"
   ]
 }

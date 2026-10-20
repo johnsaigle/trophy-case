@@ -16,7 +16,7 @@
  */
 const fs = require("fs");
 const path = require("path");
-const { ghSearch, sleep, SEARCH_INTERVAL_MS } = require("./lib/github");
+const { ghAllPages, ghSearch, sleep, SEARCH_INTERVAL_MS } = require("./lib/github");
 const { mergeCandidates, windowHalves, stableId } = require("./lib/contribution-rules");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -44,6 +44,10 @@ if (!INCREMENTAL && !args.includes("--backfill")) {
 const config = JSON.parse(fs.readFileSync(REPOS_CONFIG, "utf8"));
 const AUTHOR = config.author;
 const repos = REPO_FILTER || config.repos;
+// Repos whose review work is attributed to a team rather than the owner's
+// account. Collected by listing merged closed PRs that mention "AR" (the same
+// rule the weekly collector has always used), not by search.
+const MANUAL_MENTIONS_AR = new Set(config.manual_mentions_ar || []);
 
 function loadState() {
   try {
@@ -132,6 +136,12 @@ function yearlyWindows() {
   return windows;
 }
 
+/** Repos with team-attributed review work: merged closed PRs mentioning "AR". */
+async function searchManualMentionsAr(slug) {
+  const pulls = await ghAllPages(`repos/${slug}/pulls?state=closed`, { attempts: 8 });
+  return pulls.filter((p) => p.merged_at && `${p.title} ${p.body || ""}`.includes("AR"));
+}
+
 async function main() {
   const state = loadState();
   let candidates = loadDiscovery();
@@ -141,6 +151,24 @@ async function main() {
   let totalNew = 0;
 
   for (const slug of repos) {
+    // Manual team-attribution repos: one listing pass, checkpointed separately.
+    if (MANUAL_MENTIONS_AR.has(slug)) {
+      const completed = new Set((state.windows[slug] || {})["mentions-ar"] || []);
+      if (completed.size === 0) {
+        const merged = await searchManualMentionsAr(slug);
+        const fresh = toCandidates(merged, "reviewed-pr", slug);
+        candidates = mergeCandidates(candidates, fresh);
+        totalNew += fresh.length;
+        console.log(`${slug} mentions-ar: ${merged.length} merged PRs -> ${candidates.length} total candidates`);
+        if (!DRY_RUN) {
+          writeJsonAtomic(DISCOVERY_PATH, candidates);
+          state.windows[slug] = state.windows[slug] || {};
+          state.windows[slug]["mentions-ar"] = [`done-${nowIso}`];
+          writeJsonAtomic(STATE_PATH, state);
+        }
+        await sleep(SEARCH_INTERVAL_MS);
+      }
+    }
     for (const relationship of RELATIONSHIPS) {
       let windows;
       let updatedSince = null;

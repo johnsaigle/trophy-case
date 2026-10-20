@@ -314,6 +314,41 @@ test("overrides add or remove only the assertions they name", () => {
   );
 });
 
+// ---------------------------------------------------------------- manual attribution
+
+test("manual team attribution (m0 AR) emits reviewed-pr with manual-attribution evidence", () => {
+  const raw = prFixture({
+    project: "m0-platform/solana-m",
+    number: 300,
+    user: "some-m0-dev",
+    files: [file("programs/protocols/ntt/src/lib.rs", 40, 2), file("Cargo.toml")],
+    ownerReviews: [], // GitHub credits no account
+  });
+  const record = classifyRecord(raw, rules, { author: AUTHOR });
+  assert.deepEqual(record.relations, ["reviewed-pr"]);
+  assert.equal(record.provenance.attribution, "manual");
+  const rust = find(record, "rust");
+  assert.equal(rust.evidence_level, "reviewed-pr-scope");
+  assert.ok(rust.evidence.includes("manual-attribution"));
+  const solana = find(record, "solana");
+  assert.equal(solana.evidence_level, "repository-context");
+  assert.equal(record.review.count, 0);
+});
+
+test("API-verified review outranks manual attribution on the same repo", () => {
+  const raw = prFixture({
+    project: "m0-platform/solana-m-extensions",
+    number: 4,
+    user: "some-dev",
+    files: [file("extension/src/lib.rs")],
+    ownerReviews: [{ user: { login: AUTHOR }, state: "APPROVED", submitted_at: "x" }],
+  });
+  const record = classifyRecord(raw, rules, { author: AUTHOR });
+  assert.equal(find(record, "rust").evidence.includes("reviewed-pr"), true);
+  assert.equal(find(record, "rust").evidence.includes("manual-attribution"), false);
+  assert.equal(record.provenance.attribution, undefined);
+});
+
 // ---------------------------------------------------------------- fingerprint & misc
 
 test("fingerprints change when source fields change and stay stable otherwise", () => {
@@ -361,7 +396,7 @@ test("window splitting produces contiguous inclusive date halves", () => {
 test("checked-in rules and overrides are valid", () => {
   const rulesPath = path.join(__dirname, "..", "data", "github-enrichment-rules.json");
   const parsed = JSON.parse(fs.readFileSync(rulesPath, "utf8"));
-  assert.equal(parsed.version, 1);
+  assert.equal(parsed.version, 2);
   for (const lang of Object.values(parsed.languages.extensions)) {
     assert.match(lang, /^[a-z0-9-]+$/);
   }

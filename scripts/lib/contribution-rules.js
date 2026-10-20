@@ -180,7 +180,7 @@ function languageBasis(filePath, rules) {
 }
 
 function levelForFile(project, filePath, context, rules) {
-  const { authored, commentedPaths, reviewed } = context;
+  const { authored, commentedPaths, reviewed, manualReviewed } = context;
   const ecosystems = ecosystemsForPath(project, filePath, rules);
   const language = languageForPath(filePath, rules);
   const languageBasisStr = languageBasis(filePath, rules);
@@ -199,6 +199,11 @@ function levelForFile(project, filePath, context, rules) {
   } else if (reviewed) {
     level = "reviewed-pr-scope";
     relationshipEvidence = "reviewed-pr";
+  } else if (manualReviewed) {
+    // Human-verified team attribution (e.g. AR reviews on m0): weaker claim,
+    // still item-level file scope, explicitly marked in evidence.
+    level = "reviewed-pr-scope";
+    relationshipEvidence = "manual-attribution";
   } else {
     level = null; // no relationship: no assertion from this file
   }
@@ -223,11 +228,17 @@ function classifyRecord(raw, rules, { author, overrides } = {}) {
   const commentedPaths = isPr ? ownerCommentedPaths(raw, author) : [];
   const authored = source.user && source.user.login === author;
   const reviewed = ownerReviewList.length > 0;
+  // Repositories where review work is attributed to a team the owner was part
+  // of rather than their GitHub account (configured in the rules, e.g. AR
+  // reviews on m0). The relation is human-verified; file-level evidence is
+  // stamped "manual-attribution" instead of the API-backed "reviewed-pr".
+  const manualReviewRel = (rules.repos || {})[raw.project]?.manual_relations || [];
+  const manualReviewed = isPr && manualReviewRel.includes("reviewed-pr") && !reviewed;
 
   const relations = [];
   if (isPr) {
     if (authored) relations.push("authored-pr");
-    if (reviewed) relations.push("reviewed-pr");
+    if (reviewed || manualReviewed) relations.push("reviewed-pr");
   } else if (authored) {
     relations.push("authored-issue");
   }
@@ -237,7 +248,14 @@ function classifyRecord(raw, rules, { author, overrides } = {}) {
     );
   }
 
-  const context = { authored, reviewed, commentedPaths };
+  const context = {
+    authored,
+    reviewed,
+    manualReviewed,
+    commentedPaths,
+    author,
+    project: raw.project,
+  };
   const assertions = [];
   let filesPayload = null;
   let languageChanges = {};
@@ -349,6 +367,9 @@ function classifyRecord(raw, rules, { author, overrides } = {}) {
     source_fingerprint: computeFingerprint(raw, author),
     collector_version: COLLECTOR_VERSION,
   };
+  if (manualReviewed) {
+    record.provenance.attribution = "manual";
+  }
   return record;
 }
 
