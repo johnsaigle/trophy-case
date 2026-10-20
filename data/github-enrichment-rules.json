@@ -87,7 +87,8 @@
       }
     },
     "wormhole-foundation/wormhole-solidity-sdk": {
-      "defaults": ["evm"]
+      "defaults": ["evm", "bridge"],
+      "manual_relations": ["reviewed-pr"]
     },
     "m0-platform/solana-m": {
       "defaults": ["solana"],

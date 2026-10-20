@@ -14,6 +14,7 @@
   ],
   "manual_mentions_ar": [
     "m0-platform/solana-m",
-    "m0-platform/solana-m-extensions"
+    "m0-platform/solana-m-extensions",
+    "wormhole-foundation/wormhole-solidity-sdk"
   ]
 }
