@@ -1,0 +1,49 @@
+{
+  "since": "2026-10-19T12:37:48.190Z",
+  "candidates": [
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5070",
+      "number": 5070,
+      "title": "node: Upgrade go-libp2p to v0.46.0",
+      "is_pr": true,
+      "body": "## Summary\n\nUpgrade go-libp2p from v0.37.0 to v0.46.0. This change keeps Go at 1.25.10.\n\nThe Go 1.26 upgrade (#4828) needs this change. go-libp2p v0.37.0 uses quic-go v0.48.1. On Go 1.26, quic-go v0.48.1 panics in the server handshake when the TLS config disables session tickets. libp2p always sets this option, so a guardian built with Go 1.26 crashes on inbound connections. The `tilt` and `node-tests` jobs on #4828 show this panic.\n\nquic-go v0.57.1 fixes the panic (quic-go/quic-go#5462). The quic-go project did not backport the fix to older versions. quic-go v0.57.1 does not compile with go-l",
+      "created_at": "2026-10-21T16:04:08Z"
+    },
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/4828",
+      "number": 4828,
+      "title": "node: Upgrade to Go 1.26",
+      "is_pr": true,
+      "body": "Updates the Guardian code to use 1.26 at the latest release on that line.\r\n\r\nThis necessitates bumping some dependencies (see https://github.com/wormhole-foundation/wormhole/pull/5070). That PR contains just the dependency bumps against `1.25`. It's probably best that we merge that PR separately from this one. That should help us isolate any problems in case we need to rollback.",
+      "created_at": "2026-10-21T17:51:47Z"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "proposal-wormhole-foundation-wormhole-5070",
+      "type": "bug-report",
+      "date": "2026-10-21",
+      "title": "node: Upgrade go-libp2p to v0.46.0",
+      "org": null,
+      "project": "wormhole-foundation/wormhole",
+      "role": "reporter",
+      "summary": null,
+      "evidence": [
+        {
+          "kind": "url",
+          "url": "https://github.com/wormhole-foundation/wormhole/pull/5070"
+        }
+      ],
+      "tags": [],
+      "severity": null,
+      "notability": 3,
+      "provenance": {
+        "source": "github-collector",
+        "extracted_at": "2026-10-26"
+      },
+      "reviewed": false
+    }
+  ]
+}
