@@ -1165,9 +1165,9 @@
     },
     "reviewed": true,
     "code_review": {
-      "prs_merged": 180,
+      "prs_merged": 182,
       "issues": 10,
-      "reviews_ytd": 113
+      "reviews_ytd": 114
     }
   },
   {
@@ -1971,5 +1971,29 @@
       "extracted_at": "2026-10-06"
     },
     "reviewed": true
+  },
+  {
+    "id": "proposal-wormhole-foundation-wormhole-5070",
+    "type": "bug-report",
+    "date": "2026-10-21",
+    "title": "node: Upgrade go-libp2p to v0.46.0",
+    "org": null,
+    "project": "wormhole-foundation/wormhole",
+    "role": "reporter",
+    "summary": null,
+    "evidence": [
+      {
+        "kind": "url",
+        "url": "https://github.com/wormhole-foundation/wormhole/pull/5070"
+      }
+    ],
+    "tags": [],
+    "severity": null,
+    "notability": 3,
+    "provenance": {
+      "source": "github-collector",
+      "extracted_at": "2026-10-26"
+    },
+    "reviewed": false
   }
 ]

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "events.jsonl",
-  "event_count": 37,
+  "event_count": 38,
   "map": {
     "minimum_event_count": 2,
     "categories": [
