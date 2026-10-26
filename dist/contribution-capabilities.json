@@ -19,21 +19,21 @@
     },
     "bridge": {
       "category": "domain",
-      "records": 638,
+      "records": 641,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
         "reviewed-pr-scope": 0,
-        "repository-context": 638
+        "repository-context": 641
       }
     },
     "cosmos": {
       "category": "ecosystem",
-      "records": 9,
+      "records": 10,
       "evidence": {
         "direct-contribution": 5,
         "direct-review": 1,
-        "reviewed-pr-scope": 3,
+        "reviewed-pr-scope": 4,
         "repository-context": 0
       }
     },
@@ -59,29 +59,29 @@
     },
     "dockerfile": {
       "category": "language",
-      "records": 34,
+      "records": 35,
       "evidence": {
         "direct-contribution": 10,
         "direct-review": 1,
-        "reviewed-pr-scope": 23,
+        "reviewed-pr-scope": 24,
         "repository-context": 0
       }
     },
     "evm": {
       "category": "ecosystem",
-      "records": 63,
+      "records": 64,
       "evidence": {
         "direct-contribution": 10,
         "direct-review": 8,
-        "reviewed-pr-scope": 38,
+        "reviewed-pr-scope": 39,
         "repository-context": 7
       }
     },
     "go": {
       "category": "language",
-      "records": 294,
+      "records": 295,
       "evidence": {
-        "direct-contribution": 131,
+        "direct-contribution": 132,
         "direct-review": 57,
         "reviewed-pr-scope": 106,
         "repository-context": 0
@@ -119,11 +119,11 @@
     },
     "near": {
       "category": "ecosystem",
-      "records": 8,
+      "records": 9,
       "evidence": {
         "direct-contribution": 7,
         "direct-review": 0,
-        "reviewed-pr-scope": 1,
+        "reviewed-pr-scope": 2,
         "repository-context": 0
       }
     },

@@ -71,17 +71,17 @@
     },
     {
       "project": "wormhole-foundation/wormhole",
-      "records": 475,
+      "records": 478,
       "relations": {
-        "authored-pr": 241,
-        "reviewed-pr": 294,
+        "authored-pr": 243,
+        "reviewed-pr": 295,
         "authored-issue": 10
       },
       "languages": {
         "go": {
-          "records": 293,
+          "records": 294,
           "evidence": {
-            "direct-contribution": 131,
+            "direct-contribution": 132,
             "direct-review": 57,
             "reviewed-pr-scope": 105,
             "repository-context": 0
@@ -124,11 +124,11 @@
           }
         },
         "dockerfile": {
-          "records": 23,
+          "records": 24,
           "evidence": {
             "direct-contribution": 9,
             "direct-review": 1,
-            "reviewed-pr-scope": 13,
+            "reviewed-pr-scope": 14,
             "repository-context": 0
           }
         },
@@ -171,11 +171,20 @@
       },
       "ecosystems": {
         "evm": {
-          "records": 25,
+          "records": 26,
           "evidence": {
             "direct-contribution": 7,
             "direct-review": 3,
-            "reviewed-pr-scope": 15,
+            "reviewed-pr-scope": 16,
+            "repository-context": 0
+          }
+        },
+        "cosmos": {
+          "records": 10,
+          "evidence": {
+            "direct-contribution": 5,
+            "direct-review": 1,
+            "reviewed-pr-scope": 4,
             "repository-context": 0
           }
         },
@@ -188,21 +197,12 @@
             "repository-context": 0
           }
         },
-        "cosmos": {
-          "records": 9,
-          "evidence": {
-            "direct-contribution": 5,
-            "direct-review": 1,
-            "reviewed-pr-scope": 3,
-            "repository-context": 0
-          }
-        },
         "near": {
-          "records": 8,
+          "records": 9,
           "evidence": {
             "direct-contribution": 7,
             "direct-review": 0,
-            "reviewed-pr-scope": 1,
+            "reviewed-pr-scope": 2,
             "repository-context": 0
           }
         },
@@ -227,12 +227,12 @@
       },
       "domains": {
         "bridge": {
-          "records": 475,
+          "records": 478,
           "evidence": {
             "direct-contribution": 0,
             "direct-review": 0,
             "reviewed-pr-scope": 0,
-            "repository-context": 475
+            "repository-context": 478
           }
         }
       }

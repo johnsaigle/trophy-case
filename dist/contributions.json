@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "count": 2001,
+  "count": 2004,
   "records": [
     {
       "id": "github-issue-aces-Loris-1770",
@@ -110933,13 +110933,13 @@
       "number": 4431,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4431",
       "title": "node(governor): refactor `dayLength` and `dailyLimit` fields and change wording",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr",
         "reviewed-pr"
       ],
       "created_at": "2025-07-11T18:32:46Z",
-      "updated_at": "2026-04-13T18:56:35Z",
+      "updated_at": "2026-10-22T14:04:44Z",
       "merged_at": null,
       "head_sha": "f9fd55c337751de97aa5557fe035afa4ece353fc",
       "review": {
@@ -111004,7 +111004,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:33fb684be7f2f3c2bec59acbbea7b83538d4dfab95c76aa1dcbf2e42a7ff5888",
+        "source_fingerprint": "sha256:9d97e20cb0b6db01207b6e34ee8dbbbccb9810510d946fe9ac241edde778edbc",
         "collector_version": 1
       }
     },
@@ -114795,9 +114795,9 @@
         "authored-pr"
       ],
       "created_at": "2025-10-28T13:57:13Z",
-      "updated_at": "2026-06-19T15:15:40Z",
+      "updated_at": "2026-10-20T14:08:10Z",
       "merged_at": null,
-      "head_sha": "52a9f8d364b55ddff2df474e5c6ac6a06c54f25b",
+      "head_sha": "06a70106020d68b8e60fd275a6d5703ff810e5e3",
       "review": {
         "count": 0,
         "states": [],
@@ -114827,7 +114827,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:f16169d6f6837706636f389f018a10e44145d842f1c6cfba7483dcd8a93b798a",
+        "source_fingerprint": "sha256:40c24da3344b74547a8903b2aa031046232518aed0faf24cf239e7924a9a3f13",
         "collector_version": 1
       }
     },
@@ -116009,12 +116009,12 @@
       "number": 4573,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4573",
       "title": "sdk(rust): Automatically generate ChainIDs based on Go SDK ",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-11-04T20:22:19Z",
-      "updated_at": "2026-06-01T12:47:38Z",
+      "updated_at": "2026-10-22T14:04:00Z",
       "merged_at": null,
       "head_sha": "01064f482ece1ce3265af02653ea5ce6df27e578",
       "review": {
@@ -116086,7 +116086,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:3bed244970ab2cf770272c227183e35cf2ac4f580589d628b6505cc2386c8576",
+        "source_fingerprint": "sha256:8672e1e433d4265a4ae1649ae2f2a1f71cc3d56913f22543c55d7e5f4a866290",
         "collector_version": 1
       }
     },
@@ -116434,12 +116434,12 @@
       "number": 4587,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4587",
       "title": "node: Update repair_solana script to support Fogo",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-11-18T18:46:11Z",
-      "updated_at": "2025-11-20T13:44:00Z",
+      "updated_at": "2026-10-22T14:03:38Z",
       "merged_at": null,
       "head_sha": "e2550a3de4fdfb5e0c8977cb0d6c0a34f9e41727",
       "review": {
@@ -116485,7 +116485,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:40fcd0a6243441dae64163aef8958b2992e1d120c71bc0969ef2a2dcc405f0f3",
+        "source_fingerprint": "sha256:5889a1de80cc5e528f6724615e8c63f8bcd311de220b9f50c30e4ea246eb53b1",
         "collector_version": 1
       }
     },
@@ -117061,12 +117061,12 @@
       "number": 4603,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4603",
       "title": "node(governor): Refactor to do stateless checks",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-11-27T22:33:26Z",
-      "updated_at": "2026-02-26T12:36:57Z",
+      "updated_at": "2026-10-22T14:03:13Z",
       "merged_at": null,
       "head_sha": "717f300787f46e69e6f2e342fc6001ddf53e7d47",
       "review": {
@@ -117113,7 +117113,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:0fd1e901b30df780c138633a90c2ed0c97cc5484bb0b1250d1905fa49f6e0b4c",
+        "source_fingerprint": "sha256:738a2293e17080162924988da6681bac170bb848b316b9be41db352d0d6c1db1",
         "collector_version": 1
       }
     },
@@ -117561,12 +117561,12 @@
       "number": 4617,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4617",
       "title": "Create Governor CLI tools; refactor CoinGecko functionality into a separate package",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-12-10T14:38:12Z",
-      "updated_at": "2025-12-18T14:17:14Z",
+      "updated_at": "2026-10-22T14:02:36Z",
       "merged_at": null,
       "head_sha": "3c8b72b391f00577772fb0cabbacf33e0feb26d8",
       "review": {
@@ -117632,7 +117632,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:1ce39ac6fca3efe55fbf2d3afa25cf74843e3f6255af36fe7b2189a637f383a9",
+        "source_fingerprint": "sha256:6742c3856714329863d3671ba0b7c2159e8ae7f1bdc4cc901013a4280d115eaf",
         "collector_version": 1
       }
     },
@@ -121598,9 +121598,9 @@
         "reviewed-pr"
       ],
       "created_at": "2026-03-11T20:59:01Z",
-      "updated_at": "2026-09-07T12:35:47Z",
+      "updated_at": "2026-10-21T06:14:59Z",
       "merged_at": null,
-      "head_sha": "e31e0e54a5584f09f51e7594dd00a30a0d3893b6",
+      "head_sha": "eb14b74b83f523c89115a6baa1af3b6981c99e94",
       "review": {
         "count": 1,
         "states": [
@@ -121646,7 +121646,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:c822faf36a3ed1a4d996241eb9154681376940563a317933df9fe505c35f0e24",
+        "source_fingerprint": "sha256:02f9ba9c98afacf361add3b3f7099016f42f4b9b1461764a08e7ffcf167f5212",
         "collector_version": 1
       }
     },
@@ -121836,7 +121836,7 @@
         "reviewed-pr"
       ],
       "created_at": "2026-03-12T20:54:08Z",
-      "updated_at": "2026-10-08T15:06:27Z",
+      "updated_at": "2026-10-26T08:34:27Z",
       "merged_at": null,
       "head_sha": "225f25b6066bf0b79354490712a4c401bd8513e4",
       "review": {
@@ -121891,7 +121891,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:ccf0a7bbe3c23c47884636d01537f018201969ee63d0c29dbc943e4a76d433d0",
+        "source_fingerprint": "sha256:d5c86336c6d5de67b80d2d39431d3a959be751fe42a0432c0fd7c9630b32465d",
         "collector_version": 1
       }
     },
@@ -127635,9 +127635,9 @@
         "authored-pr"
       ],
       "created_at": "2026-05-21T13:42:41Z",
-      "updated_at": "2026-07-31T18:36:45Z",
+      "updated_at": "2026-10-20T14:54:57Z",
       "merged_at": null,
-      "head_sha": "5f8b4c4aff111a8a50484d7fa0457938e9d8e9cd",
+      "head_sha": "28586885c5c99bb8c5308d1ad0903ddcff981997",
       "review": {
         "count": 0,
         "states": [],
@@ -127678,7 +127678,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:8c73bcd323c996e70bdf5bd72d7499c6d4a7bea36cbc2e2748d58f693780040a",
+        "source_fingerprint": "sha256:c8f846a1f3e67224f27b30446999b66337105a3072cc100a1aace7d901878cec",
         "collector_version": 1
       }
     },
@@ -127762,14 +127762,14 @@
       "number": 4828,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4828",
       "title": "node: Upgrade to Go 1.26",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-05-21T15:29:30Z",
-      "updated_at": "2026-08-14T11:21:04Z",
-      "merged_at": null,
-      "head_sha": "e49da4c55f9b223727f858800f2dd285ac3c3cc9",
+      "updated_at": "2026-10-21T17:51:47Z",
+      "merged_at": "2026-10-21T17:51:47Z",
+      "head_sha": "e033d6222249176d818b0e545910e6889929d91c",
       "review": {
         "count": 0,
         "states": [],
@@ -127777,16 +127777,20 @@
         "commented_paths": []
       },
       "files": {
-        "count": 9,
+        "count": 13,
         "complete": true,
         "paths": [
           ".github/workflows/build.yml",
+          ".github/workflows/codeql.yml",
+          ".oss-scanner/Dockerfile",
           "DEVELOP.md",
           "Dockerfile.proto",
           "docs/operations.md",
           "node/Dockerfile",
           "node/go.mod",
           "node/hack/query/ccqlistener/Dockerfile",
+          "node/pkg/manager/manager.go",
+          "node/pkg/manager/manager_test.go",
           "scripts/Dockerfile.lint",
           "scripts/coverage-check/go.mod"
         ],
@@ -127796,8 +127800,14 @@
         },
         "language_changes": {
           "dockerfile": {
+            "files": 3,
+            "changed_lines": 6,
+            "direct_review_paths": [],
+            "evidence_level": "direct-contribution"
+          },
+          "go": {
             "files": 2,
-            "changed_lines": 4,
+            "changed_lines": 6,
             "direct_review_paths": [],
             "evidence_level": "direct-contribution"
           }
@@ -127820,11 +127830,20 @@
             "authored-pr",
             "filename:dockerfile"
           ]
+        },
+        {
+          "tag": "go",
+          "category": "language",
+          "evidence_level": "direct-contribution",
+          "evidence": [
+            "authored-pr",
+            "extension:.go"
+          ]
         }
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:3e4df1e182a6079fafd6c29ef595349fd6592db5bbacf7742ee68aa03d885cb1",
+        "source_fingerprint": "sha256:1a286eb82f7e170adba61fbc2746a29285656959ce4d26418da7dbfb3cf23ba7",
         "collector_version": 1
       }
     },
@@ -127835,12 +127854,12 @@
       "number": 4831,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4831",
       "title": "ci: Improve performance of go lint and formatting",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-05-21T18:15:02Z",
-      "updated_at": "2026-06-18T18:53:08Z",
+      "updated_at": "2026-10-22T14:00:56Z",
       "merged_at": null,
       "head_sha": "ac7d5ae12fbdfc344b2d2c8e9b046281f6476730",
       "review": {
@@ -127902,7 +127921,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:f3365fdcff667833d66c1b1f58900313339ffd816eab4cf0019dc17c6de9f14d",
+        "source_fingerprint": "sha256:26998735a2f952d8b3eee82db564407b5b8a4ce24e2c3971917f5438c0672cf9",
         "collector_version": 1
       }
     },
@@ -133265,9 +133284,9 @@
         "authored-pr"
       ],
       "created_at": "2026-09-29T14:45:15Z",
-      "updated_at": "2026-10-08T13:58:23Z",
+      "updated_at": "2026-10-21T11:56:02Z",
       "merged_at": null,
-      "head_sha": "906f1270095bcf0bcb8e1467857fa51829b190b5",
+      "head_sha": "deac31e0e398e8d369945f4abb05d1e3f1a21d06",
       "review": {
         "count": 0,
         "states": [],
@@ -133351,7 +133370,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:be80d890b236b24c843ee285303dc3485f048a0409d5d20dd7eca8939f68956f",
+        "source_fingerprint": "sha256:8fbf7bae240bd54aded2e4f7c3bcb3d1db247ffa2eadf7521d36c03dd8904ce6",
         "collector_version": 1
       }
     },
@@ -133398,6 +133417,204 @@
       "provenance": {
         "source": "github-api",
         "source_fingerprint": "sha256:03fad4df3fe8c29a47bb02dbdbd68e5146113093a0ac6faa233e026d90dcfa47",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5070",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5070,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5070",
+      "title": "node: Upgrade go-libp2p to v0.46.0",
+      "state": "closed",
+      "relations": [
+        "authored-pr"
+      ],
+      "created_at": "2026-10-21T14:32:10Z",
+      "updated_at": "2026-10-21T16:04:09Z",
+      "merged_at": "2026-10-21T16:04:08Z",
+      "head_sha": "f1ddf2dc926af9876bea937c929b76a60a86171d",
+      "review": {
+        "count": 0,
+        "states": [],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 2,
+        "complete": true,
+        "paths": [
+          "node/go.mod",
+          "node/go.sum"
+        ],
+        "flagged": {
+          "node/go.sum": "lock"
+        },
+        "language_changes": {}
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:67cd4b1e87d18631c253a25552adfbdaac3bb92fb6a7715655d692a0f0230dc8",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5071",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5071,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5071",
+      "title": "Bump Node.js version",
+      "state": "open",
+      "relations": [
+        "reviewed-pr"
+      ],
+      "created_at": "2026-10-21T16:15:48Z",
+      "updated_at": "2026-10-24T08:33:46Z",
+      "merged_at": null,
+      "head_sha": "9e4349802668918299b32b930d4a13555cd36c08",
+      "review": {
+        "count": 1,
+        "states": [
+          "APPROVED"
+        ],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 13,
+        "complete": true,
+        "paths": [
+          ".nvmrc",
+          "Dockerfile.cli",
+          "Dockerfile.const",
+          "Dockerfile.proto",
+          "cosmwasm/Dockerfile.deploy",
+          "devnet/tx-verifier/Dockerfile.tx-verifier-evm",
+          "ethereum/Dockerfile",
+          "near/Dockerfile.base",
+          "near/Dockerfile.deploy",
+          "testing/Dockerfile.querysdk.test",
+          "testing/Dockerfile.sdk.test",
+          "testing/Dockerfile.spydk.test",
+          "wormchain/Dockerfile.deploy"
+        ],
+        "flagged": {},
+        "language_changes": {
+          "dockerfile": {
+            "files": 1,
+            "changed_lines": 4,
+            "direct_review_paths": [],
+            "evidence_level": "reviewed-pr-scope"
+          }
+        }
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        },
+        {
+          "tag": "cosmos",
+          "category": "ecosystem",
+          "evidence_level": "reviewed-pr-scope",
+          "evidence": [
+            "path-prefix:cosmwasm/",
+            "reviewed-pr"
+          ]
+        },
+        {
+          "tag": "dockerfile",
+          "category": "language",
+          "evidence_level": "reviewed-pr-scope",
+          "evidence": [
+            "filename:dockerfile",
+            "reviewed-pr"
+          ]
+        },
+        {
+          "tag": "evm",
+          "category": "ecosystem",
+          "evidence_level": "reviewed-pr-scope",
+          "evidence": [
+            "path-prefix:ethereum/",
+            "reviewed-pr"
+          ]
+        },
+        {
+          "tag": "near",
+          "category": "ecosystem",
+          "evidence_level": "reviewed-pr-scope",
+          "evidence": [
+            "path-prefix:near/",
+            "reviewed-pr"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:e14cfe00e8a8349bfbc65cd1fb28f032ea6d0a334e102c11b2a4232313379d03",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5078",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5078,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5078",
+      "title": "node: Update coverage baseline",
+      "state": "open",
+      "relations": [
+        "authored-pr"
+      ],
+      "created_at": "2026-10-23T11:13:42Z",
+      "updated_at": "2026-10-23T11:13:44Z",
+      "merged_at": null,
+      "head_sha": "d449ccd53371263778b99a5347fbad4a1cdab6e6",
+      "review": {
+        "count": 0,
+        "states": [],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 1,
+        "complete": true,
+        "paths": [
+          ".coverage-baseline"
+        ],
+        "flagged": {},
+        "language_changes": {}
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:af1db4f932564511f07ab8e2dce42253de895bf5ccb46d456efb2218856c0eeb",
         "collector_version": 1
       }
     },
