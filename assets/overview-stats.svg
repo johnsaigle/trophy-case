@@ -49,12 +49,12 @@
 <rect x="307.13" y="112" width="105.25" height="10" rx="2" fill="#38bdf8"><title>low: 44</title></rect>
 <rect x="414.38" y="112" width="51.63" height="10" rx="2" fill="#94a3b8"><title>informational: 22</title></rect>
 <text class="tile-sub" x="234" y="138">5 crit · 13 high · 12 med · 44 low · 22 info</text>
-<text class="big" x="520" y="76">808 / 1,248</text>
+<text class="big" x="520" y="76">813 / 1,255</text>
 <text class="tile-label" x="520" y="100">PRs authored / reviewed</text>
 
-<rect x="520" y="112" width="89.96" height="10" rx="2" fill="url(#g-authored)"/>
-<rect x="611.96" y="112" width="142.04" height="10" rx="2" fill="url(#g-reviewed)"/>
-<text class="tile-sub" x="520" y="138">607 merged · 3,575 inline review comments</text>
+<rect x="520" y="112" width="89.99" height="10" rx="2" fill="url(#g-authored)"/>
+<rect x="611.99" y="112" width="142.01" height="10" rx="2" fill="url(#g-reviewed)"/>
+<text class="tile-sub" x="520" y="138">611 merged · 3,586 inline review comments</text>
 <text class="big" x="806" y="76">11</text>
 <text class="tile-label" x="806" y="100">tools</text>
 <text class="tile-sub" x="806" y="122">4 articles</text>

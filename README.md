@@ -11,8 +11,8 @@ security engineering and source code reviews.
 ## Selected work
 
 - **Audits:** 9 published reports as primary auditor, including 4 critical findings in ZetaChain Node and 1 critical finding in Groth16 Verifier.
-- **Code review:** reviewed 1,248 public pull requests, leaving 3,575 inline comments across 710 of them.
-- **Authored:** 808 public pull requests, 607 merged.
+- **Code review:** reviewed 1,255 public pull requests, leaving 3,586 inline comments across 712 of them.
+- **Authored:** 813 public pull requests, 611 merged.
 
 | Area | Work | PRs |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 
 ### Wormhole
 
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (182 merged PRs, 10 issues, 114 reviews in 2026)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (184 merged PRs, 10 issues, 119 reviews in 2026)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
@@ -72,6 +72,7 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 - [Ghostfolio: insecure randomness for new passwords](https://github.com/ghostfolio/ghostfolio/discussions/3192)
   Password generation used insecure randomness; reported and fixed via PR.
 - [node: Upgrade go-libp2p to v0.46.0](https://github.com/wormhole-foundation/wormhole/pull/5070)
+- [Add testutils pkg; use TimeFromUnix when building message publications](https://github.com/wormhole-foundation/wormhole/pull/4878)
 
 # Audit Reports
 

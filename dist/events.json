@@ -1165,9 +1165,9 @@
     },
     "reviewed": true,
     "code_review": {
-      "prs_merged": 182,
+      "prs_merged": 184,
       "issues": 10,
-      "reviews_ytd": 114
+      "reviews_ytd": 119
     }
   },
   {
@@ -1993,6 +1993,30 @@
     "provenance": {
       "source": "github-collector",
       "extracted_at": "2026-10-26"
+    },
+    "reviewed": false
+  },
+  {
+    "id": "proposal-wormhole-foundation-wormhole-4878",
+    "type": "bug-report",
+    "date": "2026-10-30",
+    "title": "Add testutils pkg; use TimeFromUnix when building message publications",
+    "org": null,
+    "project": "wormhole-foundation/wormhole",
+    "role": "reporter",
+    "summary": null,
+    "evidence": [
+      {
+        "kind": "url",
+        "url": "https://github.com/wormhole-foundation/wormhole/pull/4878"
+      }
+    ],
+    "tags": [],
+    "severity": null,
+    "notability": 3,
+    "provenance": {
+      "source": "github-collector",
+      "extracted_at": "2026-11-02"
     },
     "reviewed": false
   }
