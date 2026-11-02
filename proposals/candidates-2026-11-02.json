@@ -1,0 +1,49 @@
+{
+  "since": "2026-10-26T12:32:19.496Z",
+  "candidates": [
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5096",
+      "number": 5096,
+      "title": "node: make suiclient subscription coverage deterministic",
+      "is_pr": true,
+      "body": "## Problem\n\n`node-coverage-check` fails on some PRs that do not touch `suiclient`, for example #5054. The tests pass, but the percentage for `suiclient` is different from one run to the next. The baseline has 121 of 167 statements covered, `main` has 120, and #5054 has 119.\n\n`SubscribeToTransactionEvents` starts a goroutine that reads checkpoints from a stream and writes the events of the subscribed types to a channel. `Unsubscribe()` stops the goroutine with a cancel of its context. One seed of `FuzzSuiGrpcClientSubscribeToEvents` unsubscribes directly after it subscribes. The Go scheduler de",
+      "created_at": "2026-10-29T18:58:20Z"
+    },
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/4878",
+      "number": 4878,
+      "title": "Add testutils pkg; use TimeFromUnix when building message publications",
+      "is_pr": true,
+      "body": "Use the SDK's new [TimeFromUnix](https://github.com/wormhole-foundation/wormhole/blob/2771cd01da6e83ccf3ab3991357af0afb17cfc0b/sdk/vaa/structs.go#L215) timestamp validation function at all call sites, including in test code. \r\n\r\nThis normalizes timestamp validation to avoid niche overflow scenarios as well as divergences between various types used to represent timestamps in the Go code. It adds an error-handling step but it also makes it so that authors don't need to know the implementation details of how a timestamp is represented. It also allows us to avoid linter warnings by resolving them ",
+      "created_at": "2026-10-30T13:45:07Z"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "proposal-wormhole-foundation-wormhole-4878",
+      "type": "bug-report",
+      "date": "2026-10-30",
+      "title": "Add testutils pkg; use TimeFromUnix when building message publications",
+      "org": null,
+      "project": "wormhole-foundation/wormhole",
+      "role": "reporter",
+      "summary": null,
+      "evidence": [
+        {
+          "kind": "url",
+          "url": "https://github.com/wormhole-foundation/wormhole/pull/4878"
+        }
+      ],
+      "tags": [],
+      "severity": null,
+      "notability": 3,
+      "provenance": {
+        "source": "github-collector",
+        "extracted_at": "2026-11-02"
+      },
+      "reviewed": false
+    }
+  ]
+}
