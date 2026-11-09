@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "count": 2013,
+  "count": 2016,
   "records": [
     {
       "id": "github-issue-aces-Loris-1770",
@@ -107356,12 +107356,12 @@
       "number": 4349,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4349",
       "title": "node: improve message verification code for EVM Transfer Verifier; update codeowners",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-04-14T21:36:11Z",
-      "updated_at": "2025-07-10T13:06:29Z",
+      "updated_at": "2026-11-09T15:00:05Z",
       "merged_at": null,
       "head_sha": "ab6d6dcd662aba881750959ada1a1418a9455f50",
       "review": {
@@ -107412,7 +107412,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:e21b8544e631231712622f0d12c39405d25eb1895337a0a6dd4e28049f767b74",
+        "source_fingerprint": "sha256:11609100cbadf69841b7e382e19af347756a5ff0103ca5779a13b7909800f9a1",
         "collector_version": 1
       }
     },
@@ -123697,12 +123697,12 @@
       "number": 4761,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4761",
       "title": "node: Add watcher interface and refactor observation checks",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-04-21T19:41:27Z",
-      "updated_at": "2026-05-04T15:09:51Z",
+      "updated_at": "2026-11-09T14:59:34Z",
       "merged_at": null,
       "head_sha": "827609f7c733ff2b1a8aef940292c123c4e8e412",
       "review": {
@@ -123779,7 +123779,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:db2f77e1dc6290afef4f3d285b5065fb5b1388213490ed6a69fe7a647c5766d8",
+        "source_fingerprint": "sha256:8546827c483a894ad48ef1ec669217521970f07d7f3e7c62b16a8340f88a12a5",
         "collector_version": 1
       }
     },
@@ -124671,12 +124671,12 @@
       "number": 4780,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4780",
       "title": "node: Add watcher interface and implement in Aptos",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-04-29T19:31:41Z",
-      "updated_at": "2026-06-17T11:37:10Z",
+      "updated_at": "2026-11-09T14:59:21Z",
       "merged_at": null,
       "head_sha": "afadce9464011d0dbea73a064c4c718277807f3c",
       "review": {
@@ -124733,7 +124733,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:47ce4cc1e3813ebe1a8122962fccfc37374f0b367f50ae505c445e175b2c04f4",
+        "source_fingerprint": "sha256:bd39dc442b83b846b2e76feeb307ba8353a3e099c1227d06b81ceee9ffe3e410",
         "collector_version": 1
       }
     },
@@ -131988,15 +131988,15 @@
       "project": "wormhole-foundation/wormhole",
       "number": 4924,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4924",
-      "title": "node(svm): VAA injectivity regression tests for SVM watcher",
+      "title": "node(svm): regression tests for SVM watcher",
       "state": "open",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-07-30T14:18:31Z",
-      "updated_at": "2026-08-10T11:26:20Z",
+      "updated_at": "2026-11-06T21:24:03Z",
       "merged_at": null,
-      "head_sha": "76b100311f410259a7ca99cacc1d5d2dcc4c5f42",
+      "head_sha": "c7e1f070ca08d4df1082bc0fc5614a503ae234ef",
       "review": {
         "count": 0,
         "states": [],
@@ -132004,20 +132004,15 @@
         "commented_paths": []
       },
       "files": {
-        "count": 22,
+        "count": 17,
         "complete": true,
         "paths": [
-          "node/pkg/watchers/evm/watcher_test.go",
+          "cspell-custom-words.txt",
           "node/pkg/watchers/solana/bundle_replay_setup_test.go",
           "node/pkg/watchers/solana/bundle_replay_test.go",
           "node/pkg/watchers/solana/client.go",
-          "node/pkg/watchers/solana/client_test.go",
-          "node/pkg/watchers/solana/observations.go",
           "node/pkg/watchers/solana/reobserve.go",
-          "node/pkg/watchers/solana/routines.go",
           "node/pkg/watchers/solana/rpc_client_test.go",
-          "node/pkg/watchers/solana/shim.go",
-          "node/pkg/watchers/solana/shim_test.go",
           "node/pkg/watchers/solana/testdata/live_bundles.json",
           "node/pkg/watchers/solana/testdata/static_bundles.json",
           "node/pkg/watchers/solana/testgen/README.md",
@@ -132028,15 +132023,16 @@
           "node/pkg/watchers/solana/testgen/cmd/run_test.go",
           "node/pkg/watchers/solana/testgen/cmd/static.go",
           "node/pkg/watchers/solana/testgen/cmd/write.go",
-          "node/pkg/watchers/solana/tx_for_addr.go"
+          "node/pkg/watchers/solana/watcher_loops_test.go"
         ],
         "flagged": {
+          "cspell-custom-words.txt": "documentation",
           "node/pkg/watchers/solana/testgen/README.md": "documentation"
         },
         "language_changes": {
           "go": {
-            "files": 19,
-            "changed_lines": 4042,
+            "files": 13,
+            "changed_lines": 3658,
             "direct_review_paths": [],
             "evidence_level": "direct-contribution"
           }
@@ -132063,7 +132059,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:18bd36371d52cf4c4396b9f0a9469d0a93cc01704258d0944c6ccad950b6f464",
+        "source_fingerprint": "sha256:2d6ea8dbf8593a2cab3dc3445db46990b0f5bc4a9905e79fc2127a32c3889150",
         "collector_version": 1
       }
     },
@@ -132346,14 +132342,14 @@
         "reviewed-pr"
       ],
       "created_at": "2026-08-03T21:33:00Z",
-      "updated_at": "2026-10-30T19:27:40Z",
+      "updated_at": "2026-11-04T23:24:23Z",
       "merged_at": null,
-      "head_sha": "de7f77f6e4cc42e1f730f703c29d026604a9e350",
+      "head_sha": "76495a36e880711164e340494e284c6b4f12b3ce",
       "review": {
         "count": 3,
         "states": [
-          "APPROVED",
-          "COMMENTED"
+          "COMMENTED",
+          "DISMISSED"
         ],
         "inline_comment_count": 7,
         "commented_paths": [
@@ -132363,10 +132359,9 @@
         ]
       },
       "files": {
-        "count": 12,
+        "count": 11,
         "complete": true,
         "paths": [
-          "cspell-custom-words.txt",
           "node/pkg/watchers/evm/README.md",
           "node/pkg/watchers/evm/by_transaction.go",
           "node/pkg/watchers/evm/generated_receipts_test.go",
@@ -132380,13 +132375,12 @@
           "node/pkg/watchers/evm/watcher_test_helpers_test.go"
         ],
         "flagged": {
-          "cspell-custom-words.txt": "documentation",
           "node/pkg/watchers/evm/README.md": "documentation"
         },
         "language_changes": {
           "go": {
             "files": 8,
-            "changed_lines": 1250,
+            "changed_lines": 1254,
             "direct_review_paths": [
               "node/pkg/watchers/evm/by_transaction.go",
               "node/pkg/watchers/evm/watcher.go",
@@ -132417,7 +132411,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:8a78f875128342dcbc12c4cfcd15531b4664cd7d0301e65abb6cd474d122d359",
+        "source_fingerprint": "sha256:31b9bef62a329d830046c4a69fece545e5a31f9696a0544abc25070993195c5c",
         "collector_version": 1
       }
     },
@@ -133619,17 +133613,18 @@
       "number": 5063,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5063",
       "title": "Notary hardening",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "reviewed-pr"
       ],
       "created_at": "2026-10-16T08:58:06Z",
-      "updated_at": "2026-10-29T14:50:10Z",
-      "merged_at": null,
-      "head_sha": "62e25c979cea74b30a4cb3c1861b8fa261d378eb",
+      "updated_at": "2026-11-05T14:33:16Z",
+      "merged_at": "2026-11-05T14:33:16Z",
+      "head_sha": "9b8443efdeaaa27be9808234fbf2eecb58da1d09",
       "review": {
-        "count": 1,
+        "count": 2,
         "states": [
+          "APPROVED",
           "COMMENTED"
         ],
         "inline_comment_count": 0,
@@ -133642,8 +133637,8 @@
           "node/pkg/common/pendingmessage.go",
           "node/pkg/common/pendingmessage_test.go",
           "node/pkg/db/notary.go",
+          "node/pkg/node/node.go",
           "node/pkg/node/options.go",
-          "node/pkg/notary/admincommands.go",
           "node/pkg/notary/notary.go",
           "node/pkg/notary/notary_test.go",
           "node/pkg/processor/observation_test.go"
@@ -133652,7 +133647,7 @@
         "language_changes": {
           "go": {
             "files": 8,
-            "changed_lines": 452,
+            "changed_lines": 362,
             "direct_review_paths": [],
             "evidence_level": "reviewed-pr-scope"
           }
@@ -133679,7 +133674,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:3e83fe6561fe8a3e3e4629754f22e7fd4ca661ce36dcebd05ae7e4311a11be37",
+        "source_fingerprint": "sha256:5d3e71a739a0e8c1fa47b842ec173a68346ad6ac1dcca96e621fbc4320626a1a",
         "collector_version": 1
       }
     },
@@ -133842,12 +133837,12 @@
       "number": 5078,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5078",
       "title": "node: Update coverage baseline",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-10-23T11:13:42Z",
-      "updated_at": "2026-10-27T22:48:22Z",
+      "updated_at": "2026-11-09T13:01:34Z",
       "merged_at": null,
       "head_sha": "b369be8e466ef5e67ea59617b1f366c67a94dd99",
       "review": {
@@ -133877,7 +133872,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:87a297d2078ecdf6990b1c08dd4dca7c0b7212a5f28aae7c64cc413445829569",
+        "source_fingerprint": "sha256:bec1cee08f8b41057b4db9379ce6e5e9dea823214af834c465e137b88a5f66df",
         "collector_version": 1
       }
     },
@@ -134118,12 +134113,12 @@
       "number": 5097,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5097",
       "title": "node: Update coverage baseline",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-10-30T14:42:53Z",
-      "updated_at": "2026-10-30T14:42:59Z",
+      "updated_at": "2026-11-09T13:01:37Z",
       "merged_at": null,
       "head_sha": "2a6f61635ca41c468c665d5585868d69435cba9e",
       "review": {
@@ -134153,7 +134148,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:ac90137c9fd7d020454b601240929227ba6f4063a2fd30faf7bff5c85716af8d",
+        "source_fingerprint": "sha256:4df9240b8c810cd24d627d6425719207dd7decc31994bf7e5a1bd827b3ae19eb",
         "collector_version": 1
       }
     },
@@ -134214,12 +134209,12 @@
       "number": 5099,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5099",
       "title": "node: Governor token list update",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "reviewed-pr"
       ],
       "created_at": "2026-11-01T04:09:18Z",
-      "updated_at": "2026-11-02T14:37:37Z",
+      "updated_at": "2026-11-03T04:54:40Z",
       "merged_at": null,
       "head_sha": "6ca23956b5f4358c3fb99c057ecab1917289dad4",
       "review": {
@@ -134267,7 +134262,179 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:9d44f45c9b8853d92a9202d3d5261e683b52f545a77e419c33a766530b069b90",
+        "source_fingerprint": "sha256:f0a57dea826cce078748a6393ea186e207f2c9a43ab22098c9ef8ec92f9808ef",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5104",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5104,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5104",
+      "title": "node: Governor token list update",
+      "state": "closed",
+      "relations": [
+        "reviewed-pr"
+      ],
+      "created_at": "2026-11-03T05:26:55Z",
+      "updated_at": "2026-11-04T13:46:42Z",
+      "merged_at": "2026-11-04T13:46:41Z",
+      "head_sha": "3314c38c595285199992d59fefb0e204d7921958",
+      "review": {
+        "count": 1,
+        "states": [
+          "APPROVED"
+        ],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 1,
+        "complete": true,
+        "paths": [
+          "node/pkg/governor/generated_mainnet_tokens.go"
+        ],
+        "flagged": {},
+        "language_changes": {
+          "go": {
+            "files": 1,
+            "changed_lines": 3282,
+            "direct_review_paths": [],
+            "evidence_level": "reviewed-pr-scope"
+          }
+        }
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        },
+        {
+          "tag": "go",
+          "category": "language",
+          "evidence_level": "reviewed-pr-scope",
+          "evidence": [
+            "extension:.go",
+            "reviewed-pr"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:9a7021a39d1a820b1f7c1543a751124a366348f31c696ef798ab77c6a7d84e58",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5106",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5106,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5106",
+      "title": "node: Update coverage baseline",
+      "state": "open",
+      "relations": [
+        "authored-pr"
+      ],
+      "created_at": "2026-11-06T13:58:07Z",
+      "updated_at": "2026-11-06T13:58:09Z",
+      "merged_at": null,
+      "head_sha": "ea2738e54f8c414550f34630dd27eca27de331dc",
+      "review": {
+        "count": 0,
+        "states": [],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 1,
+        "complete": true,
+        "paths": [
+          ".coverage-baseline"
+        ],
+        "flagged": {},
+        "language_changes": {}
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:3a0c3c87d301e944278841a520b63528adaccc53c1df7c05eed11c3756fa28c2",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5107",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5107,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5107",
+      "title": "node(near): Add unit tests for processWormholeLog validation",
+      "state": "open",
+      "relations": [
+        "authored-pr"
+      ],
+      "created_at": "2026-11-09T14:59:41Z",
+      "updated_at": "2026-11-09T15:09:36Z",
+      "merged_at": null,
+      "head_sha": "1a8de3b7b655931ee7c1157c5ee1c33ea148fbf2",
+      "review": {
+        "count": 0,
+        "states": [],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 1,
+        "complete": true,
+        "paths": [
+          "node/pkg/watchers/near/tx_processing_test.go"
+        ],
+        "flagged": {},
+        "language_changes": {
+          "go": {
+            "files": 1,
+            "changed_lines": 155,
+            "direct_review_paths": [],
+            "evidence_level": "direct-contribution"
+          }
+        }
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        },
+        {
+          "tag": "go",
+          "category": "language",
+          "evidence_level": "direct-contribution",
+          "evidence": [
+            "authored-pr",
+            "extension:.go"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:e55a71cbc112be901db719d2a5e6305992d86569dbf3ee9644a13c5c88b0dc99",
         "collector_version": 1
       }
     },

@@ -71,19 +71,19 @@
     },
     {
       "project": "wormhole-foundation/wormhole",
-      "records": 487,
+      "records": 490,
       "relations": {
-        "authored-pr": 246,
-        "reviewed-pr": 301,
+        "authored-pr": 248,
+        "reviewed-pr": 302,
         "authored-issue": 10
       },
       "languages": {
         "go": {
-          "records": 300,
+          "records": 302,
           "evidence": {
-            "direct-contribution": 134,
+            "direct-contribution": 135,
             "direct-review": 59,
-            "reviewed-pr-scope": 107,
+            "reviewed-pr-scope": 108,
             "repository-context": 0
           }
         },
@@ -227,12 +227,12 @@
       },
       "domains": {
         "bridge": {
-          "records": 487,
+          "records": 490,
           "evidence": {
             "direct-contribution": 0,
             "direct-review": 0,
             "reviewed-pr-scope": 0,
-            "repository-context": 487
+            "repository-context": 490
           }
         }
       }
