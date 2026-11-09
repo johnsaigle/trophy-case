@@ -42,7 +42,7 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 
 ### Wormhole
 
-- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (184 merged PRs, 10 issues, 119 reviews in 2026)
+- [Wormhole Guardian](https://github.com/wormhole-foundation/wormhole/pulls/johnsaigle) (184 merged PRs, 10 issues, 120 reviews in 2026)
 - [Review: Canton chain integration](https://github.com/wormholelabs-xyz/wormhole/pull/55)
   Substantial review and design feedback on the Canton integration PR (developed on the WormholeLabs fork).
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
