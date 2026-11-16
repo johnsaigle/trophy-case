@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "count": 2016,
+  "count": 2017,
   "records": [
     {
       "id": "github-issue-aces-Loris-1770",
@@ -132245,11 +132245,11 @@
         "reviewed-pr"
       ],
       "created_at": "2026-08-03T20:40:54Z",
-      "updated_at": "2026-08-13T22:14:08Z",
+      "updated_at": "2026-11-13T13:02:25Z",
       "merged_at": null,
       "head_sha": "f2c07c8fbf63aea73be4715860960a2fe67e2f43",
       "review": {
-        "count": 1,
+        "count": 2,
         "states": [
           "APPROVED"
         ],
@@ -132326,7 +132326,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:376d4ae6568839de4654bb4d542df5e30beb5732808304a5dc9d723e37dee76c",
+        "source_fingerprint": "sha256:5ddbf3850de736a8b7c495a3be6be3a86ac9b874e1894243e57ceeb5b2676693",
         "collector_version": 1
       }
     },
@@ -132342,9 +132342,9 @@
         "reviewed-pr"
       ],
       "created_at": "2026-08-03T21:33:00Z",
-      "updated_at": "2026-11-04T23:24:23Z",
+      "updated_at": "2026-11-13T14:44:54Z",
       "merged_at": null,
-      "head_sha": "76495a36e880711164e340494e284c6b4f12b3ce",
+      "head_sha": "bc048debbc8811176fcc2506273f0eaeffc25324",
       "review": {
         "count": 3,
         "states": [
@@ -132359,9 +132359,16 @@
         ]
       },
       "files": {
-        "count": 11,
+        "count": 18,
         "complete": true,
         "paths": [
+          "codeql/docs/rules/evm-require-successful-receipt-before-observation.md",
+          "codeql/src/evm-require-successful-receipt-before-observation.ql",
+          "codeql/test/evm-require-successful-receipt-before-observation/evm-require-successful-receipt-before-observation.expected",
+          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/by_transaction.go",
+          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/negative.go",
+          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/positive.go",
+          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/unsafe/positive_unsafe_validate_helper.go",
           "node/pkg/watchers/evm/README.md",
           "node/pkg/watchers/evm/by_transaction.go",
           "node/pkg/watchers/evm/generated_receipts_test.go",
@@ -132375,12 +132382,13 @@
           "node/pkg/watchers/evm/watcher_test_helpers_test.go"
         ],
         "flagged": {
+          "codeql/docs/rules/evm-require-successful-receipt-before-observation.md": "documentation",
           "node/pkg/watchers/evm/README.md": "documentation"
         },
         "language_changes": {
           "go": {
-            "files": 8,
-            "changed_lines": 1254,
+            "files": 12,
+            "changed_lines": 1455,
             "direct_review_paths": [
               "node/pkg/watchers/evm/by_transaction.go",
               "node/pkg/watchers/evm/watcher.go",
@@ -132411,7 +132419,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:31b9bef62a329d830046c4a69fece545e5a31f9696a0544abc25070993195c5c",
+        "source_fingerprint": "sha256:d0b89570c96f0499d79eef7fa63bde64b054ecf9807635ac645b8ef81505e395",
         "collector_version": 1
       }
     },
@@ -133367,9 +133375,9 @@
         "authored-pr"
       ],
       "created_at": "2026-09-29T14:45:15Z",
-      "updated_at": "2026-10-28T16:18:49Z",
+      "updated_at": "2026-11-13T23:18:43Z",
       "merged_at": null,
-      "head_sha": "1025d8b2c85c3891228c882f740d8a6cee61ce20",
+      "head_sha": "fbc74156d26d855261c67c5485d842a420977863",
       "review": {
         "count": 0,
         "states": [],
@@ -133453,7 +133461,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:abf1cf92a03a508e929df52a5404d1c3555a6139ee7338c28eb3956d941f543c",
+        "source_fingerprint": "sha256:12cb7052a6eb678e53512f1afd678e445fbde466fd13d3b5e3a8513225375d39",
         "collector_version": 1
       }
     },
@@ -133515,9 +133523,9 @@
         "reviewed-pr"
       ],
       "created_at": "2026-10-12T12:40:07Z",
-      "updated_at": "2026-10-30T15:47:46Z",
+      "updated_at": "2026-11-13T18:18:28Z",
       "merged_at": null,
-      "head_sha": "2c6289f46ce0d4bbc8fcbe6b198e95168912a555",
+      "head_sha": "c181f6fa403f7b9faf49480c415b1dfe1cd02255",
       "review": {
         "count": 4,
         "states": [
@@ -133530,7 +133538,7 @@
         ]
       },
       "files": {
-        "count": 16,
+        "count": 17,
         "complete": true,
         "paths": [
           "devnet/node.yaml",
@@ -133538,6 +133546,7 @@
           "docs/query_proxy.md",
           "node/Dockerfile",
           "node/hack/accountant/send_obs.go",
+          "node/hack/devkey/devkey.go",
           "node/hack/query/ccqlistener/ccqlistener.go",
           "node/hack/query/send_req.go",
           "node/pkg/common/armoredKey.go",
@@ -133562,8 +133571,8 @@
             "evidence_level": "reviewed-pr-scope"
           },
           "go": {
-            "files": 12,
-            "changed_lines": 398,
+            "files": 13,
+            "changed_lines": 395,
             "direct_review_paths": [
               "node/pkg/common/armoredKey.go",
               "node/pkg/query/query_test.go"
@@ -133602,7 +133611,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:7d3bb557c559fbc0bd2b7f167cea02b0ee57ad5164e3a94e5a2cf3f151c7fb0f",
+        "source_fingerprint": "sha256:118cf49e41a9a5ca28752529c151540052eb72d842dc86689621744da9c6f0bc",
         "collector_version": 1
       }
     },
@@ -134337,13 +134346,13 @@
       "number": 5106,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5106",
       "title": "node: Update coverage baseline",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-11-06T13:58:07Z",
-      "updated_at": "2026-11-06T13:58:09Z",
-      "merged_at": null,
+      "updated_at": "2026-11-13T08:27:35Z",
+      "merged_at": "2026-11-13T08:27:35Z",
       "head_sha": "ea2738e54f8c414550f34630dd27eca27de331dc",
       "review": {
         "count": 0,
@@ -134372,7 +134381,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:3a0c3c87d301e944278841a520b63528adaccc53c1df7c05eed11c3756fa28c2",
+        "source_fingerprint": "sha256:d7d51bd9471f779315cdd5c83db98f63db9308dfb5670389c164fa288e639939",
         "collector_version": 1
       }
     },
@@ -134383,13 +134392,13 @@
       "number": 5107,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/5107",
       "title": "node(near): Add unit tests for processWormholeLog validation",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2026-11-09T14:59:41Z",
-      "updated_at": "2026-11-09T15:09:36Z",
-      "merged_at": null,
+      "updated_at": "2026-11-13T12:56:57Z",
+      "merged_at": "2026-11-13T12:56:56Z",
       "head_sha": "1a8de3b7b655931ee7c1157c5ee1c33ea148fbf2",
       "review": {
         "count": 0,
@@ -134434,7 +134443,53 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:e55a71cbc112be901db719d2a5e6305992d86569dbf3ee9644a13c5c88b0dc99",
+        "source_fingerprint": "sha256:9586f91666d1cae163d2b4f56be07d6c6145e679bebae1f105eaa0f36406c136",
+        "collector_version": 1
+      }
+    },
+    {
+      "id": "github-pr-wormhole-foundation-wormhole-5114",
+      "kind": "pull-request",
+      "project": "wormhole-foundation/wormhole",
+      "number": 5114,
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5114",
+      "title": "node: Update coverage baseline",
+      "state": "open",
+      "relations": [
+        "authored-pr"
+      ],
+      "created_at": "2026-11-13T14:10:07Z",
+      "updated_at": "2026-11-13T20:03:05Z",
+      "merged_at": null,
+      "head_sha": "41face3c981424f6c5e40f55c78a30ad275ae69b",
+      "review": {
+        "count": 0,
+        "states": [],
+        "inline_comment_count": 0,
+        "commented_paths": []
+      },
+      "files": {
+        "count": 1,
+        "complete": true,
+        "paths": [
+          ".coverage-baseline"
+        ],
+        "flagged": {},
+        "language_changes": {}
+      },
+      "assertions": [
+        {
+          "tag": "bridge",
+          "category": "domain",
+          "evidence_level": "repository-context",
+          "evidence": [
+            "repository-default"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "github-api",
+        "source_fingerprint": "sha256:1c6c8f34fad885dd2416d427e8952f7f88de43a5ac1f2aff23b85a3ed0d86801",
         "collector_version": 1
       }
     },

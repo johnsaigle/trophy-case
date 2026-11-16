@@ -71,9 +71,9 @@
     },
     {
       "project": "wormhole-foundation/wormhole",
-      "records": 490,
+      "records": 491,
       "relations": {
-        "authored-pr": 248,
+        "authored-pr": 249,
         "reviewed-pr": 302,
         "authored-issue": 10
       },
@@ -227,12 +227,12 @@
       },
       "domains": {
         "bridge": {
-          "records": 490,
+          "records": 491,
           "evidence": {
             "direct-contribution": 0,
             "direct-review": 0,
             "reviewed-pr-scope": 0,
-            "repository-context": 490
+            "repository-context": 491
           }
         }
       }

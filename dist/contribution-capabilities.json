@@ -19,12 +19,12 @@
     },
     "bridge": {
       "category": "domain",
-      "records": 653,
+      "records": 654,
       "evidence": {
         "direct-contribution": 0,
         "direct-review": 0,
         "reviewed-pr-scope": 0,
-        "repository-context": 653
+        "repository-context": 654
       }
     },
     "cosmos": {
