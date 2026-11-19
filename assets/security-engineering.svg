@@ -39,7 +39,7 @@
 <rect width="100%" height="100%" rx="16" fill="url(#bgfade)"/>
 <rect x="40" y="16" width="64" height="4" rx="2" fill="url(#accent)"/>
 <text class="title" x="40" y="48">Security engineering in public repositories</text>
-<text class="subtitle" x="40" y="75">280 authored PRs (204 merged) · 347 reviewed PRs · 49 issues · 2024–2026</text>
+<text class="subtitle" x="40" y="75">283 authored PRs (206 merged) · 348 reviewed PRs · 49 issues · 2024–2026</text>
 <rect x="40" y="96" width="12" height="12" rx="3" fill="url(#g-authored)"/>
 <text class="legend" x="58" y="107">authored PRs</text>
 <rect x="154.4" y="96" width="12" height="12" rx="3" fill="url(#g-reviewed)"/>
@@ -51,9 +51,9 @@
 <line class="grid" x1="546.6666666666666" x2="546.6666666666666" y1="146" y2="504"/>
 <text class="q" x="735.33" y="140">2026</text>
 <line class="grid" x1="733.3333333333333" x2="733.3333333333333" y1="146" y2="504"/>
-<g><title>wormhole-foundation/wormhole: 487 records</title>
+<g><title>wormhole-foundation/wormhole: 491 records</title>
 <text class="lane" x="40" y="166">wormhole-foundation/wormhole</text>
-<text class="lane-sub" x="40" y="180">246 authored (184 merged) · 231 reviewed · 10 issues</text>
+<text class="lane-sub" x="40" y="180">249 authored (186 merged) · 232 reviewed · 10 issues</text>
 </g>
 <line class="grid" x1="360" x2="920" y1="186" y2="186"/>
 <g><title>wormhole-foundation/wormhole 2024Q1: 2 (1 authored, 1 reviewed)</title>
@@ -107,10 +107,10 @@
 <rect x="837.00" y="177.26" width="26.00" height="7.74" fill="url(#g-authored)"/>
 <path d="M 837.00 177.26 L 837.00 170.34 Q 837.00 166.34 841.00 166.34 L 859.00 166.34 Q 863.00 166.34 863.00 170.34 L 863.00 177.26 Z" fill="url(#g-reviewed)"/>
 </g>
-<g><title>wormhole-foundation/wormhole 2026Q4: 13 (6 authored, 6 reviewed, 1 issues)</title>
-<rect x="883.67" y="180.15" width="26.00" height="4.85" fill="url(#g-authored)"/>
-<rect x="883.67" y="175.30" width="26.00" height="4.85" fill="url(#g-reviewed)"/>
-<path d="M 883.67 175.30 L 883.67 175.30 Q 883.67 174.49 884.47 174.49 L 908.86 174.49 Q 909.67 174.49 909.67 175.30 L 909.67 175.30 Z" fill="url(#g-issues)"/>
+<g><title>wormhole-foundation/wormhole 2026Q4: 17 (9 authored, 7 reviewed, 1 issues)</title>
+<rect x="883.67" y="178.64" width="26.00" height="6.36" fill="url(#g-authored)"/>
+<rect x="883.67" y="173.69" width="26.00" height="4.95" fill="url(#g-reviewed)"/>
+<path d="M 883.67 173.69 L 883.67 173.69 Q 883.67 172.99 884.37 172.99 L 908.96 172.99 Q 909.67 172.99 909.67 173.69 L 909.67 173.69 Z" fill="url(#g-issues)"/>
 </g>
 <g><title>wormhole-foundation/native-token-transfers: 124 records</title>
 <text class="lane" x="40" y="206">native-token-transfers</text>
@@ -245,7 +245,7 @@
 <path d="M 837.00 505.00 L 837.00 505.00 Q 837.00 501.00 841.00 501.00 L 859.00 501.00 Q 863.00 501.00 863.00 505.00 L 863.00 505.00 Z" fill="url(#g-reviewed)"/>
 </g>
 <text class="section" x="40" y="558">What the authored PR titles say</text>
-<text class="lane-sub" x="40" y="574">Keyword groups over 280 authored PR titles · bar = PRs, solid portion = merged</text>
+<text class="lane-sub" x="40" y="574">Keyword groups over 283 authored PR titles · bar = PRs, solid portion = merged</text>
 <g><title>Linters &amp; static analysis: 57 PRs, 41 merged</title>
 <text class="lane" x="256" y="604" text-anchor="end">Linters &amp; static analysis</text>
 <rect class="track" x="270" y="590" width="580.00" height="18" rx="3"/>
@@ -258,11 +258,11 @@
 <rect x="270" y="618" width="324.61" height="18" rx="3" fill="url(#g-authored)"/>
 <text class="count" x="705.37" y="632">42</text>
 </g>
-<g><title>Tests &amp; fuzzing: 39 PRs, 19 merged</title>
+<g><title>Tests &amp; fuzzing: 42 PRs, 21 merged</title>
 <text class="lane" x="256" y="660" text-anchor="end">Tests &amp; fuzzing</text>
-<rect class="track" x="270" y="646" width="396.84" height="18" rx="3"/>
-<rect x="270" y="646" width="192.33" height="18" rx="3" fill="url(#g-authored)"/>
-<text class="count" x="674.84" y="660">39</text>
+<rect class="track" x="270" y="646" width="427.37" height="18" rx="3"/>
+<rect x="270" y="646" width="212.68" height="18" rx="3" fill="url(#g-authored)"/>
+<text class="count" x="705.37" y="660">42</text>
 </g>
 <g><title>Docs, policy &amp; security context: 36 PRs, 33 merged</title>
 <text class="lane" x="256" y="688" text-anchor="end">Docs, policy &amp; security context</text>
