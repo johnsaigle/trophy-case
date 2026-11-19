@@ -1,0 +1,24 @@
+{
+  "since": "2026-11-09T15:40:29.839Z",
+  "candidates": [
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5107",
+      "number": 5107,
+      "title": "node(near): Add unit tests for processWormholeLog validation",
+      "is_pr": true,
+      "body": "## Summary\n\nAdd `TestProcessWormholeLog`, a table test for the checks in `processWormholeLog`. Each case starts from a valid Wormhole publish event and changes one field. For each case, the test checks the error result and `job.hasWormholeMsg`. For a rejected or skipped log, it also checks that no `MessagePublication` goes to `msgC`.\n\nThe valid case checks all fields of the published message.\n\n## Why\n\nThis PR mainly fixes the `node-coverage-check` failure on #5106. That PR sets the baseline for `node/pkg/watchers/near` to 76.9%, but the package coverage is 75.1% in CI and locally. The differen",
+      "created_at": "2026-11-13T12:56:56Z"
+    },
+    {
+      "slug": "wormhole-foundation/wormhole",
+      "url": "https://github.com/wormhole-foundation/wormhole/pull/5106",
+      "number": 5106,
+      "title": "node: Update coverage baseline",
+      "is_pr": true,
+      "body": "Coverage has improved since the previous baseline. This PR updates the coverage baseline to reflect the latest test coverage.\n\nReview the diff in `.coverage-baseline` and merge to lock in the improvements.",
+      "created_at": "2026-11-13T08:27:35Z"
+    }
+  ],
+  "proposals": []
+}
