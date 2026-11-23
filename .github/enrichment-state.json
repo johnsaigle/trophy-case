@@ -452,54 +452,54 @@
  },
  "last_incremental": {
   "wormhole-foundation/wormhole": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "wormhole-foundation/native-token-transfers": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "wormhole-foundation/example-liquidity-layer": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "wormhole-foundation/wormhole-solidity-sdk": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "m0-platform/solana-m": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "m0-platform/solana-m-extensions": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "stx-labs/clarity-go": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "commonwarexyz/monorepo": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "ghostfolio/ghostfolio": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   },
   "aces/Loris": {
-   "authored-pr": "2026-11-16T16:43:00.624Z",
-   "reviewed-pr": "2026-11-16T16:43:00.624Z",
-   "authored-issue": "2026-11-16T16:43:00.624Z"
+   "authored-pr": "2026-11-23T18:56:44.286Z",
+   "reviewed-pr": "2026-11-23T18:56:44.286Z",
+   "authored-issue": "2026-11-23T18:56:44.286Z"
   }
  }
 }

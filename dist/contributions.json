@@ -995,12 +995,12 @@
       "number": 4332,
       "url": "https://github.com/aces/Loris/issues/4332",
       "title": "Visit Label Feedback button should be disabled when no imaging data exists for a session",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-issue"
       ],
       "created_at": "2019-02-13T17:20:59Z",
-      "updated_at": "2023-11-14T21:49:21Z",
+      "updated_at": "2026-11-16T20:06:22Z",
       "assertions": [
         {
           "tag": "web",
@@ -1013,7 +1013,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:93430913c192ea1e96427033f2b87a216d3014d3b0cfdad4af577ca9a03e1c31",
+        "source_fingerprint": "sha256:a7c8b8c7529e117e4e6eb52e3d31eaae304647940b05e27a68fe8871c8f1a69f",
         "collector_version": 1
       }
     },
@@ -106031,9 +106031,9 @@
         "reviewed-pr"
       ],
       "created_at": "2025-03-28T14:43:22Z",
-      "updated_at": "2026-03-17T12:35:40Z",
+      "updated_at": "2026-11-19T22:57:48Z",
       "merged_at": null,
-      "head_sha": "f62aff40d677f6ca7d4b121e362c26711c06e5c8",
+      "head_sha": "adc8e5454862b1970c548a7075d1886de16aa317",
       "review": {
         "count": 3,
         "states": [
@@ -106054,7 +106054,7 @@
         "language_changes": {
           "shell": {
             "files": 1,
-            "changed_lines": 15,
+            "changed_lines": 21,
             "direct_review_paths": [
               "scripts/lint.sh"
             ],
@@ -106083,7 +106083,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:d672d9eb15ff58ada7e20f9fe6c74122cd3a5e992bb980b0faa8c49a2435c9ef",
+        "source_fingerprint": "sha256:87eddf96fc4912ec9942d8a5d1ab4a8136aff01d24dd89fdbef3984bb3db4be8",
         "collector_version": 1
       }
     },
@@ -108645,9 +108645,9 @@
         "authored-pr"
       ],
       "created_at": "2025-05-13T13:57:06Z",
-      "updated_at": "2025-11-21T15:15:58Z",
+      "updated_at": "2026-11-20T18:24:31Z",
       "merged_at": null,
-      "head_sha": "75f2e68ed2d9cc326b690edb78901c9f39eb0c8a",
+      "head_sha": "a0e206a970fc9374f408bd18e564f983ce713747",
       "review": {
         "count": 0,
         "states": [],
@@ -108659,14 +108659,14 @@
         "complete": true,
         "paths": [
           ".golangci.yml",
-          "node/pkg/accountant/audit.go",
+          "node/pkg/common/pendingmessage.go",
           "sdk/vaa/structs.go"
         ],
         "flagged": {},
         "language_changes": {
           "go": {
             "files": 2,
-            "changed_lines": 9,
+            "changed_lines": 5,
             "direct_review_paths": [],
             "evidence_level": "direct-contribution"
           }
@@ -108693,7 +108693,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:5ea91352422619d711e2bbeb484f66c1307e16c6724e4b950abae490f215648c",
+        "source_fingerprint": "sha256:12d39321fcbc3ca43f9a54c24552f238a32b17af9f0389e55826e722e01f3e16",
         "collector_version": 1
       }
     },
@@ -108775,12 +108775,12 @@
       "number": 4375,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4375",
       "title": "node(governor): reobservations should not flow cancel",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-05-14T18:41:19Z",
-      "updated_at": "2026-05-14T15:51:07Z",
+      "updated_at": "2026-11-20T15:29:08Z",
       "merged_at": null,
       "head_sha": "3e3a818371ede828c3708ccd13d391ab818c97b0",
       "review": {
@@ -108827,7 +108827,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:22e1b598fbf3f6615719dc5c9f3644fb4bd1858417677f52b9d6fb680401ed6e",
+        "source_fingerprint": "sha256:bd2c966a5dc14c50a51bb643ad9c4aeb0d2ceb86463d61373c67a0f55e5f990b",
         "collector_version": 1
       }
     },
@@ -111665,12 +111665,12 @@
       "number": 4456,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4456",
       "title": "ci: Add lint rule that ensures a mutex guards \"AlreadyLocked\" functions",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-08-01T16:06:04Z",
-      "updated_at": "2026-06-17T16:46:07Z",
+      "updated_at": "2026-11-20T00:35:47Z",
       "merged_at": null,
       "head_sha": "f6a0f83cd5e6fd204c1ef1b580678b475973f746",
       "review": {
@@ -111760,7 +111760,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:1d3874344d0821bc85b1f87606ccc4ae1da0d1547bb33e26f52e6fc92bff816b",
+        "source_fingerprint": "sha256:0fc41a426ac3ff2f2a39f3396d04f7195acbcc1a130b68096cea1c9367c8f92a",
         "collector_version": 1
       }
     },
@@ -114790,14 +114790,14 @@
       "number": 4551,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4551",
       "title": "meta: Update codeowners for Transfer Verifier (after Sui portion was merged)",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr"
       ],
       "created_at": "2025-10-28T13:57:13Z",
-      "updated_at": "2026-10-20T14:08:10Z",
-      "merged_at": null,
-      "head_sha": "06a70106020d68b8e60fd275a6d5703ff810e5e3",
+      "updated_at": "2026-11-20T14:23:16Z",
+      "merged_at": "2026-11-20T14:23:16Z",
+      "head_sha": "7b1c9334e56d9eea4aa6ff95dbaa66bddb66ffb5",
       "review": {
         "count": 0,
         "states": [],
@@ -114827,7 +114827,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:40c24da3344b74547a8903b2aa031046232518aed0faf24cf239e7924a9a3f13",
+        "source_fingerprint": "sha256:f3a5b929833fd44fd280c5f82d0d667359eea41fd81e586c75fd8bbaaef1f090",
         "collector_version": 1
       }
     },
@@ -121049,12 +121049,12 @@
       "number": 4702,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4702",
       "title": "fix: upgrade ledger-go to v1.0.1 to improve ledger device detection",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "reviewed-pr"
       ],
       "created_at": "2026-03-09T15:17:45Z",
-      "updated_at": "2026-03-09T15:29:12Z",
+      "updated_at": "2026-11-20T16:01:37Z",
       "merged_at": null,
       "head_sha": "ef47d9413c6ea089802007448355c86dab4445a3",
       "review": {
@@ -121095,7 +121095,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:13cf8ef86f3cf6f2cb5ed0b9463db5940de3e531847a3ec2081ef78d595d0e1b",
+        "source_fingerprint": "sha256:13c42cdbfb9730e8b13d56ae24e166bbfb945ceafdd3decbf5bfc1052fdf0e3a",
         "collector_version": 1
       }
     },
@@ -123925,13 +123925,13 @@
       "number": 4765,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4765",
       "title": "Dockerize go lint and tests",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "authored-pr",
         "reviewed-pr"
       ],
       "created_at": "2026-04-24T14:15:25Z",
-      "updated_at": "2026-05-29T14:53:52Z",
+      "updated_at": "2026-11-20T18:30:39Z",
       "merged_at": null,
       "head_sha": "6e1c644f44a352101f7eb83c6379546da742ec48",
       "review": {
@@ -124005,7 +124005,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:801596dc9067600a36eb38c502d7e07da506f973420072a8049aca805f17e7aa",
+        "source_fingerprint": "sha256:5cffe0f939f425ffdba2e15caa1a3e76e5f94e3b16bcfe3e69ba944e9db8af19",
         "collector_version": 1
       }
     },
@@ -127636,9 +127636,9 @@
         "authored-pr"
       ],
       "created_at": "2026-05-21T13:42:41Z",
-      "updated_at": "2026-10-20T14:54:57Z",
+      "updated_at": "2026-11-20T15:58:36Z",
       "merged_at": null,
-      "head_sha": "28586885c5c99bb8c5308d1ad0903ddcff981997",
+      "head_sha": "cd3a024339fc9a445e0e66f3480264f84212f965",
       "review": {
         "count": 0,
         "states": [],
@@ -127679,7 +127679,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:c8f846a1f3e67224f27b30446999b66337105a3072cc100a1aace7d901878cec",
+        "source_fingerprint": "sha256:7a6a23897f3d8d7ca8a212205489451050a76cd025ff832af471b3b38d376b46",
         "collector_version": 1
       }
     },
@@ -129593,9 +129593,9 @@
         "authored-pr"
       ],
       "created_at": "2026-06-17T11:20:59Z",
-      "updated_at": "2026-06-19T15:18:27Z",
+      "updated_at": "2026-11-20T15:43:21Z",
       "merged_at": null,
-      "head_sha": "33d6700c4a237143c8816d50431929f64019d603",
+      "head_sha": "ec45a7f0c7300142d50d1c1836fecbf68aa92f67",
       "review": {
         "count": 0,
         "states": [],
@@ -129603,18 +129603,20 @@
         "commented_paths": []
       },
       "files": {
-        "count": 3,
+        "count": 5,
         "complete": true,
         "paths": [
           ".golangci.yml",
           "node/pkg/db/accountant.go",
-          "node/pkg/db/accountant_test.go"
+          "node/pkg/db/accountant_test.go",
+          "node/pkg/watchers/aptos/watcher_test.go",
+          "node/pkg/watchers/near/tx_processing_test.go"
         ],
         "flagged": {},
         "language_changes": {
           "go": {
-            "files": 2,
-            "changed_lines": 22,
+            "files": 4,
+            "changed_lines": 72,
             "direct_review_paths": [],
             "evidence_level": "direct-contribution"
           }
@@ -129641,7 +129643,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:32aac7518fb4426ce4c2379a65c8265aab78261a9a43cccfc69578f50f6c4b7b",
+        "source_fingerprint": "sha256:06733d600d75852037761e269e887a4c848d7822b5627a949d28cf3086dc67be",
         "collector_version": 1
       }
     },
@@ -131994,9 +131996,9 @@
         "authored-pr"
       ],
       "created_at": "2026-07-30T14:18:31Z",
-      "updated_at": "2026-11-06T21:24:03Z",
+      "updated_at": "2026-11-16T16:50:47Z",
       "merged_at": null,
-      "head_sha": "c7e1f070ca08d4df1082bc0fc5614a503ae234ef",
+      "head_sha": "cec3fba2b89d1e302c258efc9b60b47271f11661",
       "review": {
         "count": 0,
         "states": [],
@@ -132059,7 +132061,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:2d6ea8dbf8593a2cab3dc3445db46990b0f5bc4a9905e79fc2127a32c3889150",
+        "source_fingerprint": "sha256:d15baf7db7a2c6142de27b210b8a08ad54e14d766f34a24e36dfc0ab12592dfb",
         "collector_version": 1
       }
     },
@@ -132342,9 +132344,9 @@
         "reviewed-pr"
       ],
       "created_at": "2026-08-03T21:33:00Z",
-      "updated_at": "2026-11-13T14:44:54Z",
+      "updated_at": "2026-11-17T05:28:28Z",
       "merged_at": null,
-      "head_sha": "bc048debbc8811176fcc2506273f0eaeffc25324",
+      "head_sha": "307a9d6fe234e2c8e2d42a557dde0627e35c7ee8",
       "review": {
         "count": 3,
         "states": [
@@ -132359,16 +132361,9 @@
         ]
       },
       "files": {
-        "count": 18,
+        "count": 11,
         "complete": true,
         "paths": [
-          "codeql/docs/rules/evm-require-successful-receipt-before-observation.md",
-          "codeql/src/evm-require-successful-receipt-before-observation.ql",
-          "codeql/test/evm-require-successful-receipt-before-observation/evm-require-successful-receipt-before-observation.expected",
-          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/by_transaction.go",
-          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/negative.go",
-          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/positive.go",
-          "codeql/test/evm-require-successful-receipt-before-observation/node/pkg/watchers/evm/unsafe/positive_unsafe_validate_helper.go",
           "node/pkg/watchers/evm/README.md",
           "node/pkg/watchers/evm/by_transaction.go",
           "node/pkg/watchers/evm/generated_receipts_test.go",
@@ -132382,13 +132377,12 @@
           "node/pkg/watchers/evm/watcher_test_helpers_test.go"
         ],
         "flagged": {
-          "codeql/docs/rules/evm-require-successful-receipt-before-observation.md": "documentation",
           "node/pkg/watchers/evm/README.md": "documentation"
         },
         "language_changes": {
           "go": {
-            "files": 12,
-            "changed_lines": 1455,
+            "files": 8,
+            "changed_lines": 1254,
             "direct_review_paths": [
               "node/pkg/watchers/evm/by_transaction.go",
               "node/pkg/watchers/evm/watcher.go",
@@ -132419,7 +132413,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:d0b89570c96f0499d79eef7fa63bde64b054ecf9807635ac645b8ef81505e395",
+        "source_fingerprint": "sha256:8d7e9e921bb93f70be31ef2d1eaa0062bd2771d37010470ad3587f813a1bd122",
         "collector_version": 1
       }
     },
@@ -132881,12 +132875,12 @@
       "number": 4947,
       "url": "https://github.com/wormhole-foundation/wormhole/pull/4947",
       "title": "node: Update accountant audit logic",
-      "state": "open",
+      "state": "closed",
       "relations": [
         "reviewed-pr"
       ],
       "created_at": "2026-08-17T21:18:02Z",
-      "updated_at": "2026-08-18T22:30:52Z",
+      "updated_at": "2026-11-18T20:56:39Z",
       "merged_at": null,
       "head_sha": "81485f3734344a68a6d98938ea7b707b6233c508",
       "review": {
@@ -132942,7 +132936,7 @@
       ],
       "provenance": {
         "source": "github-api",
-        "source_fingerprint": "sha256:0a027a1b2a30d413768d77f21ffe7dead17228f39a002a56662a5d3440149ed1",
+        "source_fingerprint": "sha256:f16dff4c1cba2d8f933cd4cb3e61a9f7ae6560f83ab8a177c67478e6b9116824",
         "collector_version": 1
       }
     },
