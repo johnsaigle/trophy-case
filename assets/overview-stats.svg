@@ -54,7 +54,7 @@
 
 <rect x="520" y="112" width="90.15" height="10" rx="2" fill="url(#g-authored)"/>
 <rect x="612.15" y="112" width="141.85" height="10" rx="2" fill="url(#g-reviewed)"/>
-<text class="tile-sub" x="520" y="138">613 merged · 3,586 inline review comments</text>
+<text class="tile-sub" x="520" y="138">614 merged · 3,586 inline review comments</text>
 <text class="big" x="806" y="76">11</text>
 <text class="tile-label" x="806" y="100">tools</text>
 <text class="tile-sub" x="806" y="122">4 articles</text>
