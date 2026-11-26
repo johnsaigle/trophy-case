@@ -197,14 +197,27 @@ for (const org of EMPLOYERS) {
 const huntEvents = contributionEvents.filter((e) => !EMPLOYERS.includes(e.org));
 if (huntEvents.length) {
   lines.push(`## Bug Hunting`, ``);
+  const huntGroups = {};
   for (const e of huntEvents) {
-    const url = evUrl(e);
-    const sev = e.severity ? ` (${e.severity})` : "";
-    const orgTag = e.org ? ` — reported to ${e.org}` : "";
-    lines.push(`- ${url ? `[${e.title}](${url})` : e.title}${sev}${orgTag}${countsSuffix(e)}`);
-    if (e.summary) lines.push(`  ${e.summary}`);
+    let label;
+    if (e.project) {
+      const repo = e.project.split("/")[1];
+      label = e.org ? `${e.org} / ${repo}` : repo.charAt(0).toUpperCase() + repo.slice(1);
+    } else {
+      label = e.org || "Other";
+    }
+    (huntGroups[label] = huntGroups[label] || []).push(e);
   }
-  lines.push(``);
+  for (const label of Object.keys(huntGroups)) {
+    lines.push(`### ${label}`, ``);
+    for (const e of huntGroups[label]) {
+      const url = evUrl(e);
+      const sev = e.severity ? ` (${e.severity})` : "";
+      lines.push(`- ${url ? `[${e.title}](${url})` : e.title}${sev}${countsSuffix(e)}`);
+      if (e.summary) lines.push(`  ${e.summary}`);
+    }
+    lines.push(``);
+  }
 }
 
 // --- audit table
@@ -251,6 +264,35 @@ for (const e of events.filter((e) => e.type === "tool")) {
   lines.push(`- ${nameLinked}${desc ? ` -- ${desc}` : ""}`);
 }
 lines.push(``);
+
+// --- table of contents
+// GitHub-style anchors: lowercase, drop punctuation except hyphens, spaces to
+// hyphens, deduplicate repeats with -1/-2 suffixes.
+const anchorCounts = new Map();
+const anchorOf = (text) => {
+  let slug = text.toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+  const seen = anchorCounts.get(slug) || 0;
+  anchorCounts.set(slug, seen + 1);
+  return seen ? `${slug}-${seen}` : slug;
+};
+const headingRe = /^(#{1,3}) (.+)$/;
+const tocEntries = [];
+for (let i = 1; i < lines.length; i++) {
+  const m = lines[i].match(headingRe);
+  if (!m) continue;
+  const [, hashes, text] = m;
+  if (text === "Contents") continue;
+  tocEntries.push({ level: hashes.length, text });
+}
+const tocLines = [`## Contents`, ``];
+for (const { level, text } of tocEntries) {
+  const indent = "  ".repeat(level - 1);
+  tocLines.push(`${indent}- [${text}](#${anchorOf(text)})`);
+}
+tocLines.push(``);
+const selectedWorkIdx = lines.indexOf(`## Selected work`);
+if (selectedWorkIdx === -1) throw new Error("cannot locate Selected work heading for TOC insertion");
+lines.splice(selectedWorkIdx, 0, ...tocLines);
 
 fs.writeFileSync(path.join(ROOT, "README.md"), lines.join("\n"));
 console.log(`Rendered README.md: ${events.length} events, ${findings.length} findings`);

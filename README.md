@@ -8,6 +8,28 @@ security engineering and source code reviews.
 > **Note:** this is a best-effort list of *public* work only. Much of my audit
 > and security engineering output is under confidentiality agreement and cannot be listed.
 
+## Contents
+
+  - [Selected work](#selected-work)
+  - [Public work over time](#public-work-over-time)
+  - [Security engineering in public repositories](#security-engineering-in-public-repositories)
+  - [Findings in published audit reports](#findings-in-published-audit-reports)
+- [Code Review and Security Engineering](#code-review-and-security-engineering)
+  - [As part of Asymmetric Research](#as-part-of-asymmetric-research)
+    - [Wormhole](#wormhole)
+    - [Stacks](#stacks)
+    - [Commonware](#commonware)
+    - [Other Projects](#other-projects)
+  - [McGill University (2015-2020)](#mcgill-university-2015-2020)
+  - [Bug Hunting](#bug-hunting)
+    - [Ghostfolio](#ghostfolio)
+    - [Paradigm / iron-proxy](#paradigm-iron-proxy)
+- [Audit Reports](#audit-reports)
+- [Technical Writing](#technical-writing)
+  - [Asymmetric Research](#asymmetric-research)
+  - [Halborn](#halborn)
+- [Tools](#tools)
+
 ## Selected work
 
 - **Audits:** 9 published reports as primary auditor, including 4 critical findings in ZetaChain Node and 1 critical finding in Groth16 Verifier and 1 critical finding in Maya Node ETH Router.
@@ -71,9 +93,14 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 
 ## Bug Hunting
 
+### Ghostfolio
+
 - [Ghostfolio: insecure randomness for new passwords](https://github.com/ghostfolio/ghostfolio/discussions/3192) (medium)
   Password generation used insecure randomness; reported and fixed via PR.
-- [fix(header_allowlist): strip headers stored under non-canonical keys](https://github.com/paradigmxyz/iron-proxy/pull/325) (low) — reported to Paradigm
+
+### Paradigm / iron-proxy
+
+- [fix(header_allowlist): strip headers stored under non-canonical keys](https://github.com/paradigmxyz/iron-proxy/pull/325) (low)
   Reported that http.Header.Del canonicalization let headers stored under non-canonical keys survive header_allowlist stripping while still being reported in stripped_headers.
 
 # Audit Reports
