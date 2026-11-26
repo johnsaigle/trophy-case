@@ -1113,8 +1113,7 @@
   {
     "id": "audit-mayachain-eth-router-2022",
     "type": "audit",
-    "date": null,
-    "date_hint": "2022",
+    "date": "2022-12-13",
     "title": "Maya Node ETH Router Audit",
     "org": "Halborn",
     "client": "MayaChain",
@@ -1132,10 +1131,60 @@
     ],
     "notability": 4,
     "provenance": {
-      "source": "manual",
-      "extracted_at": "2026-10-06"
+      "source": "pdf-parse",
+      "extracted_at": "2026-11-25"
     },
-    "reviewed": true
+    "reviewed": true,
+    "audit": {
+      "counts": {
+        "critical": 1,
+        "high": 1,
+        "medium": 1,
+        "low": 2
+      },
+      "findings": [
+        {
+          "id": "HAL-01",
+          "title": "Unit tests failures indicate fund calculation issues",
+          "severity": "critical",
+          "score": null,
+          "remediation": "unknown",
+          "class": "accounting"
+        },
+        {
+          "id": "HAL-02",
+          "title": "Use of tx.origin creates a risk that funds can be stolen",
+          "severity": "high",
+          "score": null,
+          "remediation": "unknown",
+          "class": "access-control"
+        },
+        {
+          "id": "HAL-03",
+          "title": "Use of ERC-20 safeApprove pattern can be risky",
+          "severity": "medium",
+          "score": null,
+          "remediation": "unknown",
+          "class": "error-handling"
+        },
+        {
+          "id": "HAL-04",
+          "title": "Use of npm packages with critical issues",
+          "severity": "low",
+          "score": null,
+          "remediation": "unknown",
+          "class": "supply-chain"
+        },
+        {
+          "id": "HAL-05",
+          "title": "Multiple implementations of safeApprove and safeTransferFrom with different behavior",
+          "severity": "low",
+          "score": null,
+          "remediation": "unknown",
+          "class": "error-handling"
+        }
+      ]
+    }
   },
   {
     "id": "code-review-wormhole-guardian",
@@ -1266,12 +1315,12 @@
   {
     "id": "bug-report-wormhole-solidity-sdk",
     "type": "bug-report",
-    "date": null,
+    "date": "2025-11-15",
     "title": "Wormhole Solidity SDK bug reports",
     "org": "Asymmetric Research",
     "project": "wormhole-foundation/wormhole-solidity-sdk",
     "role": "reporter",
-    "summary": null,
+    "summary": "Reported two SDK parsing bugs: the CCTP token-burn body was decoded from offset 0 due to a wrong offset variable (#105), and the Schnorr attestation R size constant was 32 instead of 20 (#106).",
     "evidence": [
       {
         "kind": "url",
@@ -1285,7 +1334,7 @@
     "tags": [
       "solidity"
     ],
-    "severity": null,
+    "severity": "medium",
     "notability": 4,
     "provenance": {
       "source": "manual",
@@ -1376,7 +1425,7 @@
       "rust",
       "defi"
     ],
-    "severity": null,
+    "severity": "medium",
     "notability": 3,
     "provenance": {
       "source": "manual",
@@ -1449,7 +1498,7 @@
   {
     "id": "bug-report-ghostfolio-insecure-randomness",
     "type": "bug-report",
-    "date": null,
+    "date": "2024-03-26",
     "title": "Ghostfolio: insecure randomness for new passwords",
     "org": null,
     "project": "ghostfolio/ghostfolio",
@@ -1977,47 +2026,77 @@
     "type": "bug-report",
     "date": "2026-10-21",
     "title": "node: Upgrade go-libp2p to v0.46.0",
-    "org": null,
+    "org": "Asymmetric Research",
     "project": "wormhole-foundation/wormhole",
     "role": "reporter",
-    "summary": null,
+    "summary": "Upgraded go-libp2p to v0.46.0: quic-go v0.48.1 panics on inbound connections when the TLS config disables session tickets, crashing guardians built with Go 1.26.",
     "evidence": [
       {
         "kind": "url",
         "url": "https://github.com/wormhole-foundation/wormhole/pull/5070"
       }
     ],
-    "tags": [],
-    "severity": null,
+    "tags": [
+      "go"
+    ],
+    "severity": "low",
     "notability": 3,
     "provenance": {
       "source": "github-collector",
       "extracted_at": "2026-10-26"
     },
-    "reviewed": false
+    "reviewed": true
   },
   {
     "id": "proposal-wormhole-foundation-wormhole-4878",
     "type": "bug-report",
     "date": "2026-10-30",
     "title": "Add testutils pkg; use TimeFromUnix when building message publications",
-    "org": null,
+    "org": "Asymmetric Research",
     "project": "wormhole-foundation/wormhole",
     "role": "reporter",
-    "summary": null,
+    "summary": "Adopted the SDK's TimeFromUnix timestamp validation across message-publication call sites to avoid timestamp overflow scenarios and divergence between Go timestamp types.",
     "evidence": [
       {
         "kind": "url",
         "url": "https://github.com/wormhole-foundation/wormhole/pull/4878"
       }
     ],
-    "tags": [],
-    "severity": null,
+    "tags": [
+      "go"
+    ],
+    "severity": "low",
     "notability": 3,
     "provenance": {
       "source": "github-collector",
       "extracted_at": "2026-11-02"
     },
-    "reviewed": false
+    "reviewed": true
+  },
+  {
+    "id": "bug-report-paradigmxyz-iron-proxy-325",
+    "type": "bug-report",
+    "date": "2026-11-25",
+    "title": "fix(header_allowlist): strip headers stored under non-canonical keys",
+    "org": "Paradigm",
+    "project": "paradigmxyz/iron-proxy",
+    "role": "reporter",
+    "summary": "Reported that http.Header.Del canonicalization let headers stored under non-canonical keys survive header_allowlist stripping while still being reported in stripped_headers.",
+    "evidence": [
+      {
+        "kind": "url",
+        "url": "https://github.com/paradigmxyz/iron-proxy/pull/325"
+      }
+    ],
+    "tags": [
+      "go"
+    ],
+    "severity": "low",
+    "notability": 3,
+    "provenance": {
+      "source": "manual",
+      "extracted_at": "2026-11-25"
+    },
+    "reviewed": true
   }
 ]

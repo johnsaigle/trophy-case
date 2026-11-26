@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "events.jsonl",
-  "event_count": 39,
+  "event_count": 40,
   "map": {
     "minimum_event_count": 2,
     "categories": [
@@ -54,7 +54,7 @@
       "id": "go",
       "label": "Go",
       "category": "language",
-      "count": 11,
+      "count": 14,
       "event_ids": [
         "audit-boostylabs-tricorn-2023",
         "audit-mars-protocol-custom-modules-2022",
@@ -64,7 +64,10 @@
         "audit-sifchain-clp-update-2022",
         "audit-sifchain-margin-2022",
         "audit-zetachain-node-2023",
+        "bug-report-paradigmxyz-iron-proxy-325",
         "code-review-clarity-go-parser",
+        "proposal-wormhole-foundation-wormhole-4878",
+        "proposal-wormhole-foundation-wormhole-5070",
         "tool-channelcheck",
         "tool-go-unmaintained"
       ]

@@ -6,12 +6,12 @@
   ],
   "audits": 9,
   "findings": {
-    "total": 96,
+    "total": 101,
     "by_severity": {
-      "critical": 5,
-      "high": 13,
-      "medium": 12,
-      "low": 44,
+      "critical": 6,
+      "high": 14,
+      "medium": 13,
+      "low": 46,
       "informational": 22
     }
   },

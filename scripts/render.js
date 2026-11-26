@@ -143,7 +143,8 @@ for (const e of contributionEvents) {
   (byOrg[org] = byOrg[org] || []).push(e);
 }
 
-for (const org of ["Asymmetric Research", "McGill University", "Independent"]) {
+const EMPLOYERS = ["Asymmetric Research", "McGill University"];
+for (const org of EMPLOYERS) {
   const evs = byOrg[org];
   if (!evs) continue;
 
@@ -159,10 +160,11 @@ for (const org of ["Asymmetric Research", "McGill University", "Independent"]) {
   }
 
   if (org === "Independent") {
-    lines.push(`## Independent Projects`, ``);
+    lines.push(`## Bug Hunting`, ``);
     for (const e of evs) {
       const url = evUrl(e);
-      lines.push(`- ${url ? `[${e.title}](${url})` : e.title}${countsSuffix(e)}`);
+      const sev = e.severity ? ` (${e.severity})` : "";
+      lines.push(`- ${url ? `[${e.title}](${url})` : e.title}${sev}${countsSuffix(e)}`);
       if (e.summary) lines.push(`  ${e.summary}`);
     }
     lines.push(``);
@@ -182,12 +184,27 @@ for (const org of ["Asymmetric Research", "McGill University", "Independent"]) {
     for (const e of groups[g]) {
       const url = evUrl(e);
       const name = url ? `[${e.title}](${url})` : e.title;
-      const prefix = e.type === "bug-report" ? "" : "";
-      lines.push(`- ${prefix}${name}${countsSuffix(e)}`);
+      lines.push(`- ${name}${countsSuffix(e)}`);
       if (e.type === "review" && e.summary) lines.push(`  ${e.summary}`);
     }
     lines.push(``);
   }
+}
+
+// --- Bug Hunting: contribution events attributed outside employer orgs
+// (org null, or a vendor org like "Paradigm"), so `org` stays free for
+// attribution without spawning "As part of X" employer sections.
+const huntEvents = contributionEvents.filter((e) => !EMPLOYERS.includes(e.org));
+if (huntEvents.length) {
+  lines.push(`## Bug Hunting`, ``);
+  for (const e of huntEvents) {
+    const url = evUrl(e);
+    const sev = e.severity ? ` (${e.severity})` : "";
+    const orgTag = e.org ? ` — reported to ${e.org}` : "";
+    lines.push(`- ${url ? `[${e.title}](${url})` : e.title}${sev}${orgTag}${countsSuffix(e)}`);
+    if (e.summary) lines.push(`  ${e.summary}`);
+  }
+  lines.push(``);
 }
 
 // --- audit table

@@ -3,14 +3,14 @@
 This is a loose archive of security work I've done for open-source projects, including
 security engineering and source code reviews.
 
-![9 audits · 96 published findings (5 critical, 13 high, 12 medium, 44 low, 22 informational) · 4 articles · 11 security tools](assets/overview-stats.svg)
+![9 audits · 101 published findings (6 critical, 14 high, 13 medium, 46 low, 22 informational) · 4 articles · 11 security tools](assets/overview-stats.svg)
 
 > **Note:** this is a best-effort list of *public* work only. Much of my audit
 > and security engineering output is under confidentiality agreement and cannot be listed.
 
 ## Selected work
 
-- **Audits:** 9 published reports as primary auditor, including 4 critical findings in ZetaChain Node and 1 critical finding in Groth16 Verifier.
+- **Audits:** 9 published reports as primary auditor, including 4 critical findings in ZetaChain Node and 1 critical finding in Groth16 Verifier and 1 critical finding in Maya Node ETH Router.
 - **Code review:** reviewed 1,256 public pull requests, leaving 3,586 inline comments across 712 of them.
 - **Authored:** 816 public pull requests, 614 merged.
 
@@ -48,6 +48,8 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 - [Wormhole Native Token Transfers](https://github.com/wormhole-foundation/native-token-transfers/pulls?q=is%3Apr+author%3Ajohnsaigle) (18 merged PRs, 25 issues, 11 reviews in 2026)
 - [Wormhole Liquidity Layer](https://github.com/wormhole-foundation/example-liquidity-layer/pulls?q=johnsaigle) (7 issues)
 - [Wormhole Solidity SDK bug reports](https://github.com/wormhole-foundation/wormhole-solidity-sdk/pull/105)
+- [node: Upgrade go-libp2p to v0.46.0](https://github.com/wormhole-foundation/wormhole/pull/5070)
+- [Add testutils pkg; use TimeFromUnix when building message publications](https://github.com/wormhole-foundation/wormhole/pull/4878)
 
 ### Stacks
 
@@ -67,12 +69,12 @@ Machine-readable exports: [summary](dist/summary.json) · [events](dist/events.j
 
 - [LORIS Neuroimaging Software](https://github.com/aces/Loris/pulls?q=is%3Apr+author%3Ajohnsaigle+is%3Aclosed+label%3A%22Category%3A+Security%22) (407 merged PRs, 207 issues)
 
-## Independent Projects
+## Bug Hunting
 
-- [Ghostfolio: insecure randomness for new passwords](https://github.com/ghostfolio/ghostfolio/discussions/3192)
+- [Ghostfolio: insecure randomness for new passwords](https://github.com/ghostfolio/ghostfolio/discussions/3192) (medium)
   Password generation used insecure randomness; reported and fixed via PR.
-- [node: Upgrade go-libp2p to v0.46.0](https://github.com/wormhole-foundation/wormhole/pull/5070)
-- [Add testutils pkg; use TimeFromUnix when building message publications](https://github.com/wormhole-foundation/wormhole/pull/4878)
+- [fix(header_allowlist): strip headers stored under non-canonical keys](https://github.com/paradigmxyz/iron-proxy/pull/325) (low) — reported to Paradigm
+  Reported that http.Header.Del canonicalization let headers stored under non-canonical keys survive header_allowlist stripping while still being reported in stripped_headers.
 
 # Audit Reports
 
@@ -85,10 +87,10 @@ Formal audit reports for which I was the primary auditor.
 | 2023-03-31 | ZetaChain Node Security Audit | ZetaChain | Cosmos, Bridge, Bitcoin | Go, Solidity | 4 / 5 / 6 / 6 / 0 | [Report](https://drive.google.com/file/d/1323iwH34kOqGzBZIz4iX-Qfo8ACzomNc/view) |
 | 2023-01-25 | Maya Node Security Audit | MayaChain | Cosmos, Node | Go | 0 / 2 / 0 / 12 / 4 | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/Cosmos_Security_Final.pdf) |
 | 2023-01-18 | Maya Node Liquidity Auction Audit | MayaChain | Cosmos, DeFi | Go | 0 / 2 / 1 / 4 / 2 | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/Liquidity_Auction_Final.pdf) |
+| 2022-12-13 | Maya Node ETH Router Audit | MayaChain | Cosmos, DeFi | Go | 1 / 1 / 1 / 2 / 0 | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/ETH_Router_Draft_3.pdf) |
 | 2022-11-24 | Mars Protocol Custom Modules Audit (Governance, Incentives, Safety) | Mars Protocol | Cosmos, Governance, DeFi | Go | 0 / 1 / 0 / 3 / 3 | [Report](https://github.com/mars-protocol/mars-audits/blob/main/hub/halborn/Mars_Protocol_Custom_Modules_Gov_Incentives_Safety_Cosmos_Security.pdf) |
 | 2022-09-08 | Sifchain Margin Audit | Sifchain | Cosmos, DeFi | Go | 0 / 0 / 1 / 1 / 2 | [Report](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
 | 2022-07-08 | Sifchain CLP Update Audit | Sifchain | Cosmos, DeFi | Go | 0 / 0 / 1 / 2 / 1 | [Report](https://drive.google.com/drive/u/1/folders/1kkjdpNuRmTjaiIKA6CQISavCvj4Awpbc) |
-|  | Maya Node ETH Router Audit | MayaChain | Cosmos, DeFi | Go | n/a | [Report](https://maya-cdn.s3.amazonaws.com/Halborn/ETH_Router_Draft_3.pdf) |
 
 # Technical Writing
 

@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "source": "events.jsonl",
-  "report_count": 8,
-  "finding_count": 96,
+  "report_count": 9,
+  "finding_count": 101,
   "classes": [
     {
       "id": "supply-chain",
       "label": "Supply Chain",
-      "count": 20,
+      "count": 21,
       "severities": {
         "high": 3,
-        "low": 12,
+        "low": 13,
         "informational": 4,
         "medium": 1
       }
@@ -18,11 +18,23 @@
     {
       "id": "error-handling",
       "label": "Failure Handling",
-      "count": 13,
+      "count": 15,
       "severities": {
         "high": 1,
         "informational": 5,
-        "low": 7
+        "low": 8,
+        "medium": 1
+      }
+    },
+    {
+      "id": "accounting",
+      "label": "Accounting",
+      "count": 9,
+      "severities": {
+        "medium": 2,
+        "low": 3,
+        "critical": 2,
+        "high": 2
       }
     },
     {
@@ -38,14 +50,13 @@
       }
     },
     {
-      "id": "accounting",
-      "label": "Accounting",
+      "id": "access-control",
+      "label": "Access Control",
       "count": 8,
       "severities": {
-        "medium": 2,
         "low": 3,
-        "critical": 1,
-        "high": 2
+        "high": 2,
+        "medium": 3
       }
     },
     {
@@ -64,16 +75,6 @@
       "count": 8,
       "severities": {
         "informational": 8
-      }
-    },
-    {
-      "id": "access-control",
-      "label": "Access Control",
-      "count": 7,
-      "severities": {
-        "low": 3,
-        "high": 1,
-        "medium": 3
       }
     },
     {

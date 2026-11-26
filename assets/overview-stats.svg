@@ -40,15 +40,15 @@
 <text class="big" x="48" y="76">9</text>
 <text class="tile-label" x="48" y="100">audits</text>
 <text class="tile-sub" x="48" y="122">as primary auditor</text>
-<text class="big" x="234" y="76">96</text>
+<text class="big" x="234" y="76">101</text>
 <text class="tile-label" x="234" y="100">published findings</text>
 
-<rect x="234.00" y="112" width="10.19" height="10" rx="2" fill="#b91c1c"><title>critical: 5</title></rect>
-<rect x="246.19" y="112" width="29.69" height="10" rx="2" fill="#f97316"><title>high: 13</title></rect>
-<rect x="277.88" y="112" width="27.25" height="10" rx="2" fill="#eab308"><title>medium: 12</title></rect>
-<rect x="307.13" y="112" width="105.25" height="10" rx="2" fill="#38bdf8"><title>low: 44</title></rect>
-<rect x="414.38" y="112" width="51.63" height="10" rx="2" fill="#94a3b8"><title>informational: 22</title></rect>
-<text class="tile-sub" x="234" y="138">5 crit · 13 high · 12 med · 44 low · 22 info</text>
+<rect x="234.00" y="112" width="11.90" height="10" rx="2" fill="#b91c1c"><title>critical: 6</title></rect>
+<rect x="247.90" y="112" width="30.44" height="10" rx="2" fill="#f97316"><title>high: 14</title></rect>
+<rect x="280.34" y="112" width="28.12" height="10" rx="2" fill="#eab308"><title>medium: 13</title></rect>
+<rect x="310.46" y="112" width="104.57" height="10" rx="2" fill="#38bdf8"><title>low: 46</title></rect>
+<rect x="417.03" y="112" width="48.97" height="10" rx="2" fill="#94a3b8"><title>informational: 22</title></rect>
+<text class="tile-sub" x="234" y="138">6 crit · 14 high · 13 med · 46 low · 22 info</text>
 <text class="big" x="520" y="76">816 / 1,256</text>
 <text class="tile-label" x="520" y="100">PRs authored / reviewed</text>
 
